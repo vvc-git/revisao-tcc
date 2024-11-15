@@ -1,23 +1,43 @@
-\begin{minipage}[b]{0.5\linewidth}
-    \centering
-    \begin{tikzpicture}[roundnode/.style={circle, draw=black, very thick, minimum size=20mm, align=center},]
-        % Nodes
-        \node[roundnode]      (idp)                            {IdP};
-        \node[roundnode]      (sp)     [below right=3cm and 1cm of idp]  {SP}; % Adjusted positioning
-        \node[roundnode]      (fid)    [below left=3cm and 1cm of idp]  {Fiduciário}; % Adjusted positioning
-        \node[roundnode]      (usr)    [left=of fid]  {usuário};
-        
-        % Lines
-        \draw[<->] (idp) -- (fid);
-        \draw[<->]  (fid) -- (sp);
-        \draw[->, dashed] (sp) edge[bend right=5, draw=none] coordinate[at start](sp-b) coordinate[at end](idp-b) (idp)
-                  edge[bend left=5, draw=none] coordinate[at start](sp-t) coordinate[at end](idp-t) (idp)
-              (sp-t) -- (idp-t);
-        \draw[<->] (fid) edge[bend right=-5, draw=none] coordinate[at start](fid-b) coordinate[at end](usr-b)(usr)
-              edge[bend left=-4, draw=none] coordinate[at start](fid-t) coordinate[at end](usr-t) (usr)
-             (fid-t) -- (usr-t);
-        \draw[<-, double, dashed] (usr) edge[bend right=5, draw=none] coordinate[at start](usr-b) coordinate[at end](fid-b) (fid)
-              edge[bend left=-10, draw=none] coordinate[at start](usr-t) coordinate[at end](fid-t) (fid)
-             (usr-t) -- (fid-t);
-    \end{tikzpicture}
-\end{minipage}
+% \begin{minipage}[b]{0.5\linewidth}
+\begin{tikzpicture}[roundnode/.style={circle, draw=black, thick, minimum size=30mm, align=center},]
+    % Nodes
+    \node[roundnode]      (idp)     at (10,0)                       {IdP};
+    \node[roundnode]      (sp)     [below right=of idp]  {SP}; % Adjusted positioning
+    \node[roundnode]      (fid)    [below left=of idp]  {Fiduciário}; % Adjusted positioning
+    \node[roundnode]      (usr)    [left=of fid]  {Usuário};
+    
+    \node[draw, thick, rectangle, minimum width=7.5cm, minimum height=3cm, align=left] (legend) [right=of sp] {};
+    % Lines
+    \draw[<->,  >=Latex, >={Latex[length=1mm, width=3mm]}] (idp) -- (fid);
+    \draw[<->, >=Latex, >={Latex[length=1mm, width=3mm]}]  (fid) -- (sp);
+    \draw[->, >=Latex, >={Latex[length=1mm, width=3mm]}, dashed] (sp) edge[bend right=5, draw=none] coordinate[at start](sp-b) coordinate[at end](idp-b) (idp)
+                edge[bend left=5, draw=none] coordinate[at start](sp-t) coordinate[at end](idp-t) (idp)
+            (sp-t) -- (idp-t);
+    \draw[<->, >=Latex, >={Latex[length=1mm, width=3mm]}] (fid) edge[bend right=-5, draw=none] coordinate[at start](fid-b) coordinate[at end](usr-b)(usr)
+            edge[bend left=-4, draw=none] coordinate[at start](fid-t) coordinate[at end](usr-t) (usr)
+            (fid-t) -- (usr-t);
+    \draw[<-, double, dashed,  >=Latex, >={Latex[length=1mm, width=2mm]}] (usr) edge[bend right=5, draw=none] coordinate[at start](usr-b) coordinate[at end](fid-b) (fid)
+            edge[bend left=-10, draw=none] coordinate[at start](usr-t) coordinate[at end](fid-t) (fid)
+            (usr-t) -- (fid-t);
+
+        % Legend Items
+    \node[align=left] at ([yshift=2.5cm, xshift=0.5cm] legend.south) {
+        \textbf{Legenda}
+    };
+    \node[anchor=west] at ([xshift=0.5cm, yshift=1.5cm] legend.south west) {
+        \begin{tikzpicture}
+            \draw[<->, >=Latex, >={Latex[length=1mm, width=3mm]}] (0,0) -- ++(1.5,0);
+        \end{tikzpicture} Interações
+    };
+    \node[anchor=west] at ([xshift=0.5cm, yshift=1cm] legend.south west) {
+        \begin{tikzpicture}
+            \draw[->, dashed, >=Latex, >={Latex[length=1mm, width=2.5mm]}] (0,0) -- ++(1.5,0);
+        \end{tikzpicture} Confiança
+    };
+    \node[anchor=west] at ([xshift=0.5cm, yshift=0.5cm] legend.south west) {
+        \begin{tikzpicture}
+            \draw[<-, double, dashed, >=Latex, >={Latex[length=1mm, width=2mm]}] (0,0) -- ++(1.5,0);
+        \end{tikzpicture} Relacionamento fiduciário
+    };
+\end{tikzpicture}
+% \end{minipage}

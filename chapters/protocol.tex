@@ -72,7 +72,7 @@ O Provedor de Serviços possui a prerrogativa de aceitar ou recusar a proposta d
 
 Em outros casos, o Fiduciário pode rejeitar a proposta por não concordar com os novos atributos sugeridos. Nessas situações, a resposta HTTP deve utilizar o parâmetro status rejeitando a declaração e o código de status HTTP 400 (Bad Request) incluindo os seguintes parâmetros no corpo da resposta codificada em JSON.
 
-\subsubsection{Resposta de Recusa de Negociação}\label{subsubsection:response-negotiation-error}
+\subsubsection*{Resposta de Recusa de Negociação}\label{subsubsection:response-negotiation-error}
 
 Se a Solicitação de Negociação não for aceita ou for considerada inválida, o SP deverá definir o campo de status como "refused" e incluir os campos "error" e "interval", conforme ilustrado abaixo.
 
@@ -106,7 +106,7 @@ Se o Fiduciário e o Provedor de Serviços não chegarem a um acordo sobre a Dec
 
 \subsection{Novo Parâmetro de Metadados do Provedor de Serviços (Metadados do Cliente)}
 
-De maneira similar ao token vp\_formats definido na Seção 9 de \acs{OIDC4VP} \cite{OIDC4VP2023}, esta especificação define os seguintes novos parâmetros de metadados de acordo com o \acs{OIDC Dynamic Client Registration} \cite{sakimura2023openidDiscovery}, a serem utilizados pelo Provedor de Serviços. Dessa forma, o Endpoint de Negociação pode ser adquirido tanto pelo mecanimso tradicional citado acima, quanto por meio client\_metadata encaminhado na Requisição de Autorização definada na Seção 5 \acs{OIDC4VP} \cite{OIDC4VP2023}.
+De maneira similar ao token vp\_formats definido na Seção 9 de \acs{OIDC4VP} \cite{OIDC4VP2023}, esta especificação define os seguintes novos parâmetros de metadados de acordo com o \acs{OIDC-D} \cite{sakimura2023openidDiscovery}, a serem utilizados pelo Provedor de Serviços. Dessa forma, o Endpoint de Negociação pode ser adquirido tanto pelo mecanimso tradicional citado acima, quanto por meio client\_metadata encaminhado na Requisição de Autorização definada na Seção 5 \acs{OIDC4VP} \cite{OIDC4VP2023}.
 
 \begin{itemize}
     \item \textbf{negotiation\_endpoint}: URL do Endpoint de Negociação do Provedor de Serviços, conforme definido na \autoref{subsection:endpoint-negociação}. Esta URL deve usar o esquema HTTPS e pode conter componentes de porta, caminho e parâmetros de consulta. Se omitido, o provedor não oferece suporte a esse endpoint e não está em conformidade com as propriedades do Modelo Fiduciário.

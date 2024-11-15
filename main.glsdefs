@@ -754,15 +754,15 @@ parent={},%
 %
 }%
 
-\glsdefs@newdocentry{OIDC Discovery}%
+\glsdefs@newdocentry{OIDC-D}%
 {%
-name={OIDC Discovery},%
-sort={OIDC Discovery},%
+name={OIDC-D},%
+sort={OIDC-D},%
 type={acronym},%
-first={OpenID Connect Discovery\glsspace (OIDC Discovery)},%
-firstplural={OpenID Connect Discovery\acrpluralsuffix \glsspace (OIDC Discovery\acrpluralsuffix )},%
-text={OIDC Discovery},%
-plural={OIDC Discovery\acrpluralsuffix },%
+first={OpenID Connect Discovery\glsspace (OIDC-D)},%
+firstplural={OpenID Connect Discovery\acrpluralsuffix \glsspace (OIDC-D\acrpluralsuffix )},%
+text={OIDC-D},%
+plural={OIDC-D\acrpluralsuffix },%
 description={OpenID Connect Discovery},%
 descriptionplural={OpenID Connect Discovery\acrpluralsuffix },%
 symbol={\relax },%
@@ -775,22 +775,22 @@ user5={},%
 user6={},%
 long={OpenID Connect Discovery},%
 longplural={OpenID Connect Discoverys},%
-short={OIDC Discovery},%
-shortplural={OIDC Discoverys},%
+short={OIDC-D},%
+shortplural={OIDC-Ds},%
 counter={page},%
 parent={},%
 %
 }%
 
-\glsdefs@newdocentry{OIDC Dynamic Client Registration}%
+\glsdefs@newdocentry{OIDC-DCR}%
 {%
-name={OIDC Dynamic Client Registration},%
-sort={OIDC Dynamic Client Registration},%
+name={OIDC-DCR},%
+sort={OIDC-DCR},%
 type={acronym},%
-first={OpenID Connect Dynamic Client Registration\glsspace (OIDC Dynamic Client Registration)},%
-firstplural={OpenID Connect Dynamic Client Registration\acrpluralsuffix \glsspace (OIDC Dynamic Client Registration\acrpluralsuffix )},%
-text={OIDC Dynamic Client Registration},%
-plural={OIDC Dynamic Client Registration\acrpluralsuffix },%
+first={OpenID Connect Dynamic Client Registration\glsspace (OIDC-DCR)},%
+firstplural={OpenID Connect Dynamic Client Registration\acrpluralsuffix \glsspace (OIDC-DCR\acrpluralsuffix )},%
+text={OIDC-DCR},%
+plural={OIDC-DCR\acrpluralsuffix },%
 description={OpenID Connect Dynamic Client Registration},%
 descriptionplural={OpenID Connect Dynamic Client Registration\acrpluralsuffix },%
 symbol={\relax },%
@@ -803,8 +803,8 @@ user5={},%
 user6={},%
 long={OpenID Connect Dynamic Client Registration},%
 longplural={OpenID Connect Dynamic Client Registrations},%
-short={OIDC Dynamic Client Registration},%
-shortplural={OIDC Dynamic Client Registrations},%
+short={OIDC-DCR},%
+shortplural={OIDC-DCRs},%
 counter={page},%
 parent={},%
 %

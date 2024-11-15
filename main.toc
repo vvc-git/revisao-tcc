@@ -36,31 +36,27 @@
 \contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Fundamentação teórica}}{27}{chapter.2}%
 \contentsline {section}{\numberline {2.1}O desafio da identificação digital}{27}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Modelos de Identidades}{28}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Centralizado}{28}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.1}Centralizado}{29}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Terceirizado}{29}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Auto-Soberano}{30}{subsection.2.2.3}%
 \contentsline {subsubsection}{\numberline {2.2.3.1}Carteiras Digitais}{32}{subsubsection.2.2.3.1}%
 \contentsline {subsubsection}{\numberline {2.2.3.2}Prova de Zero Conhecimento}{33}{subsubsection.2.2.3.2}%
-\contentsline {paragraph}{\numberline {2.2.3.2.1}Fundamentos e Funcionamento}{34}{paragraph.2.2.3.2.1}%
-\contentsline {paragraph}{\numberline {2.2.3.2.2}Protocolos Existentes}{34}{paragraph.2.2.3.2.2}%
 \contentsline {subsection}{\numberline {2.2.4}Fiduciário}{36}{subsection.2.2.4}%
 \contentsline {section}{\numberline {2.3}Protocolos de Identidade Digital}{39}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}OAuth 2.0}{39}{subsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.1.1}Funcionamento}{41}{subsubsection.2.3.1.1}%
 \contentsline {subsection}{\numberline {2.3.2}OpenID Connect}{42}{subsection.2.3.2}%
-\contentsline {subsubsection}{\numberline {2.3.2.1}Funcionamento}{43}{subsubsection.2.3.2.1}%
 \contentsline {subsection}{\numberline {2.3.3}OIDC4VC: O OpenID Connect no modelo SSI }{44}{subsection.2.3.3}%
-\contentsline {subsubsection}{\numberline {2.3.3.1}Ecossistema}{46}{subsubsection.2.3.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.3.2}OID4VP}{47}{subsubsection.2.3.3.2}%
-\contentsline {subsubsection}{\numberline {2.3.3.3}Funcionamento}{49}{subsubsection.2.3.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.3.1}Ecossistema}{45}{subsubsection.2.3.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.3.2}OIDC4VP}{47}{subsubsection.2.3.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3.3}Funcionamento}{48}{subsubsection.2.3.3.3}%
 \contentsline {section}{\numberline {2.4}Análise formal de segurança}{51}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Definição Formal de Protocolos Usando \acs {WIM}}{52}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Propriedades de segurança}{52}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.1}Definição Formal de Protocolos Usando WIM}{52}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Propriedades de segurança}{53}{subsection.2.4.2}%
 \contentsline {subsection}{\numberline {2.4.3}Prova de segurança}{53}{subsection.2.4.3}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Trabalhos relacionados}}{55}{chapter.3}%
 \contentsline {section}{\numberline {3.1}\newacronym {OPAL}{OPAL}{Open Algorithms}\acrfull {OPAL}}{55}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Standard for Machine Readable Personal Privacy Terms}{56}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Machine Readable Personal Privacy Terms}{56}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Comparação entre propostas}{56}{section.3.3}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Um Novo Protocolo Para Identidade Fiduciária}}{59}{chapter.4}%
@@ -70,23 +66,21 @@
 \contentsline {subsection}{\numberline {4.3.1}Endpoint de Negociação}{62}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Solicitação de Negociação}{62}{subsection.4.3.2}%
 \contentsline {subsection}{\numberline {4.3.3}Resposta de Negociação}{62}{subsection.4.3.3}%
-\contentsline {subsubsection}{\numberline {4.3.3.1}Resposta de Recusa de Negociação}{63}{subsubsection.4.3.3.1}%
 \contentsline {subsection}{\numberline {4.3.4}Novo Parâmetro de Metadados do Provedor de Serviços (Metadados do Cliente)}{65}{subsection.4.3.4}%
 \contentsline {section}{\numberline {4.4}Negociação do Ambiente de Execução}{67}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Solicitação de Negociação}{67}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Resposta de Negociação}{68}{subsection.4.4.2}%
 \contentsline {subsubsection}{\numberline {4.4.2.1}Resposta de Sucesso para Computação Multi-Agente}{68}{subsubsection.4.4.2.1}%
 \contentsline {subsubsection}{\numberline {4.4.2.2}Resposta de Recusa para Execução em outros Ambientes}{69}{subsubsection.4.4.2.2}%
-\contentsline {section}{\numberline {4.5}Análise Formal de Segurança}{69}{section.4.5}%
+\contentsline {section}{\numberline {4.5}Análise Formal de Segurança}{70}{section.4.5}%
 \contentsline {subsection}{\numberline {4.5.1}Propriedade de Segurança: Autenticação da Negociação}{70}{subsection.4.5.1}%
 \contentsline {subsection}{\numberline {4.5.2}Prova da Autenticação da Negociação}{70}{subsection.4.5.2}%
 \contentsline {section}{\numberline {4.6}Limitações e esforço para mudança}{71}{section.4.6}%
 \contentsline {section}{\numberline {4.7}Conclusões}{72}{section.4.7}%
-\contentsline {subsection}{\numberline {4.7.1}Trabalhos Futuros}{72}{subsection.4.7.1}%
 \vspace {\cftbeforechapterskip }
 \babel@toc {brazil}{}\relax 
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{73}{section*.17}%
+\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{73}{section*.46}%
 \renewcommand *{\cftappendixname }{AP\^ENDICE \space }
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
@@ -104,7 +98,5 @@
 \contentsline {subsection}{\numberline {A.1.4}Fiduciário}{80}{subsection.A.1.4}%
 \contentsline {subsection}{\numberline {A.1.5}Verificador}{81}{subsection.A.1.5}%
 \contentsline {section}{\numberline {A.2}Propriedades Formais de Segurança}{82}{section.A.2}%
-\contentsline {subsection}{\numberline {A.2.1}Autenticação da Negociação}{82}{subsection.A.2.1}%
 \contentsline {section}{\numberline {A.3}Prova de Propriedades de Segurança}{82}{section.A.3}%
-\contentsline {subsection}{\numberline {A.3.1}Prova da Autenticação da Negociação}{82}{subsection.A.3.1}%
 \thispagestyle {empty}
