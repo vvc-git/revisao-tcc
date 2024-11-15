@@ -1,0 +1,20 @@
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|p{8cm}|c|c|}
+    \hline
+    \rowcolor{lightgray} \textbf{Campo} & \textbf{Descrição} & \textbf{Tipo} & \textbf{Obrigatório} \\
+    \hline
+    from & Indica a origem da mensagem & string & sim \\
+    \hline
+    to & Indica o destino da mensagem & string & sim \\
+    \hline
+    circuit & Informações sobre qual circuito foi usado para gerar prova de zero-conhecimento  & string & sim \\
+     \hline
+    issuer & Indica quem emitiu a credencial & string & sim \\
+    \hline
+    ZKProof.proof & Prova de zero conhecimento & JSON & sim \\
+    \hline
+    ZKProof.pubSignals & Lista de entradas públicas utilizadas para geração de provas de zero-conhecimento & string & sim \\
+    \hline
+    \end{tabular}
+\end{table}

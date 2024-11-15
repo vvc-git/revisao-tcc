@@ -1,0 +1,31 @@
+\input{code/pseudo.tex}
+\begin{lstlisting}[language=pseudo, caption={Modificação 1 na relação de um verificador $R^{v}$: Processamento de Requisições HTTPS}, firstnumber=21, label={lst:verifier-relation}]
+let $domain$ $\leftarrow$ $FiduciaryDoms$
+let $authUrl$ := $\langle$URL, S, domain, $/vp/authentication$,$\langle$$\rangle$, $\bot$$\rangle$ 
+let $negotiationEndpoint$ $\leftarrow$ {$\langle$URL, S, $d$, $/negotiate$, $\langle$$\rangle$, $\top$$\rangle$ | $d$ $\in$ dom($v$)}
+let $clientMetadata$ := $clientMetadata$ +$^{\langle \rangle}$ $\langle$negotiation_endpoint, $negotiationEndpoint$$\rangle$
+let $idVerifierPd$ := $\nu_1$
+let $presentationDefinition$ :=  BUILD_PRESENTATION_DEFINITION(a, constraints($f$), $idVerifierPd$) 
+let $parameters$ := $parameters$ +$^{\langle \rangle}$ $\langle$client_metadata, $clientMetadata$$\rangle$ 
+let $parameters$ := $parameters$ +$^{\langle \rangle}$ $\langle$presentation_definition_id, $presentationDefinition$[id]$\rangle$ 
+let $session$ := $session$ +$^{\langle \rangle}$ $\langle$presentation_definition, $presentationDefinition$$\rangle$
+\end{lstlisting}
+
+\begin{lstlisting}[language=pseudo, caption={Modificação 2 na relação de um verificador $R^{v}$: Processamento de Requisições HTTPS}, firstnumber=101, label={lst:verifier-relation-2}]
+else if $m$.path $\equiv$ $/negotiate$ $\wedge$ $m$.method $\equiv$ POST then
+  if $m$.body[type] $\equiv$ $attribute$ then
+    if $m$.body[previous_id] $\equiv$ $s'$.session[presentation_definition][id] then
+      let $validatePresentationDefinition$ $\leftarrow$ $\{\top, \bot\}$
+      if $validatePresentationDefinition$ $\equiv$ $\top$ then
+        let $session$ := $session$ + $^{\langle\rangle}$$\langle$presentation_definition, $m$.body[presentation_definition]$\rangle$
+        let $body$ := $\langle$status, ACCEPTED$\rangle$
+        let $m'$ := $enc_s$($\langle$HTTPResp, $m$.nonce, 201, $\langle$$\rangle$, $body$$\rangle$, $k$)
+        stop $\langle$$\langle$$f$, $a$, $m'$$\rangle$$\rangle$, $s'$
+      else
+        let $body$ := $\langle$status, REJECTED$\rangle$
+        let $error$ $\leftarrow$ {negotiation_request_denied, invalid_negotiation_request, 
+        unsupported_definition, expired_defintion_id} 
+        let $body$ := $body$ +$^ {\langle\rangle}$$\langle$error, $error$$\rangle$
+        let $m'$ := $enc_s$($\langle$HTTPResp, $m$.nonce, 400, $\langle$$\rangle$, $body$$\rangle$, $k$)
+        stop $\langle$$\langle$$f$, $a$, $m'$$\rangle$$\rangle$, $s'$      
+\end{lstlisting}

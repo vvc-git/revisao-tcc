@@ -1,0 +1,22 @@
+
+% Modelo Centralizado
+\begin{minipage}[b]{0.5\linewidth}
+    \centering
+    \begin{tikzpicture}[roundnode/.style={circle, draw=black, very thick, minimum size=20mm, align=center},]
+        %Nodes
+        \node[roundnode]      (idp)                            {IdP};
+        \node[roundnode]      (sp)     [below right=of idp]  {SP};
+        \node[roundnode]      (usr)    [below left=of idp]   {usuário\\IdP};
+        
+        %Lines
+        \draw[<->] (idp) -- (usr);
+        \draw[<->]  (usr) -- (sp);
+        \draw[->, dashed] (sp) edge[bend right=5, draw=none] coordinate[at start](sp-b) coordinate[at end](idp-b) (idp)
+                  edge[bend left=5, draw=none] coordinate[at start](sp-t) coordinate[at end](idp-t) (idp)
+              (sp-t) -- (idp-t);
+        \draw[->, dashed] (sp) edge[bend right=5, draw=none] coordinate[at start](sp-b) coordinate[at end](usr-b) (usr)
+                  edge[bend left=5, draw=none] coordinate[at start](sp-t) coordinate[at end](usr-t) (usr)
+              (sp-t) -- (usr-t);
+    
+    \end{tikzpicture}
+\end{minipage}

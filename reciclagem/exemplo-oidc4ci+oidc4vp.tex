@@ -1,0 +1,33 @@
+Nesse exemplo [\ref{fig:OID4VC}], agrupados as duas modificações para implementação da extensão do OpenID para Credenciais Verificáveis, o \acs{OIDC4VP} e \acs{OIDC4CI}. Para isso, foi utilizado o fluxo de entre dispositivos (cross device flow) para o sub-protocolo \acs{OIDC4VP} e o fluxo de código de Autorização (authorization code flow) para o sub-protocolo \acs{OIDC4CI}. No fluxo entre dispositivos, O verificador prepara uma Solicitação de Autorização e a renderiza como um QR Code. O usuário então usa a carteira para escanear o Código QR Code. É importante observar também que nesse exemplo específico a emissão de credenciais foi feita sob-demanda, ou seja, somente quando a carteira digital tem a \acs{DA}, que ela requisita um credencial para o Provedor de Identidade. 
+
+\input{diagrams/sequence-diagram/oidc4vc}
+\begin{enumerate}
+
+    \item Usuário acessa um serviço por meio do seu agente (navegador) e usa a Carteira para escanear o QR Code.
+    
+    \item A Carteira recebe uma Requisição de Autorização. Nela, contém uma URL (Request URL) com os caminhos para pedir o Objeto de Requisição (Request Object).
+
+    \item A Carteira envia uma solicitação GET HTTPS para o URL de solicitação para recuperar o Objeto de Solicitação. A resposta do HTTPS GET retorna o Objeto de Requisição. Esse objeto contém uma \acs{DA}, descrevendo os requisitos das Credenciais que o Provedor de Serviços está solicitando para serem apresentadas. 
+    
+    Tais requisitos podem incluir o tipo de Credencial, em quais formatos, quais Reivindicações individuais dentro dessas Credenciais (divulgação seletiva). A Carteira processa o Objeto de Requisição e determina quais Credenciais estão disponíveis correspondendo à solicitação do Verificador. 
+    
+    \item A Carteira autentica o usuário e obtém seu consentimento para apresentar as Credenciais solicitadas.
+    
+    \item O fluxo iniciado pela Carteira começa quando o utilizador solicita uma Credencial via Carteira ao Provedor de Identidade. O indivíduo seleciona uma credencial de uma lista pré-configurada de credenciais prontas para serem emitidas ou, alternativamente, a carteira o orienta a selecionar uma credencial de um provedor com base nas informações recebidas na solicitação de apresentação de um Provedor de Serviço.
+
+
+    \item  A Carteira utiliza o URL do Provedor de Identidade para buscar os metadados do mesmo. Os metadados são necessários para aprender os tipos e formatos de Credenciais que o \acs{IdP} suporta. Além disso, a carteira também precisa determinar o endpoint de Autorização (Servidor de Autorização OAuth 2.0) e o endpoint de Credencial necessários para iniciar a solicitação. Observe que nesse exemplo o \acs{IdP} emite credenciais e desempenha o papel de Servidor de Autorização OAuth 2.0, mas poderiam ser entidade diferentes.
+
+    \item \label{item:oidc4vc-item7} A carteira realiza a requisição do Token de Autorização no endpoint de Autorização. O Endpoint de Autorização processa a Solicitação de Autorização. Endpoint utilizado: Token Endpoint.
+
+    \item \label{item:oidc4vc-item8} Para emitir o token de Autorização, é necessário autenticar o usuário e obter seu consentimento para emitir credenciais para a carteira digital.
+
+    \item A Carteira envia uma Solicitação de Token Acesso com o Código de Autorização obtido na etapa anterior. O \acs{IdP} retorna o token de Acesso após validar com sucesso o Código de Autorização.Esta etapa ocorre no backend (comunicação direta entre dois sistemas usando solicitações e respostas HTTP, sem utilizar redirecionamentos através de um intermediário como um navegador). Endpoint utilizado: token endpoint.
+
+    \item A Carteira envia uma Solicitação de emissão de credencial para o \acs{IdP} com o Token de Acesso e (opcionalmente) a prova de posse da chave privada de um par de chaves ao qual ele deve vincular a Credencial emitida. Ao validar com sucesso o Token de Acesso e a prova, o provedor retorna uma credencial.
+    
+    \item A Carteira prepara as apresentações verificáveis à partir das credenciais verificáveis aos quais o usuário consentiu. Em seguida, envia ao Provedor de Serviços uma Resposta de Autorização onde as apresentações verificáveis estão contidas no parâmetro vp\_token
+    
+    Observação: As etapas (\ref{item:oidc4vc-item7}) e (\ref{item:oidc4vc-item8}) ocorrem no frontend, redirecionando o usuário por meio do seu navegador.
+    
+\end{enumerate}

@@ -1,0 +1,25 @@
+\begin{tikzpicture}[
+  >={Stealth[round]},
+  every node/.style={align=center},
+  IdP/.style={draw, rounded corners, fill=gray!30, minimum height=2em, minimum width=3cm},
+  usr/.style={draw, rounded corners, fill=gray!30, minimum height=2em, minimum width=4cm},
+  sp/.style={draw, rounded corners, fill=gray!30, minimum height=2em, minimum width=3cm},
+  registry/.style={draw, rounded corners, fill=gray!30, minimum height=3em, minimum width=5cm},
+  line/.style={-Stealth, thick, black},
+  node distance=2cm and 3cm, % Adjust node distance for spacing
+]
+
+    % Nodes
+    \node[IdP] (IdP) {\acs{IdP}\\(Website)};
+    \node[usr, right=of IdP] (usr) {Usuário\\(Carteira Digital)};
+    \node[sp, right=of usr] (sp) {\acs{SP}\\(Website)};
+    \node[registry, below=of usr, yshift=-1cm] (registry) {Registro de Dados Verificáveis}; % Adjusted position
+    
+    % Arrows
+    \draw[line] (IdP) -- node[above] {Emissão\\de\\\acs{VC}s} (usr);
+    \draw[line] (usr) -- node[above] {Submissão\\de\\\acs{VP}s} (sp);
+    \draw[line] (IdP) -- node[sloped, above] {Utiliza\\\acs{VC}s} (registry);
+    \draw[line] (usr) -- node[sloped, below] {Utiliza\\\acs{VC}s} (registry);
+    \draw[line] (sp) --  node[sloped, above]  {Verifica\\\acs{VP}s} (registry);
+    
+\end{tikzpicture}

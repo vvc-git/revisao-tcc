@@ -1,0 +1,11 @@
+% Tanto o verificador quanto o fiduciário usam essa função
+\input{code/pseudo.tex}
+\begin{lstlisting}[language=pseudo, caption={Relação de um verificador $R^v$: Função para construir definição de apresentação.}]
+function BUILD_PRESENTATION_DEFINITION($a$, $constraints$, $id$)
+    let $inputDescriptor$ :=  inputDescriptor($a$, $constraints$)
+    let $presentationDefinition$ := $\langle id, inputDescriptor\rangle$
+return $presentationDefinition$
+\end{lstlisting}
+
+% // Verifier chooses input\_objects that describes better their constrains
+% // Todos os Descritores de Objetos que podem ser utilizados pelo verificador

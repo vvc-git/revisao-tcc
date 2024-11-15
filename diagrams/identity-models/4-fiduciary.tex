@@ -1,0 +1,23 @@
+\begin{minipage}[b]{0.5\linewidth}
+    \centering
+    \begin{tikzpicture}[roundnode/.style={circle, draw=black, very thick, minimum size=20mm, align=center},]
+        % Nodes
+        \node[roundnode]      (idp)                            {IdP};
+        \node[roundnode]      (sp)     [below right=3cm and 1cm of idp]  {SP}; % Adjusted positioning
+        \node[roundnode]      (fid)    [below left=3cm and 1cm of idp]  {Fiduciário}; % Adjusted positioning
+        \node[roundnode]      (usr)    [left=of fid]  {usuário};
+        
+        % Lines
+        \draw[<->] (idp) -- (fid);
+        \draw[<->]  (fid) -- (sp);
+        \draw[->, dashed] (sp) edge[bend right=5, draw=none] coordinate[at start](sp-b) coordinate[at end](idp-b) (idp)
+                  edge[bend left=5, draw=none] coordinate[at start](sp-t) coordinate[at end](idp-t) (idp)
+              (sp-t) -- (idp-t);
+        \draw[<->] (fid) edge[bend right=-5, draw=none] coordinate[at start](fid-b) coordinate[at end](usr-b)(usr)
+              edge[bend left=-4, draw=none] coordinate[at start](fid-t) coordinate[at end](usr-t) (usr)
+             (fid-t) -- (usr-t);
+        \draw[<-, double, dashed] (usr) edge[bend right=5, draw=none] coordinate[at start](usr-b) coordinate[at end](fid-b) (fid)
+              edge[bend left=-10, draw=none] coordinate[at start](usr-t) coordinate[at end](fid-t) (fid)
+             (usr-t) -- (fid-t);
+    \end{tikzpicture}
+\end{minipage}

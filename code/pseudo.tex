@@ -1,0 +1,29 @@
+\definecolor{background}{HTML}{EEEEEE}
+\colorlet{numb}{magenta!60!black}
+\definecolor{fadedtext}{gray}{0.5}
+
+% Definir uma nova linguagem 'pseudo'
+\lstdefinelanguage{pseudo}{
+  keywords={function, if, else, then, such, that, let, stop, call, otherwise, possible, return}, % Especifica as palavras que devem ser destacadas como palavras-chave.
+  sensitive=true,      % Case sensitive
+  morecomment=[l]{//}, % Comentários de uma linha
+  frame=lines,
+}
+
+% Configurações específicas para 'pseudo'
+\lstset{
+    language=pseudo,
+    basicstyle={\tiny\fontfamily{phv}\selectfont},
+    keywordstyle=\bfseries\color{black}, % Estilo para palavras-chave
+    commentstyle=\color{gray}, % Estilo para comentários
+    stringstyle=\color{red}, % Estilo para strings
+    mathescape=true, % Permite o uso de notação matemática entre $...$ dentro do ambiente lstlisting.
+    backgroundcolor=\color{background},
+    numbers=left,                   % Números de linha à esquerda
+    numberstyle=\tiny\color{gray},  % Estilo dos números das linhas
+    stepnumber=1,                   % Numeração de cada linha (use 2, 3 etc. para numerar a cada 2, 3 linhas)
+    literate=
+    {:=}{{{\color{numb}{:=}}}}{2}
+    % breaklines=true,
+    % lineskip=17.99446pt,
+}

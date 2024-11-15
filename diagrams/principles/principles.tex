@@ -1,0 +1,19 @@
+\noindent
+\resizebox{\textwidth}{!}{
+    \begin{minipage}{\textwidth}
+        \centering
+        \begin{tikzpicture}[roundnode/.style={circle, draw=black, very thick, minimum size=20mm, align=center},]
+            % Nodes
+            \node[roundnode]      (consent)                            {Consent by Default};
+            \node[roundnode]      (privacy)     [below right=3cm and 1cm of consent]  {Data-privacy by Design}; % Adjusted positioning
+            \node[roundnode]      (audit)    [below left=3cm and 1cm of consent]  {Audit for User Freedom};
+            
+            % Lines
+            \draw[-] (consent) -- (audit);
+            \draw[-]  (audit) -- (privacy);
+            \draw[-] (privacy) edge[bend right=5, draw=none] coordinate[at start](privacy-b) coordinate[at end](consent-b) (consent)
+                      edge[bend left=5, draw=none] coordinate[at start](privacy-t) coordinate[at end](consent-t) (consent)
+                  (privacy-t) -- (consent-t);
+        \end{tikzpicture}
+    \end{minipage}
+}

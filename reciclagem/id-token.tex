@@ -1,0 +1,11 @@
+\sigla{OIDC}{Open ID Connect} é um protocolo de autenticação baseado na família de especificações OAuth 2.0. Ele permite que as aplicações autentiquem usuários e obtenham informações sobre eles \cite{openid}, proporcionando uma experiência de \acs{SSO}.
+
+\subsubsection{Papéis}\label{subsubsec:papeis-artefatos-oidc}
+
+Os mesmos papéis presentes no OAuth são mantidos: usuário, cliente, servidor de autorização e servidor de recurso. No entanto, no contexto do OpenID, o servidor de autorização é referido também como Servidor de Autorização.
+
+\subsubsection{Artefatos}\label{subsubsec:artefato-oidc}
+
+\textbf{id\_token}: Token emitido pelo Servidor de Autorização para identificar usuários para a aplicação. Ele é a principal diferença do OAuth e o OIDC: enquanto o primeiro, emite Tokens de Acesso, o segundo, emite id\_Tokens. É representado por \sigla{JWT}{JSON Web token}  que são estruturas JSON divididas em três partes: cabeçalho, corpo e assinatura. 
+
+\input{tables/openid-tokenid}

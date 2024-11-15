@@ -1,0 +1,201 @@
+\chapter{Um Novo Protocolo Para Identidade Fiduciária}\label{ch:protocol}
+
+O novo Protocolo para Identidade Fiduciária propõe uma modificação no protocolo \acs{OIDC4VP}, parte integrante do ecossistema \acs{OIDC4VC}, para adequá-lo ao Modelo Fiduciário. Através dessa adaptação, o protocolo modificado será capaz de capitalizar uma estrutura robusta, facilitando a construção de uma camada de apresentação de credenciais de maneira simplificada, segura e amigável para os desenvolvedores. Destaca-se também a capacidade de reutilizar a infraestrutura existente, além do fácil acesso a uma vasta gama de códigos e bibliotecas desenvolvidas com base na especificação central do OpenID, o que amplifica sua adoção e integração. Essas características tornam o protocolo não apenas uma solução técnica eficiente, mas também uma abordagem estratégica que potencializa a escalabilidade e a interoperabilidade dentro do ecossistema de identidades digitais.
+
+% % Pilha de protocolos 
+\input{images/tex/stack-model-protocol}
+
+Além disso, a nova especificação introduz duas extensões que se alinham com as estratégias delineadas em \autoref{subsection:fiduciário} para a preservação da privacidade dos usuários: a Negociação de Atributos e a Negociação do Ambiente de Execução. A primeira utiliza a estrutura de \acs{DA}s em conjunto com a definição de novas mensagens e endpoints, visando à redução do risco de uso indevido de dados, garantindo que somente as informações estritamente necessárias sejam compartilhadas. De maneira similar, a segunda extensão, também baseada em  endpoints e mensagens, possibilita que dados e informações sensíveis sejam preferencialmente processados em ambientes confiáveis para o usuário. Essas inovações visam não apenas cumprir os requisitos de segurança, mas também aprimorar a confiança do usuário no sistema, ao assegurar que sua privacidade seja rigorosamente protegida em todas as etapas do processo.
+
+Dessa forma, esta documentação busca detalhar as adaptações requeridas no \acs{OIDC4VP} para garantir sua conformidade com a pilha especificada na \autoref{fig:stack-model-protocol-extension}, onde os protocolos e extensões são integrados para satisfazer as propriedades e comportamentos preconizados pelo Modelo Fiduciário. Essas adaptações asseguram o alinhamento com os princípios de privacidade estabelecidos por regulamentações como a \sigla{LGPD}{Lei Geral de Proteção de Dados}, representando um avanço significativo na evolução das identidades digitais, promovendo uma solução que equilibra inovação tecnológica com os mais altos padrões de proteção de dados.
+
+\section{Transição: de Carteiras para Fiduciários}
+
+A transição do modelo original de \acs{SSI}, no qual o ecossistema \acs{OIDC4VC} foi originalmente proposto, para o Modelo Fiduciário, é um processo bastante natural. Sem a necessidade de modificações significativas, o \acs{SP} permanece como a entidade responsável por solicitar, receber e validar as \acs{VP}s. Durante o processo de apresentação de credenciais, o \acs{SP} continua a desempenhar o papel de Cliente OAuth em relação à Carteira.
+
+Conforme discutido anteriormente na \autoref{subsection:fiduciário}, o Fiduciário é capaz de exercer as mesmas funções e capacidades que a Carteira. Dessa forma, é responsabilidade do Fiduciário receber, armazenar, apresentar e gerenciar as \acs{VC}s e as chaves criptográficas associadas. Ademais, assim como não existe um único modelo de implementação para Carteiras, também não há uma única abordagem para a configuração de entidades Fiduciárias. Em outras palavras, as \acs{VC}s e as chaves podem ser armazenadas e gerenciadas localmente, por meio de um serviço remoto auto-hospedado — gerido e mantido pelo próprio usuário — ou ainda por meio de um serviço remoto operado por terceiros. Em última análise, o Fiduciário deve assumir os mesmos papéis que a Carteira desempenha no contexto da plataforma de serviços OAuth, particularmente na função de Servidor de Autorização.
+
+% Mudanças em oidc4vp
+\input{images/tex/oidc4vp-in-fid}
+
+\section{Uso de Provas de Conhecimento Zero}
+
+A utilização da especificação OIDC4VP no Modelo Fiduciário visa aproveitar a flexibilidade e a concepção agnóstica em relação ao formato das Credenciais Verificáveis utilizadas. Isso significa que sua adaptação ao modelo não exige diretamente o uso de Provas de Conhecimento Zero; ao contrário, proporciona um ambiente que permite a integração de \acs{VC}s que possuam essa capacidade. Como o \acs{OIDC4VP} não estabelece requisitos específicos para a implementação de \acs{ZKP}, cabe aos formatos de \acs{VC}s adotados determinar se oferecem suporte ou não para essa tecnologia. O uso dessa tecnologia é recomendado especialmente em contextos que exigem altos níveis de privacidade e segurança na verificação das credenciais, permitindo que apenas as informações estritamente necessárias sejam divulgadas.
+
+Portanto, o uso do \acs{OIDC4VP} no Modelo Fiduciário viabiliza a adoção de qualquer formato de \acs{VC}s que esteja alinhado com os princípios e objetivos do modelo, incluindo aqueles que suportam \acs{ZKP}. Essa abordagem proporciona maior flexibilidade e permite que o sistema se adapte a diferentes necessidades e preferências tecnológicas, ao mesmo tempo em que assegura um alto grau de interoperabilidade e segurança.
+
+\section{Negociação de Atributos}\label{section:attribute-negotiation}
+
+Quando um Fiduciário recebe uma Requisição de Autorização é bem provável que a Definição de Apresentação solicite informações do usuário as quais não estejam de acordo com as Políticas de Consentimento definidas previamente. Por exemplo, é comum que Provedores de Serviço realizem a solicitação da data de nascimento dos  usuários apenas para verificar sua maioridade. Este tipo de requisição é invasiva e pode estar contra os desejos do indivíduo. Dessa forma, a extensão \textbf{Negociação de Atributos} permite definir quais informações sobre os usuários são relevantes para a plataforma que está oferecendo serviços sem comprometer a privacidade e o sigilo dos dados do dono desses recursos.
+
+Esse mecanismo está centrado na estrutura de \acs{DA}s, que no modelo Fiduciário são chamados de \textbf{Declarações de Requisitos} (Requirements Statements). Neste texto, os termos \acs{DA}s e Declarações de Requisitos serão tratados como sinônimos.Com essa estrutura, os gerenciadores conseguem definir quais atributos requisitados não estão em conformidade com as Políticas de Consentimento e propor novos atributos que satisfaça as intenções. Para que isso seja possível, são definidos o endpoint Negociação (Negotiation Endpoint), a Solicitação de Negociação (Negotiation Request) e sua respectiva resposta, Resposta de Negociação (Negotiation Response). 
+
+\subsection{Endpoint de Negociação}\label{subsection:endpoint-negociação}
+
+Este endpoint é utilizado para negociar Declaração de Requisitos previamente encaminhada em casos os quais o Fiduciário identifica alguma divergência do que foi requisitado e o que é autorizado dentro das Políticas de Consentimento. A comunicação com o Endpoint de Neogicação deve utilizar TLS.
+
+\subsection{Solicitação de Negociação}\label{subsection:negotiation-request}
+
+A Solicitação de Negociação constitui uma requisição HTTP POST, devendo ser enviada com o tipo de mídia application/json. Os parâmetros utilizados na solicitação são os seguintes:
+
+% Requisição de Negociação
+\input{images/tex/negotiaton-request}
+
+\begin{itemize}
+
+    \item \textbf{type}: OBRIGATÓRIO. Este parâmetro pode ser utilizado na Solicitação de Negociação para especificar claramente o tipo de negociação que está sendo realizada. No contexto da Negociação de Atributos, deve-se utilizar o valor \textit{attribute}.
+
+    \item \textbf{definition\_id}: OPCIONAL. Trata-se de uma string que identifica uma Declaração de Requisitos previamente encaminhada ao Fiduciário. Após o acordo ser firmado entre o Fiduciário e o Provedor, o \acs{SP} deve invalidar o definition\_id. Este parâmetro se torna OBRIGATÓRIO quando o valor de type é \textit{attribute}.
+    
+    \item \textbf{presentation\_definition} OPCIONAL. Este parâmetro contém um objeto JSON de Declaração de Requisitos, conforme a sintaxe estabelecida na \cite{presentation-exchange}. Este parâmetro se torna OBRIGATÓRIO quando o valor de type é \textit{attribute}.
+    
+\end{itemize}
+
+\subsection{Resposta de Negociação}
+
+O Provedor de Serviços possui a prerrogativa de aceitar ou recusar a proposta de alteração da Declaração de Requisitos. Em determinados casos, o Fiduciário aceita a proposta que contém a nova Declaração de Requisitos e responde com uma mensagem HTTP POST com tipo de mídia application/json contendo em seu corpo o \acs{JSON} com o parâmetro status indicando a aceitação da sugestão de declaração e o código de status HTTP 201 sinalizando a criação de um novo recurso para conseguir receber a nova declaração, que é diferente daquele que ele enviou. 
+
+% % Resposta de Negocição bem sucedida
+\input{images/tex/negotiation-response-success}
+
+\begin{itemize}
+    
+   \item \textbf{status}: OBRIGATÓRIO. A semântica desse campo irá depender da negociação definida em type. Nesse contexto, indica se o \acs{SP} aceitou ou recusou a nova proposta para a Declaração de Requisitos. O código de status em formato ASCII selecionado entre as duas opções abaixo:
+
+    \begin{itemize}
+        \item \textbf{accepted}: Indica que a proposta para a nova Declaração de Requisitos foi aceita pelo \acs{SP}. Nesse caso, o processo de alteração da Declaração de Requisitos será iniciado, e o recurso associado pode ser atualizado ou criado conforme necessário.
+        
+        \item \textbf{refused}: Indica que a proposta para a nova Declaração de Requisitos foi recusada pelo \acs{SP}. Nesse caso, nenhuma alteração será realizada, e a Declaração de Requisitos permanecerá como está. O motivo da recusa pode ser detalhado em um campo adicional de erro.
+    \end{itemize}
+
+\end{itemize}
+
+Em outros casos, o Fiduciário pode rejeitar a proposta por não concordar com os novos atributos sugeridos. Nessas situações, a resposta HTTP deve utilizar o parâmetro status rejeitando a declaração e o código de status HTTP 400 (Bad Request) incluindo os seguintes parâmetros no corpo da resposta codificada em JSON.
+
+\subsubsection{Resposta de Recusa de Negociação}\label{subsubsection:response-negotiation-error}
+
+Se a Solicitação de Negociação não for aceita ou for considerada inválida, o SP deverá definir o campo de status como "refused" e incluir os campos "error" e "interval", conforme ilustrado abaixo.
+
+% % Resposta de Negocição com falha
+\input{images/tex/negotiation-response-refused}
+
+\begin{itemize}
+
+    \item \textbf{Error}: OBRIGATÓRIO. O parâmetro de erro deve conter um único código de erro em formato ASCII selecionado a partir da lista a seguir:
+
+    \begin{itemize}
+    
+        \item \textbf{negotiation\_request\_denied}: A semântica desse campo irá depender da negociação definida em type. Nesse contexto,indica que a Solicitação de Negociação com a nova Declaração de Requisitos não foi aceita pelo provedor de serviços.
+
+        \item \textbf{invalid\_negotiation\_request}: A Solicitação de Negociação está incompleta, com falta de um parâmetro obrigatório, inclui um parâmetro ou valor de parâmetro não suportado, repete o mesmo parâmetro ou está de outra forma malformada.
+
+        \item \textbf{unsupported\_definition}: A Declaração de Requisitos contida na Solicitação de Negociação contém um formato que não é reconhecido ou suportado pelo \acs{SP}. Esse erro acontece quando é utilizada uma versão desatualizada ou por não seguir a sintaxe e os padrões estabelecidos.
+
+        \item \textbf{expired\_definition\_id}: Esse erro indica que o definition\_id fornecido na Solicitação de Negociação já expirou. Isso ocorre quando a negociação associada a esse definition\_id já foi concluída e o identificador pode ser invalidado para impedir que novas solicitações sejam feitas com base em um estado anterior.
+        
+    \end{itemize}
+
+    \item \textbf{error\_description}: OPCIONAL. O parâmetro error\_description deve ser um texto ASCII legível por humanos, fornecendo informações adicionais para ajudar os implementadores do Fiduciário a entender o erro ocorrido. Ele pode incluir espaços, caracteres de pontuação e símbolos comuns, mas não pode incluir caracteres como o caractere aspas duplas ("), barra invertida (\textbackslash), ou qualquer caractere de controle esteja fora dos intervalos \%x20-21 / \%x23-5B / \%x5D-7E.
+
+    \item \textbf{interval}: OBRIGATÒRIO. A resposta de erro deve também conter o membro interval, que determina o tempo mínimo em segundos que o Fiduciário deve aguardar antes de enviar uma nova solicitação ao Endpoint de Negociação. Caso o membro interval não esteja presente, a Fiduciário deve utilizar 5 como valor padrão.
+    
+\end{itemize}
+
+
+Se o Fiduciário e o Provedor de Serviços não chegarem a um acordo sobre a Declaração de Requisitos, ambos continuarão a trocar mensagens até atingirem um limite estipulado por uma das partes. Assim, recomenda-se fortemente que o Provedor de Serviços adote práticas flexíveis, solicitando apenas as informações estritamente necessárias. Caso contrário, a ausência de um acordo pode resultar na perda de acesso ao serviço pelo usuário, o que pode afetar negativamente a percepção pública da marca, gerando comentários desfavoráveis e reclamações que podem se espalhar rapidamente.
+
+\subsection{Novo Parâmetro de Metadados do Provedor de Serviços (Metadados do Cliente)}
+
+De maneira similar ao token vp\_formats definido na Seção 9 de \acs{OIDC4VP} \cite{OIDC4VP2023}, esta especificação define os seguintes novos parâmetros de metadados de acordo com o \acs{OIDC Dynamic Client Registration} \cite{sakimura2023openidDiscovery}, a serem utilizados pelo Provedor de Serviços. Dessa forma, o Endpoint de Negociação pode ser adquirido tanto pelo mecanimso tradicional citado acima, quanto por meio client\_metadata encaminhado na Requisição de Autorização definada na Seção 5 \acs{OIDC4VP} \cite{OIDC4VP2023}.
+
+\begin{itemize}
+    \item \textbf{negotiation\_endpoint}: URL do Endpoint de Negociação do Provedor de Serviços, conforme definido na \autoref{subsection:endpoint-negociação}. Esta URL deve usar o esquema HTTPS e pode conter componentes de porta, caminho e parâmetros de consulta. Se omitido, o provedor não oferece suporte a esse endpoint e não está em conformidade com as propriedades do Modelo Fiduciário.
+\end{itemize}
+
+% Endpoint de Negocição
+\input{images/tex/negotiation-endpoint}
+% \input{images/tex/attribute-negotiation-flow}
+\input{images/tex/attribute-negotiation-flow-via-browser}
+
+
+\clearpage
+\section{Negociação do Ambiente de Execução}\label{section:env-negotiation}
+
+As arquiteturas tecnológicas vigentes, de modo geral, adotam a lógica de que a manipulação dos dados dos usuários deve ocorrer exclusivamente no lado do \acs{SP}, centralizando o processamento e o armazenamento das informações. No entanto, novas alternativas estão surgindo e possibilitam uma mudança nesse paradigma, como é o caso da proposta de execução dentro do Fiduciário, visto em \autoref{subsection:fiduciário}, e o uso de \acs{MPC}. Essas soluções permitem que o processamento de dados sensíveis seja realizado de forma descentralizada e segura, protegendo a privacidade do usuário ao restringir o acesso direto aos dados pelo provedor de serviços e permitindo que o processamento ocorra de maneira distribuída e controlada. 
+
+Nesse sentido, a especificação de \textbf{Negociação do Ambiente de Execução} viabiliza esses dois paradigmas dentro do Modelo Fiduciário, possibilitando que o beneficiário decida o local (Fiduciário ou \acs{SP}) e forma (tradicional ou \acs{MPC}) apropriada para o processamento de suas informações privadas. O objetivo dessa mudança é manter o paradigma atual em operação, enquanto abre espaço para a integração dessas novas abordagens em serviços compatíveis. Além disso, esse protocolo facilita a criação de outras documentações que possibilitem a concessão progressiva de informações do usuário, à medida que os \acs{SP} apresentem algoritmos mais transparentes e auditáveis. A especificação está centrada nas solicitações e endpoints mencionados na \autoref{subsection:negotiation-request} e irá possibilitar o usuário decidir em qual local é o melhor para que suas informações sejam processadas. 
+
+\subsection{Solicitação de Negociação}
+
+Essa extensão fará uso da Solicitação de Negociação descrita em \autoref{subsection:negotiation-request}. Nesse contexto, o valor atribuído a type será \textbf{env}. Consulte o exemplo apresentado na \autoref{fig:negotiation-request-env}.
+
+\input{images/tex/negotiation-request-env}
+
+\begin{itemize}
+
+    \item \textbf{computer\_site}: OBRIGATÓRIO. Indica o local ou formato em que o \acs{SP} realizará as manipulações de dados. O valor de computer\_site deve estar no formato ASCII, escolhido entre as três opções a seguir:
+
+    \begin{itemize}
+    
+        \item \textbf{sp}: Indica que a manipulação de dados do usuário será realizada em um ambiente de confiança gerido pelo Provedor de Serviços. Caso o Fiduciário não faça uma proposta, este é o mecanismo padrão utilizado pelo provedor.
+        
+        \item \textbf{fiduciary}: Indica que a manipulação de dados do usuário será realizada em um ambiente de confiança gerido pelo Fiduciário.
+        
+        \item \textbf{both}: Indica que a manipulação de dados do usuário será realizada de forma colaborativa em um ambiente de confiança gerido tanto pelo Fiduciário quanto pelo Provedor de Serviços. Quando essa opção for selecionada, é necessário especificar o parâmetro computer\_site\_description.
+   
+    \end{itemize}
+
+\end{itemize}
+
+
+\subsection{Resposta de Negociação}
+
+Essa extensão fará uso da Resposta de Negociação descrita em \autoref{subsection:negotiation-request}. Nesse contexto, o valor atribuído a status indica se o \acs{SP} aceitou ou recusou a nova proposta referente ao modo e local de execução. O código de status permanece no formato ASCII, selecionado entre as duas opções: accepted ou refused.
+
+\input{images/tex/negotiation-response-success}
+
+\subsubsection{Resposta de Sucesso para Computação Multi-Agente}
+
+Se a Solicitação de Negociação com o parâmetro computer\_site definido como both for verificada e considerada válida pelo \acs{SP}, ele deverá incluir o campo \textbf{computer\_site\_description} em sua Resposta de Negociação, conforme ilustrado abaixo.
+
+\input{images/tex/negotiation-response-env-with-description}
+
+\begin{itemize}
+    \item \textbf{computer\_site\_description}: Esse parâmetro é um \acs{JSON} que deve ser especificado de acordo com os requisitos estabelecidos pelo \acs{SP} para disponibilizar a computação Multi-Agente. A responsabilidade pela definição do formato deste \acs{JSON} recai sobre os implementadores, que deverão garantir que ele atenda aos critérios e necessidades específicas do \acs{SP}.
+\end{itemize}
+
+\subsubsection{Resposta de Recusa para Execução em outros Ambientes}
+
+Se a Solicitação de Negociação não for aceita ou for considerada inválida, o \acs{SP} deverá reutilizar todos os campos estabelecidos \autoref{subsubsection:response-negotiation-error}, além dos códigos de erro descritos a seguir:
+
+\begin{itemize}
+    \item \textbf{negotiation\_request\_denied}:  A interpretação deste campo dependerá do tipo de negociação especificado em type. Neste contexto, ele indica que a Solicitação de Negociação referente ao novo local de execução não foi aceita pelo Provedor de Serviços.
+
+    \item \textbf{not\_supported}: Este parâmetro indica que o Provedor de Serviços carece de mecanismos necessários para realizar uma computação do tipo \acs{MPC}.
+    
+\end{itemize}
+
+\input{images/tex/negotiation-response-env-refused}
+\input{images/tex/env-negotiation-flow}
+
+\section{Análise Formal de Segurança}\label{section:formal-security-analysis}
+
+Esta seção apresenta a prova formal de segurança para os módulos de negociação apresentados acima. Ela utiliza o modelo formal do protocolo \acs{OIDC4VP}, apresentado na \autoref{subsection:formal-definition-using-win}, para demonstrar que as propriedades de segurança definidas a seguir na \autoref{subsection:security-properties} não podem ser comprometidas por um atacante. Essa prova oferece garantias de segurança para as novas extensões dentro protocolo \acs{OIDC4VP}. Neste capítulo, as ideias principais das provas formais são explicadas de maneira resumida e organizadas em uma estrutura em árvore. A versão completa e detalhada das prova de segurança pode ser encontrada no Apêndice \ref{appendice:formal-analysis}.
+
+
+\subsection{Propriedade de Segurança: Autenticação da Negociação}\label{subsection:security-properties}
+
+Em alto nível, a propriedade de Autenticação da Negociação é dizer que um atacante não pode negociar com um verificador se passando por um Fiduciário legítimo. O atacante quebra essa propriedade quando consegue utilizar o definition\_id associado a um ID de Sessão. 
+
+\subsection{Prova da Autenticação da Negociação}
+
+a segurança de uma definição de apresentação ($pd$) em um sistema de autenticação, mostrando que informações sensíveis são protegidas contra vazamentos para terceiros não autorizados, inclusive potenciais atacantes. A análise foca em como as comunicações entre o navegador, o verificador e o fiduciário são protegidas. Utilizando conexões HTTPS, esses dados são criptografados e acessíveis apenas para as partes legítimas, conforme demonstrado pelo Lema 1 de \citeonline{fett2024wim}.
+
+O sistema garante que somente scripts confiáveis das origens autorizadas podem acessar $pd$, e esses scripts não manipulam ou divulgam a informação. Além disso, o fiduciário valida $pd$ de acordo com suas restrições de segurança antes de criar qualquer nova definição de apresentação, protegendo a integridade dos dados ao longo do processo de autenticação. Assim, a prova conclui que $pd$ permanece seguro e inacessível para qualquer agente malicioso, assegurando que apenas o Fiduciário honesto pode negociar Definições de Apresentações.
+
+\clearpage
+\section{Limitações e esforço para mudança}\label{section:limitacoes-esforco}
+
+A transição de um paradigma para outro fator que é sempre difícil de mensurar. Embora as facilidades oferecidas pelo modelo \acs{OIDC4VP} ajudem e agilizem esse processo, ainda é um desafio convencer todos os interessados de que essa mudança é benéfica não apenas do ponto de vista do usuário. Frequentemente, é do interesse extremo dos \acs{SP} manter toda a manipulação dos dados dos usuários sob uma infraestrutura de sua confiança. Isso torna mais conveniente para eles não oferecer o serviço a determinados usuários do que abdicar do controle que possuem atualmente sobre os dados.
+
+Em resumo, apesar dos benefícios claros do novo protocolo, como maior segurança e usabilidade, a transição exige esforços consideráveis em termos de mudanças técnicas, culturais e operacionais. Para uma adoção bem-sucedida, é crucial que os benefícios a longo prazo sejam claramente comunicados e que haja um suporte contínuo para superar as barreiras iniciais de implementação.

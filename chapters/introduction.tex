@@ -1,0 +1,47 @@
+\chapter{Introdução}\label{ch:intro}
+
+A identificação de pessoas no ambiente digital é um processo essencial para plataformas online, desempenhando um papel crucial tanto na segurança quanto na personalização das interações dos usuários. Conforme o número de serviços digitais e transações online cresce exponencialmente, garantir que os indivíduos sejam corretamente identificados e autenticados tornou-se uma prioridade para empresas e governos. Esse processo não só assegura que o acesso aos sistemas seja restrito a usuários autorizados, protegendo dados sensíveis e prevenindo fraudes, mas também possibilita a entrega de experiências personalizadas, adaptadas às necessidades e preferências de cada usuário, tornando a interação mais fluida e satisfatória.
+
+Ao longo dos anos, diferentes modelos de identidade – representações abstratas que descrevem formas de gerenciar as identidades dos usuários em sistemas computacionais \cite{ELJAOUHARI2017389} – foram propostos e desenvolvidos para atender às crescentes demandas por segurança, privacidade, escalabilidade e usabilidade no ambiente digital. Entre esses modelos, o Modelo Terceirizado destaca-se como o mais amplamente adotado atualmente. Esse modelo é caracterizado pela intermediação de grandes empresas que funcionam como elos entre o usuário e o Provedor de Serviços, do inglês \sigla{SP}{Service Provider}, encarregado de fornecer o serviço desejado. Empresas como Google e Facebook atuam como Provedores de Identidade, do inglês \sigla{IdP}{Identity Provider}, simplificando o processo de autenticação e aumentando a usabilidade ao permitir que os usuários utilizem as mesmas credenciais em múltiplos serviços. Esse processo é viabilizado pelo uso de tokens, que são dados digitais gerados para representar a identidade de um usuário. Em vez de transmitir diretamente as credenciais, os \acs{IdP} emitem tokens que podem ser validados pelos Provedores de Serviços, garantindo que a identidade do usuário seja confirmada de forma segura e eficiente.
+
+No entanto, essa conveniência envolve a transferência do armazenamento e gerenciamento de identidades virtuais para corporações, o que levanta preocupações quanto à privacidade e ao controle de grandes volumes de dados sensíveis por essas entidades. Para superar essas limitações, novos paradigmas estão sendo explorados, como o da Identidade Auto-Soberana, conhecida como \sigla{SSI}{Self-Sovereign Identity}, que busca oferecer aos próprios titulares um controle mais direto sobre seus dados \cite{dock2024ssi}. Em vez de confiar em uma entidade terceira para armazenar suas informações, essa abordagem permite que os dados sejam mantidos de forma segura em dispositivos pessoais, como smartphones, utilizando tecnologias de criptografia e blockchain para assegurar sua integridade e autenticidade. Assim, o \acs{SSI} inevitavelmente transfere a responsabilidade de gerenciar dados pessoais do \acs{IdP} para o próprio usuário, o que pode gerar frustração em usuários com pouca familiaridade tecnológica.
+
+Em resposta às limitações do modelo Terceirizado — que apresenta desafios quanto ao controle e à privacidade das informações — e do modelo de \acs{SSI}, que transfere ao usuário a responsabilidade de gerenciar seus próprios dados, surge o modelo de identidade Fiduciário. Um novo padrão de gestão de identidades que introduz uma entidade de confiança, denominada Fiduciário \cite{fiduciary}, que atua de forma transparente para garantir a autenticação e a autorização nas infraestruturas web desejadas pelo usuário, aliviando-o da tarefa de administrar seus dados pessoais.
+
+Para que o modelo Fiduciário funcione de maneira eficaz e segura, torna-se essencial a criação de um protocolo de comunicação que estabeleça normas claras para a interação entre o Fiduciário, os Provedores de Serviço e os usuários. Esse protocolo precisa definir como as informações de identidade devem ser trocadas de forma segura e garantir que os dados pessoais mantidos pelo Fiduciário estejam acessíveis somente aos serviços autorizados pelo usuário. A ausência de tal protocolo poderia gerar inconsistências e vulnerabilidades, comprometendo a privacidade e a confiabilidade do modelo.
+
+Dentro desse escopo, o objetivo desta monografia é desenvolver um esquema que descreva de forma detalhada a comunicação entre o Fiduciário e o \acs{SP}, buscando alcançar um equilíbrio eficaz entre usabilidade e segurança. A pesquisa visa aprofundar o nível de detalhamento necessário para uma possível implementação prática, explorando as diferentes possibilidades de comunicação entre essas entidades sem comprometer a privacidade dos usuário.
+
+\section{Objetivos Gerais}\label{section:objetivos-gerais}
+Desenvolver um protocolo que permita aos representantes legítimos dos usuários, denominados Fiduciários, autenticá-los junto aos Provedores de Serviços dentro dessa nova infraestrutura de identidade eletrônica.
+
+
+\section{Objetivos Específicos}\label{section:objetivos-especificos}
+
+\begin{enumerate}[label=\textbf{\roman*.}]
+
+    \item Propor um mecanismo para a transferência de Credenciais Verificáveis por meio de Apresentações Verificáveis.
+    
+    \item Estabelecer mecanismos eficazes para assegurar a implementação do princípio de Minimização de Dados dentro do contexto de um Modelo Fiduciário.
+
+    \item Realizar uma análise formal de segurança e propor melhorias para o protocolo.
+
+\end{enumerate}
+
+\section{Método de Pesquisa}\label{section:metodologia}
+
+Este estudo utilizará uma abordagem metodológica qualitativa, descritiva e explicativa para a criação de uma interface de comunicação baseada nas propriedades do modelo Fiduciário. A pesquisa será conduzida por meio de uma abordagem qualitativa, caracterizada pela coleta e análise de dados descritivos, permitindo uma compreensão aprofundada do tema estudado. Para tanto, serão revisados modelos existentes de gerenciamento de identidades no ambiente digital, bem como protocolos que possibilitem a implementação efetiva dessa gestão.
+
+A metodologia descritiva tem como objetivo detalhar as características e processos envolvidos na proposta de um protocolo que aumente a privacidade dos usuários sem comprometer sua experiência no ambiente digital. Nesse contexto, essa metodologia será empregada para descrever minuciosamente o funcionamento do protocolo, suas principais características, as regras que o governam, os tipos de dados que ele pode transmitir, entre outros aspectos relevantes.
+
+Por fim, o estudo buscará aprimorar a técnica desenvolvida por meio de uma abordagem explicativa, realizando uma análise formal de segurança, essencial para demonstrar que o protocolo é seguro em relação à definição de segurança sob determinadas suposições e decisões de modelagem. Uma vez comprovadas como verdadeiras, essas propriedades permanecem válidas, diferentemente dos testes tradicionais, que cobrem apenas cenários específicos. Esse aprimoramento permitirá que o protocolo seja implementado em sistemas de Gerenciamento de Identidades e Acessos em larga escala, popularmente conhecidos como \sigla{IAM}{Identity and Access Management}.
+
+\section{Motivação e Justificativa}\label{section:motivacao-justificativa}
+
+A segurança da informação tornou-se uma preocupação na era digital, à medida que indivíduos enfrentam ameaças cada vez mais sofisticadas. Tornou-se necessário a criação de mecanismos que mitiguem seus efeitos, visando fortalecer a resiliência do usuário a ameaças digitais emergentes. Escândalos de vazamentos de dados pessoais se tornaram cada vez mais comuns,o escândalo do Facebook e Cambridge Analytica \cite{g1_facebook_2018} envolvendo a coleta e uso inadequado de dados pessoais de milhões de usuários do Facebook sem o seu consentimento explícito, foi um grande marco nesse sentido. No Brasil a proteção da privacidade é princípio constitucional previsto pelos incisos X, XI e XII, do artigo 5º, da Constituição Federal de 1988 (1). Assim como afirma Maria Eugênia Finkelstein e Claudio Finkelstein \cite{finkelstein_privacidade_2019}: 
+
+\begin{citacao}
+    "Cada  vez  que  o  usuário  trafega  na  Rede,  para  que  possa usufruir de seus benefícios, deverá preencher formulários virtuais, nos quais informa seus dados pessoais,  seus  hábitos  de  consumo  e,  às  vezes,  seus  dados  patrimoniais  e  preferências.  Dessa forma,  os sites que  se  dedicam  ao  comércio  eletrônico  organizam  verdadeiros  bancos  de  dados acerca  de  seus  usuários,  cuja  utilização  encontra-se  numa  zona  cinzenta,  uma  vez  que  nem  o usuário nem o Poder Público sabem exatamente a forma da utilização destas informações."
+\end{citacao}.
+
+Para contribuir com o avanço da pesquisa no campo de \acs{IAM}, o modelo Fiduciário — um paradigma inovador em identidade eletrônica — requer o desenvolvimento de um protocolo que, além de alcançar seus objetivos como modelo, ofereça uma base formal de segurança confiável.

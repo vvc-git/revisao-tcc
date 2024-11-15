@@ -1,0 +1,199 @@
+\newpage
+\subsection{IMPLEMENTAÇÃO}
+
+Para a elaboração deste protocolo, uma das fases cruciais de desenvolvimento consistiu na implementação de uma prova de conceito. O objetivo era compreender como as provas de 
+conhecimento zero funcionam de uma forma bem alto-nível para que pudessem ser adaptadas ao novo modelo proposto. Essa implementação tem como propósito fornecer um exemplo ilustrativo que destaque os aspectos importantes a serem considerados dentro do protocolo.
+
+
+\subsubsection{Descrição}
+
+Considere uma situação fictícia em que um usuário deseja adquirir uma bebida alcoólica sem compartilhar seus dados pessoais, como nome, idade e informações familiares, com o site onde está realizando a transação. Nesse cenário, o usuário só precisa demonstrar que possui a idade legal para consumir álcool, apresentando uma identificação apropriada. Para proteger a privacidade dos dados, o agente fiduciário entra em ação, criando uma prova de conhecimento zero. Essa prova é enviada junto com uma assinatura digital do hash da identificação para o provedor de serviços. Dessa forma, o usuário confirma sua idade sem expor informações sensíveis ao site.
+
+\subsubsection{Organização}
+
+A estrutura do projeto está organizada da seguinte maneira: dentro da pasta \textbf{\textit{circuit/}}, são encontrados o circuito, o módulo JavaScript responsável por gerar o arquivo \textit{witness.json} e todas as chaves necessárias para a configuração confiável, incluindo a chave final usada para gerar as provas de conhecimento zero. Na pasta \textbf{\textit{issuer/}}, há um programa JavaScript dedicado à assinatura digital do hash da credencial. Os arquivos destinados ao encaminhamento na rede do fiduciário para o verificador são armazenados na pasta \textbf{\textit{network/}}. A pasta \textbf{\textit{prover/}} contém o script com o comando para a geração da prova, enquanto em \textbf{\textit{verifier/}} está o script com o comando para verificar a prova e validar a assinatura. Essa organização pode ser visualizada em [\ref{fig:organização}]
+
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{.2\textwidth}
+            \dirtree{%
+            .1 / .
+            .1 circuit/.
+            .1 issuer/.
+            .1 network/.
+            .1 prover/.
+            .1 verifier/.
+            }
+    \end{minipage}
+    \caption{Estrutura do Projeto}
+    \label{fig:organização}
+\end{figure}
+
+
+\subsubsection{Fluxo de execução}
+
+A geração de provas é um processo que pode ser decomposto em duas fases fundamentais. A primeira fase, denominada pré-prova, constitui o estágio inicial e essencial do processo. Durante esta etapa, ocorrem duas operações: a compilação do circuito e a criação da assinatura digital sobre o hash da credencial feita pelo emissor. A compilação do circuito é um procedimento técnico no qual são reunidos e organizados os elementos necessários para a geração da prova. Simultaneamente, a assinatura digital sobre o hash da credencial é realizada pelo provedor de identidade. Esta ação implica na autenticação da credencial em questão, conferindo-lhe uma validação digital que será crucial para a etapa subsequente do processo de geração de provas.
+
+A segunda fase, conhecida como fase de geração de prova propriamente dita, é onde o cerne do processo se desenrola. Neste estágio, o fiduciário (provador) assume o papel central, criando a prova de posse legítima das credenciais do usuário. Além disso, o provador deve assegurar que a idade do usuário seja superior a 18 anos, conforme requisitado. Para tanto, o provador compila uma mensagem que encapsula os dados relevantes, incluindo a assinatura digital gerada na fase pré-prova pelo emissor. Esta mensagem é elaborada para refletir de forma precisa os requisitos e as condições estabelecidas para provar para os provedor serviços (verificador) de que o usuário é apto para comprar o produto.
+
+\input{diagrams/concept-proof-zkp/pre-proof}
+
+Na pasta\textbf{\textit{ circuit/}} está localizado o circuito escrito em Circom, uma linguagem de programação utilizada para escrever circuitos em zk-SNARKs. Este circuito denominado de \textit{ageProof.circom} tem a finalidade comprovar que o usuário é maior de idade, conforme evidenciado em [\ref{ageProof-age-label}] e de verificar se o fiduciário possui conhecimento da pré-imagem do hash da credencial do usuário que está representando, como pode ser observado em [\ref{ageProof-hash-label}].Além disso, também se encontra nessa pasta o arquivo \textit{input.json} [\ref{input-label}], que contém as entradas para os sinais do circuito. 
+
+\begin{lstlisting}[language=code, caption=Verificação de idade em arquivo \textit{ageProof.circom}, label=ageProof-age-label]
+// Check if age is below the limit
+component lte = LessThan(252);
+lte.in[0] <== age;
+lte.in[1] <== ageThreshold;
+oldEnough <== lte.out; 
+\end{lstlisting}
+
+\begin{lstlisting}[language=code, caption=Verificação de hash em arquivo \textit{ageProof}.circom, label=ageProof-hash-label]
+// Check if the hash is valid
+component poseidon = Poseidon(8);
+poseidon.inputs[0] <== id;
+poseidon.inputs[1] <== issueDate;
+poseidon.inputs[2] <== name;
+poseidon.inputs[3] <== doBTimestamp;
+poseidon.inputs[4] <== fatherName;
+poseidon.inputs[5] <== motherName;
+poseidon.inputs[6] <== placeOfBirth;
+poseidon.inputs[7] <== sourceOfId;
+
+// Compare the hash produced by Poseidon component with the one asserted on input file
+hash === poseidon.out;
+\end{lstlisting}
+
+
+\begin{lstlisting}[language=code, caption=Arquivo input.json, label=input-label]
+{
+  "ageThreshold": "568080000",
+  "currentTimestamp": "1711568127",
+  "id": "123456789",
+  "issueDate": "1711681200",
+  "name": "741111041103268111101",
+  "doBTimestamp": "631159200",
+  "fatherName": "7710599104971011083268111101",
+  "motherName": "741011101101051021011143268111101",
+  "placeOfBirth": "7810111932891111141073267105116121",
+  "sourceOfId": "8097115115112111114116",
+  "hash": "19169662317894990683399855851481243806129670253992335137523572227625886599311"
+}
+\end{lstlisting}
+
+Com esses parâmetros, o circuito executa duas funções fundamentais: em primeiro lugar, verifica a validade da idade do usuário, ou seja, se a diferença entre a idade do usuário e o tempo atual (ambos em segundos) é superior a 18 anos. Em segundo lugar, verifica se o hash previamente calculado é equivalente ao hash que será gerado internamente pelo circuito. Após a compilação bem-sucedida do circuito usando o comando apresentado em [\ref{command:compile-circom}], podemos concluir que as entradas fornecidas correspondem às verificações realizadas foram satisfeitas.
+
+
+\begin{lstlisting}[style=shell, caption={Comando de compilação do circuito}, label=command:compile-circom]
+#!/bin/bash
+circom ageproof.circom --r1cs --wasm --sym
+\end{lstlisting}
+
+A próxima etapa envolve a produção de um arquivo denominado \textit{witness.json}, que compreende as entradas, os sinais intermediários e as saídas. Ao utilizar a flag --wasm conforme demonstrado em [\ref{command:compile-circom}], será gerada a pasta \textbf{\textit{ageproof\_js/}}, mostrada em [\ref{fig:organização-ageproof}] contendo módulos em JavaScript destinados a simplificar a geração de testemunhas. Por meio do comando [\ref{command:witness}], as entradas (\textit{input.json}) serão empregadas para criar o arquivo \textit{witness.json} como resultado.
+
+\begin{lstlisting}[style=shell, caption={Comando de geração witness.wtns}, label=command:witness]
+#!/bin/bash
+node ${file}_js/generate_witness.js ${file}_js/${file}.wasm input.json ${file}_js/witness.wtns
+\end{lstlisting}
+
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{.2\textwidth}
+            \dirtree{%
+            .1 / .
+            .1 circuit/.
+            .2 ageproof\_js/.
+            }
+    \end{minipage}
+    \caption{Pasta ageproof\_js}
+    \label{fig:organização-ageproof}
+\end{figure}
+
+Logo em seguida, é necessário gerar uma configuração confiável (trusted setup). No caso do snarkjs, que utiliza o Groth16, essa etapa é dividida em duas partes: Powers of tau, que é independente do circuito, e a fase 2, que depende do circuito. Todos os comandos necessários estão listados abaixo:
+
+\begin{lstlisting}[style=shell, caption={Comando para configuração confiável}, label=command-trusted-setup]
+echo -e "\e[34m => Setup\e[0m"
+snarkjs groth16 setup ${file}.r1cs ${ptau} zkey/${file}_0000.zkey
+
+echo -e "\e[34m => Contribute to the phase 2 ceremony\e[0m"
+snarkjs zkey contribute zkey/${file}_0000.zkey zkey/${file}_0001.zkey --name="1st Contributor Name" -v
+
+echo -e "\e[34m => Provide a second contribution\e[0m"
+snarkjs zkey contribute zkey/${file}_0001.zkey zkey/${file}_0002.zkey --name="Second contribution Name" -v -e="Another random entropy"
+
+# echo -e "\e[34m => Verify the latest zkey\e[0m"
+# snarkjs zkey verify ${file}.r1cs ${ptau} ${file}_0002.zkey
+
+echo -e "\e[34m => Apply a random beacon\e[0m"
+snarkjs zkey beacon zkey/${file}_0002.zkey zkey/${file}_final.zkey 0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f 10 -n="Final Beacon phase2"
+
+echo -e "\e[34m => Verify the latest zkey\e[0m"
+snarkjs zkey verify ${file}.r1cs ${ptau} zkey/${file}_final.zkey
+
+echo -e "\e[34m => Witness in json\e[0m"
+snarkjs wtns export json ${file}_js/witness.wtns witness.json
+\end{lstlisting}
+
+Para concluir a etapa de pré-prova, é necessário apenas executar o código sign.js. Este código extrai todos os campos da credencial, calcula o hash desses campos utilizando o algoritmo Poseidon, uma função de hash criptográfica amplamente utilizada em muitos protocolos de  zero conhecimento. Em seguida, realiza a assinatura digital, que  é então armazenada no diretório \textit{/network} [\ref{fig:network-folder}].
+
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{.2\textwidth}
+            \dirtree{%
+            .1 / .
+            .1 network/.
+            .2 signature.txt.
+            }
+    \end{minipage}
+    \caption{Pasta \textit{network/}}
+    \label{fig:network-folder}
+\end{figure}
+
+
+Na etapa final do processo, o Fiduciário (provador) precisa gerar a prova de zero-conhecimento. Para fazer isso, o comando de geração de prova [\ref{command:prove}] recebe como parâmetros o arquivo da testemunha, \textit{witness.json}, e a chave final gerada pelo processo.
+
+\begin{lstlisting}[style=shell, caption={Comando de compilação do circuito}, label=command:prove]
+#!/bin/bash
+sudo snarkjs groth16 prove ${zkey} ../circuit/${file}_js/witness.wtns ../network/proof.json ../network/public.json
+\end{lstlisting}
+
+Esse comando produzirá o artefato \textit{public.json}, um arquivo que contém os valores das entradas e saídas públicas, incluindo o hash da credencial, o limite de idade e o carimbo de tempo atual. Além disso, o arquivo \textit{prova.json} também será gerado. Ambos os arquivos serão enviados à rede, juntamente com a assinatura feita pelo issuer anteriormente [\ref{fig:network-folder}].
+
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{.2\textwidth}
+\dirtree{%
+        .1 / .
+        .1 network/.
+        .2 signature.txt.
+        .2 proof.json.
+        .2 public.json.
+        }
+    \end{minipage}
+    \caption{Pasta final \textit{network/}}
+    \label{fig:network-folder}
+\end{figure}
+
+O processo de verificação da prova é realizado utilizando o comando [\ref{command-verify}]. Esse comando requer dois parâmetros como entrada: o arquivo \textit{public.json}, que contém as informações das entradas e saídas públicas, e o arquivo \textit{proof.json}, que contém a própria prova gerada. Além desses arquivos, a chave de verificação também é necessária para conduzir a verificação corretamente. Essa chave de verificação é obtida previamente através do comando [\ref{command:export-verification-key}], o qual extrai a chave específica utilizada para verificar a autenticidade da prova. 
+
+\begin{lstlisting}[style=shell, caption={Comando para exportar a chave de verificação}, label=command:export-verification-key]
+#!/bin/bash
+snarkjs zkey export verificationkey ${zkey} verification_key.json
+\end{lstlisting}
+
+ 
+\begin{lstlisting}[style=shell, caption={Comando para verificar a prova}, label=command-verify]
+#!/bin/bash
+snarkjs groth16 verify verification_key.json ../network/public.json ../network/proof.json
+\end{lstlisting}
+
+Se a prova de conhecimento zero for válida, em seguida é realizada a verificação da assinatura digital. Nessa verificação, em vez de calcular o hash da credencial, é utilizado o hash fornecido como entrada para o circuito, conforme especificado no arquivo \textit{public.json} [\ref{public-label}]. Dessa forma, se a assinatura for válida, o verificador tem a garantia de que a credencial usada para calcular a prova de zero conhecimento é a mesma utilizada pelo emissor para gerar a assinatura.
+
+\begin{lstlisting}[language=code, caption=Arquivo public.json, label=public-label]
+{
+ "0",
+ "19169662317894990683399855851481243806129670253992335137523572227625886599311",
+ "568080000",
+ "1711588627"
+}
+\end{lstlisting}

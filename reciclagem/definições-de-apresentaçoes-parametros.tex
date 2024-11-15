@@ -1,0 +1,50 @@
+\subsubsection{DEFINIÇÕES DE APRESENTAÇÕES}
+
+Definições de Apresentação são objetos que articulam quais provas um Provedor de Serviços requer. Estas ajudam o Provedor de Serviços a decidir como ou se interagir com um Fiduciário através de entradas, que descrevem as formas e detalhes das provas que elas exigem, e conjuntos opcionais de regras de seleção, para permitir flexibilidade aos Fiduciários em casos onde diferentes tipos de provas possam satisfazer um requisito de entrada. A Definicação de Apresentação contém dois parâmetros principais:
+
+\begin{itemize}
+
+    \item \textbf{id}: A Definição de Apresentação precisa ter uma identificação. Essa identificação
+    deve ser uma sequência de letras e números que seja única para o que está sendo feito . Por exemplo, poderia ser um código como "32f54163-7166-48f1-93d8-ff217bdb0653" que é único em todo o mundo, ou algo mais simples como "minha\_definicao" que seja único apenas dentro de um contexto.
+
+    \item \textbf{input\_descriptors}: É uma lista de informações sobre o que está sendo requisitado. Essas informações são como instruções sobre o que precisamos para a apresentação. Por exemplo, se precisamos do nome e da idade de alguém, essas instruções nos diriam isso.
+
+\end{itemize}
+
+\textbf{\textcolor{red}{COLOCAR UM EXEMPLO DE APRESENTAÇÂO AQUI}}
+
+\subsubsection{ENVIO DE DEFINÇÔES DE APRESENTAÇÔES}
+
+As Definições de Apresentações são enviadas em solicitação HTTP GET para o endpoint\textit{ /authorize} do servidor de autorização. Esta solicitação está tentando iniciar um fluxo de autorização para obter um token de apresentação verificável (VP token).
+
+\begin{figure}[h]
+
+    {\couriernew
+    POST /authorize? HTTP/1.1\\
+    Host: example.com \\
+    Content-Type: application/x-www-form-urlencoded\\\\
+    response\_type=vp\_token\\
+    \&client\_id=https\%3A\%2F\%2Fclient.example.org\%2Fcb \\
+    \&redirect\_uri=https\%3A\%2F\%2Fclient.example.org\%2Fcb \\
+    \&presentation\_definition=... \\
+    \&nonce=n-0S6\_WzA2Mj HTTP/1.1 \\
+    }
+    
+  \caption{Requisição de Autorização no OIDC4VC}
+  \label{fig:auth-req-oidc4vc}
+\end{figure}
+
+
+\begin{itemize}
+
+    \item \textbf{response\_type}: Indica o tipo de resposta que o Provedor de Serviços espera do servidor de autorização. O \textit{vp\_token} conterá as apresentações verificáveis que atendem à definição de apresentação solicitada.
+
+    \item \textbf{client\_id}: Identifica o cliente que está fazendo a solicitação.\textit{client\_id} é a \textit{URL} do cliente registrado no servidor de autorização. No exemplo, o valor codificado em \textit{URL} "https\%3A\%2F\%2Fclient.example.org\%2Fcb" corresponde a "https://client.example.org/cb".
+
+    \item \textbf{redirect\_uri}: Especifica a \textit{URL} de redirecionamento para onde o servidor de autorização deve enviar a resposta depois de processar a solicitação de autorização \textit{redirect\_uri} deve corresponder a um dos \textit{URL} registrados para o cliente no servidor de autorização. 
+    
+    \item \textbf{presentation\_definition}: Contém a definição de apresentação que especifica os requisitos das credenciais\ verificáveis que o Provedor de Serviços está solicitando. O conteúdo específico desse parâmetro é geralmente uma estrutura JSON codificada que define essas regras.
+
+    \item \textbf{nonce}: Valor único que é utilizado para mitigar ataques de repetição e garantir que a solicitação de autorização seja única. Ele ajuda a garantir que a resposta seja vinculada à solicitação original e não seja reutilizada maliciosamente.
+
+\end{itemize}

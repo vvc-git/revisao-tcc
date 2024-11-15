@@ -1,0 +1,135 @@
+\chapter{Análise Formal de Segurança}\label{appendice:formal-analysis}
+
+\section{Sistema de Credenciais Verificáveis na Web}
+Os seguintes algoritmos modelam a extensão com Negociações para o modelo OpenID com Credenciais Verificáveis. O modelo é baseado na análise formal do OAuth 2.0 e o OpenID Connect da dissertação \citeonline{FettKS14} e OpenID Connect para Credenciais Verificáveis de \citeonline{hauck2023openid}. 
+
+\subsection{Visão Geral}
+Esse protocolo é modelado em um sistema de credenciais verificáveis na web $ \mathcal{VCWS}^n = (\mathcal{W}, \mathcal{S}, \text{script}, E^0) $.
+O sistema $\mathcal{W} = \text{Hon} \; \cup \; \text{Net}$ modela um processo de ataque na rede $\text{Net}$. A estrutura $\text{Hon} = \text{Issuers} \; \cup \; \text{Fiduciary} \; \cup \; \text{Verifiers} \; \cup \; \text{B}$ inclui um conjunto finito de entidades definidas como: emissores ($\text{Issuers}$), fiduciários ($\text{Fiduciary}$), verificadores ($\text{Verifiers}$) e navegadores ($\text{B}$).
+Os processos são descritos em mais detalhes nas seções seguintes. Servidores DNS não foram modelados, conforme indicado em \cite{hauck2023openid}. O conjunto de scripts $\mathcal{S}$ e o mapeamento $\text{script}$ permaneceram inalterados e são equivalentes aos apresentados em \cite[Seções A.1]{hauck2023openid}. Da mesma forma, o conjunto $E^0$ permaneceu inalterado e é equivalente à Definição 42 de \cite{FettKS14}.
+A seguir, apresentam-se as definições dos conjuntos que devem ser incorporadas ao modelo:
+
+\begin{itemize}
+  % ---- Baseado na definição de domínio -----%
+  \item $\text{IDO}$ (Input Descriptor Objects) é um conjunto finito de descritores de objeto associado a cada atacante de rede em $\text{Net}$, a cada verificador em $\text{Verifiers}$ e cada fiduciário em $\text{Fiduciary}$. 
+  Os Objetos de Descritores de Entrada especificam as informações exigidas  por uma Definição de Apresentação apresentada em \cite{presentation-exchange}. Por exemplo, para um verificador são as informações que ele requer de um titular ou para um fiduciário as que ele deseja negociar com um provedor de serviço. 
+  Denotamos por $\text{inputDescriptorObject}$ a atribuição de processos atômicos ao conjunto $\text{IDO}$. Por exemplo, para $o \in \text{inputDescriptorObject}(fid)$, sendo $fid \in \text{Fiduciary}$, teríamos $\text{inputDescriptorObject}(fid)$ como um subconjunto de $\text{IDO}$ com apenas objetos de $fid$ e $o$ sendo um único objeto que o fiduciário pode utilizar para construir sua definição de apresentação.
+  \item $\text{Constraints}$ consiste em uma coleção de regras que limitam ou definem as condições específicas que devem ser atendidas para cada processo no sistema. No caso do fiduciário, são as regras de consentimento; já no caso de um verificador, elas incluem as condições que a aplicação requer para autenticar o usuário durante uma sessão. 
+  Também denotamos por $\text{constraints}$ a atribuição de processos atômicos ao conjunto de $\text{Constraints}$,  semelhante ao $\text{inputDescriptorObject}$.
+  % -- Baseado em WalletDoms em Página 61 da citacao 1 -- %
+  \item $ \text{FiduciaryDoms} = \{ d \; | \; d \in \text{dom}(fid) \wedge fid \in \text{Fiduciary} \}$ é o conjunto de domínios usados pelos processos de fiduciários.
+\end{itemize}
+
+Além dos conjuntos, apresentamos a seguir as modificações realizadas nas definições de funções, bem como a adição de novas funções, conforme exigido pelo modelo:
+
+\begin{itemize}
+  \item $ \text{browserOfFiduciary}:  \text{Fiduciary} \rightarrow \text{B}$ função que associa cada fiduciário a exatamente um navegador.
+  \item Em uma execução $\rho$ de um sistema de credenciais verificáveis na web $\mathcal{VCWS}^n$, dentro de uma relação de uma fiduciário $fid$, dizemos que $\text{validateRequest}(x) \equiv \top$ se e somente se existe uma configuração $(S, E, N)$ que contém um estado com $x \in S(b).\texttt{authStarted}$ e $b = \text{browserOfFiduciary}(fid)$.
+  \item $\text{inputDescriptor}: \text{Fiduciary} \; \cup \; \text{Verifier} \times 2^\text{Constraints} \rightarrow 2^{\text{IDO}}$ é uma função responsável por mapear cada processo com suas respectivas restrições do sistema para um conjunto de descritores de entrada (\text{Input Descriptors}), que especificam as informações ou credenciais requeridas. Neste contexto, o domínio da função apresenta um elmento de \text{Fiduciary} ou \text{Verifier} que representam, respectivamente, os participantes fiduciários e verificadores envolvidos, enquanto $2^{\text{Constraints}}$ denota o conjunto das restrições aplicáveis. A função \text{inputDescriptor} associa essas entidades e suas restrições a um conjunto de descritores, que detalham os dados necessários para o cumprimento dos requisitos para a autenticação.
+  \item $\text{followConstraints}: \text{Constraints} \times \text{inputDescriptor} \rightarrow \{\bot, \top\}$ é uma função responsável por verificar se um conjunto de objetos descritores respeita um conjunto de restrições (constraints) associado a um processo.
+\end{itemize}
+
+\subsection{Identidades e Segredos}
+
+Esta seção descreve o processo de inicialização para identidades, chaves e segredos no sistema de credenciais verificáveis na web $\mathcal{VCWS}^n$. As subseções a seguir foram baseadas da Seção A.1 de \cite{hauck2023openid}. 
+
+\subsubsection{Identidades}
+As definições de identidades permaneceram inalteradas e são equivalentes às apresentadas na Seção A.1.1 de \cite{hauck2023openid}.
+
+\subsubsection{Chaves e Segredos}
+O conjunto $N$ de nonces continua sendo particionado em conjuntos disjuntos, um conjunto infinito $N$, e conjuntos finitos $K_{TLS}$, $K_{sign}$ e $Passwords$:
+\[
+N = N \uplus K_{TLS} \uplus K_{sign} \uplus Passwords
+\]
+
+O conjunto $K_{sign}$, no entanto, contém as chaves que serão utilizadas por emissores para assinarem credenciais e para as fiduciários assinarem apresentações. Seja $\text{signkey} : \text{Issuers} \cup \text{Fiduciary} \rightarrow K_{sign}$ uma função injetora que atribui uma chave de assinatura (diferente) a cada emissor e fiduciário.
+
+\subsubsection{Senhas}
+
+As definições de senhas mantiveram-se inalteradas, sendo equivalentes às expostas na Seção A.1.3 de \cite{hauck2023openid}.
+
+\subsubsection{Navegadores (Web Browsers)}
+
+As definições de navegadores mantiveram-se inalteradas, sendo equivalentes às expostas na Seção A.1.4 de \cite{hauck2023openid}, exceto pela alteração a seguir no estado inicial de um navegador.
+
+% ---- Baseado no estado inicial do navegador em Definição A.1.3 pagina 63 em Citacao 1
+\begin{definicao}[Estado inicial do Navegador no $\mathcal{VCWS}^n$]
+O estado inicial de um processo de navegador web $b \in B$ é definido conforme a Definição 33 apresentada em \cite{hauck2023openid}, sujeitando-se, adicionalmente, à seguinte restrição:
+$s_0^b$.secrets contém uma entrada $\langle\langle d, S \rangle, \langle \text{Secrets}^{b,p} \rangle\rangle \text{ para cada } p \in \text{Issuer} \cup \{ fid \in \text{Fiduciary} \mid b = \text{browserOfFiduciary}(fid) \} \text{ e cada domínio } d \in \text{dom}(p)$
+\end{definicao}
+
+\subsubsection{Função auxiliar}
+Para simplificar a descrição dos algoritmos, utilizamos a seguinte função auxiliar.
+
+\input{code/build-presentation-definition.tex}
+
+\subsection{Emissores}
+As definições de Emissores mantiveram-se inalteradas, sendo equivalentes às expostas na Seção A.2 de \cite{hauck2023openid}.
+
+\subsection{Fiduciário}
+Um fiduciário \( fid \in \text{Fiduciary} \) é modelado como um servidor web representado por um processo atômico DY \( (I^{fid}, Z^{fid}, R^{fid}, s^{fid}_0) \), com endereço \( I^{fid} := \text{addr}(fid) \). A definição a seguir especifica os estados \( Z^{fid} \) de \( fid \), bem como o estado inicial \( s^{fid}_0 \) de \( fid \). A \autoref{tab:placehorld-fid} mostra a lista de placeholders usados pelo Fiduciários.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{cc}
+        \hline
+        Placeholder & Uso \\ 
+        \hline
+        $\nu_1$ & Novo ID da Definição de Apresentação \\
+        \hline
+        $\nu_2$ & Novo ID de Sessão \\
+        \hline
+        $\nu_3$ & Novo HTTP nonce \\
+        \hline
+    \end{tabular}
+    \caption{Lista de placeholders usados pelo Fiduciários}
+    \label{tab:placehorld-fid}
+\end{table}
+
+% % ---- Baseado no estado em Definição A.3.1 da pagina 69
+\begin{definicao}
+Um estado $s \in Z^{fid}$ de um fiduciário $fid$ é um termo da forma
+
+\[
+\left\langle 
+\begin{array}{l}
+pendingDNS, \; pendingRequests,\; DNSaddress, \; keyMapping, \; tlskeys, \\
+corrupt, \; credentials, \; holderKey, \; userPins, \; sessions,\; transactionIds 
+\end{array}
+\right\rangle
+\]
+
+com $pendingDNS$, $pendingRequests$, $DNSaddress$, $keyMapping$, $tlskeys$, $corrupt$ como definido na Definição 43 em \cite{FettKS14} e 
+$credentials$ , $holderKey$, $userPins$, $sessions$, e $transactionIds$ definido na seção {A.3.1} em \cite{hauck2023openid}.
+
+\end{definicao}
+
+Um estado inicial $s^{fid}_0$ de $fid$ é um estado de $fid$ com $s^{fid}_0.\texttt{pendingDNS} = \langle \rangle$, $s^{fid}_0.\texttt{pendingRequests} = \langle \rangle$,
+$s^{fid}_0.\texttt{DNSaddress} \in IPs$, $s^{fid}_0.\texttt{keyMapping} = \langle \{ \langle d, \text{pub}(\text{tlskey}(d)) \rangle \mid d \in \text{Doms} \} \rangle$,
+$s^{fid}_0.\texttt{tlskeys} = tlskeys^{fid}$, $s^{fid}_0.\texttt{corrupt} = \bot$, $s^{fid}_0.\texttt{credentials} = \langle \rangle$,
+$s^{fid}_0.\texttt{holderKey} = \text{signkey}(fid)$, $s^{fid}_0.\texttt{userPins} = \langle \{ \langle i.\texttt{domain}, \text{userPinOfId}(i) \rangle \mid \forall i \in s^b_0.\texttt{ids} \text{ com } b \in browserOfFiduciary(fid) \} \rangle$,
+$s^{fid}_0.\texttt{sessions} = \langle \rangle$, e $s^{fid}_0.\texttt{transactionIds} = \langle \rangle$.
+
+A estrutura relacional de um fiduciário $fid$  continua fundamentando-se no servidor HTTPS genérico, conforme delineado em \cite{FettKS14}. O Algoritmo \ref{lst:fid-relation} subsequente modifica e expande as funcionalidade do referido servidor HTTPS com suporte para  credenciais verificáveis proposto em \cite{hauck2023openid} para suportar também o esquema de Negociação de Atributos. Métodos não modificados mantêm as definições originais estabelecidas pela Carteira.
+
+
+\input{code/fiduciary-relation-request}
+%\input{code/fiduciary-relation-response}
+\subsection{Verificador}
+
+A estrutura relacional de um Verificador $v$  continua fundamentando-se no servidor HTTPS genérico, conforme delineado em \cite{FettKS14}. Os algoritmos \ref{lst:verifier-relation} e \ref{lst:verifier-relation-2} subsequentes modificam e expandem as funcionalidade do referido servidor HTTPS com suporte para credenciais verificáveis proposto em \cite{hauck2023openid} para suportar também o esquema de Negociação de Atributos. Métodos não modificados mantêm as definições originais estabelecidas. A \autoref{tab:placehorld-verifier} lista de placeholders usados pelo verificador.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{cc}
+        \hline
+        Placeholder & Uso \\ 
+        \hline
+        $\nu_1$ & Novo ID da Definição de Apresentação \\
+        \hline
+    \end{tabular}
+    \caption{Lista de placeholders usados pelo Verificador}
+    \label{tab:placehorld-verifier}
+\end{table}
+
+\input{code/verifier-relation.tex}

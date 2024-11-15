@@ -1,0 +1,21 @@
+% Modelo Terceirizado
+\begin{minipage}[b]{0.5\linewidth}
+    \centering
+    \begin{tikzpicture}[roundnode/.style={circle, draw=black, very thick, minimum size=20mm},]
+        %Nodes
+        \node[roundnode]      (idp)                            {IdP};
+        \node[roundnode]      (sp)     [below right=of idp]  {SP};
+        \node[roundnode]      (usr)    [below left=of idp]   {usuário};
+        
+        %Lines
+        \draw[<->] (idp) -- (usr);
+        \draw[<->]  (usr) -- (sp);
+        % Linha paralela e traçada
+        \draw[->, dashed] (sp) edge[bend right=5, draw=none] coordinate[at start](sp-b) coordinate[at end](idp-b) (idp)
+                  edge[bend left=5, draw=none] coordinate[at start](sp-t) coordinate[at end](idp-t) (idp)
+              (sp-t) -- (idp-t);
+
+        \draw[<->] (idp-b) -- (sp-b);
+    
+    \end{tikzpicture}
+\end{minipage}

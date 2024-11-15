@@ -1,0 +1,12 @@
+\newpage
+\section{Conclusões} \label{section:conclusion}
+
+Este trabalho apresenta uma adaptação do OpenID Connect com Apresentações Verificáveis dentro do Modelo Fiduciário, resultando em um mecanismo flexível para a transmissão de credenciais e apresentações, com suporte à divulgação seletiva de informações e a \sigla{ZKP}{Prova de Zero-Conhecimento}. As modificações propostas não apenas permitem que os usuários negociem os atributos que desejam disponibilizar ao \acs{SP} em \acs{VP}s, mas também sugerem uma metodologia para a negociação do ambiente de execução conforme descrito pelo novo modelo. 
+
+Além disso, foi realizada uma análise formal de segurança na extensão proposta para o protocolo OpenID para Apresentações Verificáveis. Para essa análise, definiu-se a propriedade de Autenticação da Negociação e provou-se que ela é mantida dentro dos limites do modelo formal. Essa análise demonstrou que a extensão proposta oferece uma segurança no contexto do modelo definido. Considerando que esses protocolos contribuem significativamente para o avanço do Modelo Fiduciário, esta pesquisa também se torna um incentivo relevante para o desenvolvimento de novas soluções no campo da \acs{IAM}.
+
+\subsection{Trabalhos Futuros}
+
+Uma das direções promissoras é investigar o suporte dos protocolos para incorporar regras de consentimento específicas utilizadas pelos Fiduciários. Esse aprimoramento permitiria que os protocolos reconhecessem e aplicassem automaticamente políticas de consentimento conforme definidas por diferentes Fiduciários, promovendo um maior alinhamento com o Modelo Fiduciário.
+
+Outra possibilidade é expandir a análise formal para cobrir propriedades relacionadas à negociação do ambiente de execução. Isso incluiria a definição e validação de propriedades que assegurem a integridade e a conformidade do ambiente em que a negociação ocorre, garantindo que todos os elementos envolvidos na transação sigam as especificações de segurança e privacidade necessárias. Esse tipo de análise pode fortalecer a proteção contra ambientes inseguros ou comprometidos, proporcionando garantias adicionais para as partes envolvidas e consolidando a segurança dos protocolos frente a cenários de execução complexos e distribuídos.

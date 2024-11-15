@@ -1,0 +1,73 @@
+\begin{figure}[htb]
+  \caption{Diagrama de sequência para o protocolo OID4VC}
+  \centering
+  \resizebox{\linewidth}{!}{
+  
+      \begin{sequencediagram}[scale=3]
+        \newthread{A}{Usuário}{}
+        \newinst{D}{IdP}{}
+        \newinst[5]{C}{Carteira}{}
+        \newinst[2.75]{B}{Provedor de Serviços}{}
+        
+        
+        \newcounter{counter}
+        \stepcounter{counter}
+        \begin{call}{A}{(\thecounter) Interação}{B}{Acesso}
+            \postlevel
+            \stepcounter{counter}
+            \begin{call}{B}{(\thecounter) Requisição de Autorização}{C}{\shortstack{(11) Resposta de Autorização \\ (id\_token e  vp\_token com VP)}}
+                \postlevel
+                \postlevel
+    
+                \stepcounter{counter}
+                \begin{call}{C}{\shortstack{ (\thecounter) Requisição do \\ Objeto de Requisição \\ (contém o DA) }}{B}{\shortstack{(3.5) Resposta com \\ Objeto de Requisição (DA)}}
+                \postlevel
+                \end{call}
+    
+                \stepcounter{counter}
+                \begin{call}{C}{ (\thecounter) Autenticação e Autorização}{A}{Credenciais e Consentimento}    
+                \end{call}
+                \postlevel
+    
+                \stepcounter{counter}
+                \begin{call}{A}{\shortstack{(\thecounter) Usuário seleciona credencial}}{C}
+                \postlevel
+                \end{call}
+                \postlevel
+                
+                \stepcounter{counter}
+                \begin{call}{C}{\shortstack{ \shortstack{(\thecounter) Obtém metadados do \\ IdP}}}{D}
+                \postlevel
+                \end{call}
+                \postlevel
+    
+                \stepcounter{counter}
+                \begin{call}{C}{\shortstack{(\thecounter) Requisição do \\ Token de Autorização \\ (Frontend)}}{D}{\shortstack{Token de Autorização}} 
+    
+                \postlevel
+                \stepcounter{counter}
+                \begin{call}{D}{ \shortstack{(\thecounter) Autenticação/Autorização}}{A}{\shortstack{Credenciais/Consentimento}}
+                \end{call}
+                \postlevel
+                
+                \end{call}
+                \postlevel
+                \postlevel
+    
+                \stepcounter{counter}
+                \begin{call}{C}{\shortstack{(\thecounter) Requisição do Token de Acesso \\ (Backend)}}{D}{Token de Acesso}
+                \end{call}
+                \postlevel
+                \postlevel
+                \postlevel
+    
+                \stepcounter{counter}
+                \begin{call}{C}{\shortstack{(\thecounter) Requisição da emissão de \\ credencial \\ (com o Token de Acesso e a prova)}}{D}{Emissão de credencial}
+                \postlevel
+                \end{call}
+            \end{call}
+        \end{call}
+      \end{sequencediagram}}
+  \label{fig:OID4VC}
+  \fonte{O Autor}
+\end{figure}

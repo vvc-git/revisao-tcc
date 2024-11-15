@@ -1,0 +1,264 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.7 }
+
+\bibitem[Allen 2016]{allen2016}
+\abntrefinfo{Allen}{ALLEN}{2016}
+{ALLEN, C. \textbf{The Path to Self-Sovereign Identity}. 2016.
+  \url{https://www.lifewithalacrity.com/article/the-path-to-self-sovereign-identity/}.
+Acessado em 10 de julho, 2024.}
+
+\bibitem[{Authlete} 2023]{OIDC4CI2023Authlete}
+\abntrefinfo{{Authlete}}{{Authlete}}{2023}
+{{Authlete}. \textbf{OpenID for Verifiable Credential Issuance (OID4VCI) -
+  Access Token Issuance Details}. 2023.
+Acessado: 13 de agosto de 2024.
+Dispon{\'\i}vel em:
+  \url{https://www.authlete.com/developers/oid4vci/\#24-access-token-issuance-details}.}
+
+\bibitem[Belles-Munoz et al. 2023]{belles2023circom}
+\abntrefinfo{Belles-Munoz et al.}{BELLES-MUNOZ et al.}{2023}
+{BELLES-MUNOZ, M. et al. Circom: A robust and scalable language for building
+  complex zero-knowledge circuits.
+October 30 2023.}
+
+\bibitem[Bertino e Takahashi 2009]{bertino2009identity}
+\abntrefinfo{Bertino e Takahashi}{BERTINO; TAKAHASHI}{2009}
+{BERTINO, E.; TAKAHASHI, K. \textbf{Identity Management: Concepts,
+  Technologies, and Systems}. Norwood, MA, USA: Artech House, 2009.
+ISBN 978-1-59693-318-5.}
+
+\bibitem[Bosch 2024]{bosch2024selfsovereign}
+\abntrefinfo{Bosch}{BOSCH}{2024}
+{BOSCH. \textbf{Self-Sovereign Identities}. 2024.
+  \url{https://www.bosch.com/stories/self-sovereign-identities/}.
+Acessado: 10 de julho de 2024.}
+
+\bibitem[Bray 2017]{JSONrfc82592017}
+\abntrefinfo{Bray}{BRAY}{2017}
+{BRAY, T. \textbf{The JavaScript Object Notation (JSON) Data Interchange
+  Format}. Internet Engineering Task Force (IETF), 2017. Request for Comments:
+  8259.
+Dispon{\'\i}vel em: \url{https://www.rfc-editor.org/rfc/rfc8259.txt}.}
+
+\bibitem[Chinta 2024]{OAuthImage2024}
+\abntrefinfo{Chinta}{CHINTA}{2024}
+{CHINTA, M. \textbf{Understanding OAuth 2.0: Step-by-Step Gude}. 2024.
+Acessado em 06 de Abril, 2024.
+Dispon{\'\i}vel em: \url{https://medium.com/codenx/oauth-2-0-4cddd6c7471f}.}
+
+\bibitem[DIF 2024]{presentation-exchange}
+\abntrefinfo{DIF}{DIF}{2024}
+{DIF. \textbf{FPresentation Exchange 2.1.0}. [S.l.]: GitHub, 2024.
+  \url{https://github.com/decentralized-identity/presentation-exchange}.}
+
+\bibitem[{Dock.io} 2024]{dock2024ssi}
+\abntrefinfo{{Dock.io}}{{Dock.io}}{2024}
+{{Dock.io}. \textbf{Self-Sovereign Identity: The Ultimate Guide 2024}. 2024.
+Acessado: 18 de julho de 2024.
+Dispon{\'\i}vel em: \url{https://www.dock.io/post/self-sovereign-identity}.}
+
+\bibitem[{El Jaouhari}, Bouabdallah e Bonnin 2017]{ELJAOUHARI2017389}
+\abntrefinfo{{El Jaouhari}, Bouabdallah e Bonnin}{{El Jaouhari}; BOUABDALLAH;
+  BONNIN}{2017}
+{{El Jaouhari}, S.; BOUABDALLAH, A.; BONNIN, J.-M. Chapter 14 - security issues
+  of the web of things. In:  \textbf{Managing the Web of Things}. [S.l.]:
+  Morgan Kaufmann, 2017.}
+
+\bibitem[eMudhra 2022]{future_of_digital_wallets_and_identity_management}
+\abntrefinfo{eMudhra}{EMUDHRA}{2022}
+{EMUDHRA. \textbf{The Future of Digital Wallets and Identity Management}. 2022.
+Acessado: 15 de julho de 2024.
+Dispon{\'\i}vel em:
+  \url{https://emudhra.com/blog/the-future-of-digital-wallets-and-identity-management}.}
+
+\bibitem[Fett, K{\"{u}}sters e Schmitz 2014]{FettKS14}
+\abntrefinfo{Fett, K{\"{u}}sters e Schmitz}{FETT; K{\"{U}}STERS; SCHMITZ}{2014}
+{FETT, D.; K{\"{U}}STERS, R.; SCHMITZ, G. An expressive model for the web
+  infrastructure: Definition and application to the browserid {SSO} system.
+\textbf{CoRR}, 2014.}
+
+\bibitem[Fett, Kusters e Schmitz 2014]{fett2024wim}
+\abntrefinfo{Fett, Kusters e Schmitz}{FETT; KUSTERS; SCHMITZ}{2014}
+{FETT, D.; KUSTERS, R.; SCHMITZ, G. The web infrastructure model (wim). In:
+  \textbf{Proceedings of the IEEE Symposium on Security and Privacy (S\&P)}.
+  [S.l.: s.n.], 2014.}
+
+\bibitem[Finkelstein e Finkelstein 2019]{finkelstein_privacidade_2019}
+\abntrefinfo{Finkelstein e Finkelstein}{FINKELSTEIN; FINKELSTEIN}{2019}
+{FINKELSTEIN, M.~E.; FINKELSTEIN, C. Privacidade e lei geral de proteÇÃo de
+  dados pessoais / privacy and general personal data protection law.
+\textbf{Revista de Direito Brasileira}, 2019.}
+
+\bibitem[{G1} 2018]{g1_facebook_2018}
+\abntrefinfo{{G1}}{{G1}}{2018}
+{{G1}. \textbf{Entenda o escândalo de uso político de dados que derrubou
+  valor do {Facebook} e o colocou na mira de autoridades}. 2018.
+Acessado: 15 de agosto de 2024.
+Dispon{\'\i}vel em:
+  \url{https://g1.globo.com/economia/tecnologia/noticia/entenda-o-escandalo-de-uso-politico-de-dados-que-derrubou-valor-do-facebook-e-o-colocou-na-mira-de-autoridades.ghtml}.}
+
+\bibitem[Hardjono e Pentland 2019]{opal}
+\abntrefinfo{Hardjono e Pentland}{HARDJONO; PENTLAND}{2019}
+{HARDJONO, T.; PENTLAND, A. {MIT Open Algorithms}. In:  \textbf{{Trusted Data:
+  A New Framework for Identity and Data Sharing}}. The MIT Press, 2019.
+ISBN 9780262356053.
+Dispon{\'\i}vel em: \url{https://doi.org/10.7551/mitpress/12439.003.0005}.}
+
+\bibitem[Hardman 2018]{evernym2024}
+\abntrefinfo{Hardman}{HARDMAN}{2018}
+{HARDMAN, D. \textbf{The Three Models of Digital Identity Relationships}. 2018.
+  \url{https://medium.com/evernym/the-three-models-of-digital-identity-relationships-ca0727cb5186}.
+Acessado em 10 de julho, 2024.}
+
+\bibitem[Hardt 2012]{oauth}
+\abntrefinfo{Hardt}{HARDT}{2012}
+{HARDT, D. \textbf{The OAuth 2.0 Authorization Framework}. RFC Editor, 2012.
+  RFC 6749.
+ (Request for Comments, 6749).
+Dispon{\'\i}vel em: \url{https://www.rfc-editor.org/info/rfc6749}.}
+
+\bibitem[Hauck 2023]{hauck2023openid}
+\abntrefinfo{Hauck}{HAUCK}{2023}
+{HAUCK, F.
+\textbf{OpenID for Verifiable Credentials: Formal Security Analysis using the
+  Web Infrastructure Model}.
+Disserta\c{c}\~{a}o (Mestrado) --- Informatik, 2023.}
+
+\bibitem[{IDENTITY MANAGEMENT INSTITUTE}
+  2024]{digital_identity_wallet_benefits_and_risks}
+\abntrefinfo{{IDENTITY MANAGEMENT INSTITUTE}}{{IDENTITY MANAGEMENT
+  INSTITUTE}}{2024}
+{{IDENTITY MANAGEMENT INSTITUTE}. \textbf{Digital Identity Wallet Benefits and
+  Risks}. 2024.
+Acessado: 15 de julho de 2024.
+Dispon{\'\i}vel em:
+  \url{https://identitymanagementinstitute.org/digital-identity-wallet-benefits-and-risks/}.}
+
+\bibitem[Junior, Vasconcelos e Ribeiro 2024]{Farias2024ZKP}
+\abntrefinfo{Junior, Vasconcelos e Ribeiro}{JUNIOR; VASCONCELOS; RIBEIRO}{2024}
+{JUNIOR, T. A.~F.; VASCONCELOS, R.~O.; RIBEIRO, A. de R.~L. Um estudo
+  comparativo entre zero-knowledge proof (zkp) e ring signatures visando as
+  implicações legais e regulatórias com a lei geral de proteção de dados
+  (lgpd) e general data protection regulation (gdpr).
+\textbf{Revista Observatorio de la Economia Latinoamericana}, Curitiba, v.~22,
+  n.~2, p. 01--24, 2024.
+ISSN 1696-8352.}
+
+\bibitem[Kulik et al. 2020]{Kulik2020}
+\abntrefinfo{Kulik et al.}{KULIK et al.}{2020}
+{KULIK, T. et al. A survey of practical formal methods for security.
+2020.}
+
+\bibitem[Lodder 2018]{Sovrin_ZKP}
+\abntrefinfo{Lodder}{LODDER}{2018}
+{LODDER, M. \textbf{The Sovrin Network and Zero Knowledge Proofs}. 2018.
+Acessado: 02 de agosto de 2024.
+Dispon{\'\i}vel em:
+  \url{https://sovrin.org/the-sovrin-network-and-zero-knowledge-proofs/}.}
+
+\bibitem[Pandey e Saini 2012]{pandey2012investigation}
+\abntrefinfo{Pandey e Saini}{PANDEY; SAINI}{2012}
+{PANDEY, A.; SAINI, J.~R. An investigation of challenges to online federated
+  identity management systems.
+\textbf{Int. J. Eng. Innov. Res}, v.~1, n.~2, p. 50--54, 2012.}
+
+\bibitem[Petkus 2019]{petkus2019zkSNARK}
+\abntrefinfo{Petkus}{PETKUS}{2019}
+{PETKUS, M. Why and how zk-snark works: Definitive explanation.
+July 2019.}
+
+\bibitem[Podgorelec, Alber e Zefferer 2022]{podgorelec2024digital}
+\abntrefinfo{Podgorelec, Alber e Zefferer}{PODGORELEC; ALBER; ZEFFERER}{2022}
+{PODGORELEC, B.; ALBER, L.; ZEFFERER, T. What is a (digital) identity wallet? a
+  systematic literature review.
+\textbf{Journal of Digital Identity Studies}, 2022.}
+
+\bibitem[Sakimura, Bradley e Jones 2023]{sakimura2023openid-dcr}
+\abntrefinfo{Sakimura, Bradley e Jones}{SAKIMURA; BRADLEY; JONES}{2023}
+{SAKIMURA, N.; BRADLEY, J.; JONES, M. \textbf{OpenID Connect Dynamic Client
+  Registration 1.0 incorporating errata set 2}.
+[S.l.], 2023. NAT.Consulting (was at NRI), Yubico (was at Ping Identity),
+  Self-Issued Consulting (was at Microsoft).}
+
+\bibitem[Sakimura et al. 2014]{openid}
+\abntrefinfo{Sakimura et al.}{SAKIMURA et al.}{2014}
+{SAKIMURA, N. et al. \textbf{OpenID Connect Core 1.0 incorporating errata set
+  2}. 2014.
+Dispon{\'\i}vel em:
+  \url{https://openid.net/specs/openid-connect-core-1\_0.html}.}
+
+\bibitem[Sakimura et al. 2023]{sakimura2023openidDiscovery}
+\abntrefinfo{Sakimura et al.}{SAKIMURA et al.}{2023}
+{SAKIMURA, N. et al. \textbf{OpenID Connect Discovery 1.0 incorporating errata
+  set 2}.
+[S.l.], 2023. NAT.Consulting (was at NRI), Yubico (was at Ping Identity),
+  Self-Issued Consulting (was at Microsoft), Illumila.}
+
+\bibitem[Schardong 2022]{revisao-ssi-frederico}
+\abntrefinfo{Schardong}{SCHARDONG}{2022}
+{SCHARDONG, F. Self-sovereign identity: A systematic review, mapping and
+  taxonomy.
+\textbf{Sensors 22(15)}, 2022.}
+
+\bibitem[Schardong 2024]{fiduciary}
+\abntrefinfo{Schardong}{SCHARDONG}{2024}
+{SCHARDONG, F. From self-sovereign identity to fiduciary identity: A journey
+  towards greater user privacy and usability. Não publicado. 2024.}
+
+\bibitem[Sidell 2020]{sidell2020google}
+\abntrefinfo{Sidell}{SIDELL}{2020}
+{SIDELL, E.~P. \textbf{How Google uses your data}. 2020.
+Acessado: 18 de julho de 2024.
+Dispon{\'\i}vel em:
+  \url{https://www.avast.com/pt-br/c-how-google-uses-your-data}.}
+
+\bibitem[Siriwardena 2020]{OpendIDImage2024}
+\abntrefinfo{Siriwardena}{SIRIWARDENA}{2020}
+{SIRIWARDENA, P. \textbf{OpenID Connect Authentication Flows}. 2020.
+Acessado em 11 de Abril, 2024.
+Dispon{\'\i}vel em:
+  \url{https://medium.facilelogin.com/openid-connect-authentication
+  flows-936f52380f38}.}
+
+\bibitem[Sporny et al. 2024]{data-model-w3c}
+\abntrefinfo{Sporny et al.}{SPORNY et al.}{2024}
+{SPORNY, M. et al. \textbf{Verifiable Credentials Data Model v2.0}.
+[S.l.], 2024. Https://www.w3.org/TR/2024/CRD-vc-data-model-2.0-20240513/.}
+
+\bibitem[Sporny et al. 2020]{jsonld112020}
+\abntrefinfo{Sporny et al.}{SPORNY et al.}{2020}
+{SPORNY, M. et al. \textbf{JSON-LD 1.1: A JSON-based Serialization for Linked
+  Data}. World Wide Web Consortium (W3C), 2020. W3C Recommendation.
+Dispon{\'\i}vel em: \url{https://www.w3.org/TR/2020/REC-json-ld11-20200716/}.}
+
+\bibitem[Wangham et al. 2010]{wangham2008gerenciamento}
+\abntrefinfo{Wangham et al.}{WANGHAM et al.}{2010}
+{WANGHAM, M. et al. Gerenciamento de identidades federadas.
+\textbf{Anais do X Simpósio Brasileiro em Segurança da Informação e de
+  Sistemas Computacionais}, 10 2010.}
+
+\bibitem[Yasuda, Jones e Lodderstedt 2023]{SIOPv2023}
+\abntrefinfo{Yasuda, Jones e Lodderstedt}{YASUDA; JONES; LODDERSTEDT}{2023}
+{YASUDA, K.; JONES, M.; LODDERSTEDT, T. Self-issued openid provider v2 - draft
+  13. Acessado em 11 de Maio, 2024. 2023.}
+
+\bibitem[Yasuda e Lodderstedt 2023]{OIDC4CI2023}
+\abntrefinfo{Yasuda e Lodderstedt}{YASUDA; LODDERSTEDT}{2023a}
+{YASUDA, K.; LODDERSTEDT, T. Openid for verifiable credential issuance - draft
+  13. Acessado em 11 de Maio, 2024. 2023.}
+
+\bibitem[Yasuda e Lodderstedt 2023]{OIDC4VP2023}
+\abntrefinfo{Yasuda e Lodderstedt}{YASUDA; LODDERSTEDT}{2023b}
+{YASUDA, K.; LODDERSTEDT, T. Openid for verifiable presentations - draft 20.
+  Acessado em 11 de Abril, 2024. 2023.}
+
+\bibitem[Yasuda et al. 2022]{OIDC4VCWhitepaper2022}
+\abntrefinfo{Yasuda et al.}{YASUDA et al.}{2022}
+{YASUDA, K. et al. \textbf{OpenID for Verifiable Credentials}.
+[S.l.], 2022.}
+
+\end{thebibliography}

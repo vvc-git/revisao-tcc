@@ -1,0 +1,218 @@
+%dica: use a opção oneside se houver um limite (e.g., 20) de páginas
+\documentclass[embeddedlogo, nohidelinks, arial]{ufsc-thesis-rn46-2019}
+
+\usepackage[T1]{fontenc} % fontes
+%\usepackage[utf8]{inputenc} % UTF-8
+\usepackage{pdfpages} % Inclui PDF externo (ficha catalográfica)
+\usepackage{comment}
+\usepackage{tikz}
+\usepackage{tikzscale}
+\usepackage{tikz-cd}
+\usetikzlibrary{backgrounds, positioning, fit}
+\usepackage{url}
+
+% Para tabelas
+\usepackage{siunitx} % Para alinhamento numérico
+\usepackage{graphicx} % Para \resizebox
+\usepackage{array} % Para ajustes em colunas de tabelas
+
+% Diagrama de sequências
+\usepackage{pgf-umlsd}
+
+\usepackage{silence}
+
+% Suprimir avisos específicos sobre sobrescrita de comandos
+\WarningFilter{glossaries}{Overriding \printglossary}
+\WarningFilter{glossaries}{Overriding `theglossary' environment}
+
+% Todo notes
+\usepackage[colorinlistoftodos]{todonotes}
+
+% Para código de JSON
+% \usepackage{bera}% optional: just to have a nice mono-spaced font
+\usepackage{listings}
+\renewcommand{\lstlistingname}{Algoritmo}
+\usepackage{xcolor}
+
+% Mudar o esilo do enumerate
+\usepackage{enumitem}
+
+
+\usepackage{nomencl}
+\makenomenclature
+
+
+\usepackage{amsthm}
+\usepackage{amssymb}
+% EXTRACT FROM UFSC THESISCommonly used in definitions, conditions, problems and examples.
+\theoremstyle{definition}
+\newtheorem{definicao}{Defini\c{c}\~ao}[chapter]
+\newtheorem{exemplo}{Exemplo}[section]
+\newtheorem{exercicio}{Exerc\'icio}[section]
+\newtheorem{condicao}{Condi\c{c}\~ao}[chapter]
+
+\newtheorem{axioma}{Axioma}[chapter]
+\newtheorem{postulado}{Postulado}[chapter]
+\newtheorem{teorema}{Teorema}[chapter]
+\newtheorem{conjectura}{Conjectura}[chapter]
+\newtheorem{corolario}[teorema]{Corol\'ario}
+\newtheorem{lema}[teorema]{Lema}
+\newtheorem{proposicao}[teorema]{Proposi\c{c}\~ao}
+
+
+
+
+\hypersetup{
+    colorlinks=true,     % Ativa a coloração dos links
+    linkcolor=black,      % Define a cor dos links internos (sumário, referências cruzadas)
+    urlcolor=black,       % Define a cor dos links de URLs
+    citecolor=blue,       % Define a cor das citações
+    filecolor=black       % Define a cor dos links para arquivos
+}
+
+\input{glossario}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Configurações da classe (dados do trabalho)                  %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Preâmbulo
+\titulo{Protocolo para Negociação de Atributos e Ambiente de Execução no Modelo Fiduciário e Análise Formal de Segurança com WIM}
+\autor{Victor do Valle Cunha}
+
+% Importante! Para documentos em inglês, não use today, digite a data em
+% pt_BR, como deve aparecer na folha de certificação.
+\data{1 de Julho de 2024}
+\instituicao{Universidade Federal de Santa Catarina}
+\centro{Centro Tecnológico}
+\programa{Programa de Pós-Graduação em Ciência da Computação}
+\tcc
+\departamento{Departamento de Informática e Estatística}
+\curso{Ciência da Computação}
+\titulode{Bacharel em Ciência da Computação}
+\local{Florianópolis} % Apenas cidade! Sem estado
+% template da BU usa doutor/mestre em minúsculo, Bacharel/Licenciado em Title case.
+
+%%% Atenção! No caso de TCC, além de usar \tcc, outros comandos devem ser fornecidos:
+%%%
+% \tcc
+% \departamento{Departamento de Informática e Estatística}
+% \curso{Ciência da Computação}
+% \titulode{Bacharel em Ciência da Computação}
+% %% Para TCCs, orientadores e coorientadores podem ser externos, logo a
+% %% BU exige que sua afiliação seja explicitada. Por padrão, assume-se
+% %% UFSC. Você pode alterar a afiliação com os comandos abaixo:
+% \afiliacaoorientador{Universidade Federal de Santa Catarina}
+% \afiliacaocoorientador{Universidade Federal da Terra de Ninguém}
+
+% Orientador, coorientador, membros da banca e coordenador
+% As regras da BU agora exigem que Dr. apareça **depois** do nome
+% Dica: para gerar Profᵃ. use Prof\textsuperscript{a}.
+% Dica 2: para feminino use \orientadora e \coorientadora
+\orientador{Prof. Ricardo Custódio, Dr.}
+\coorientador{Prof. Frederico Schardong, Dr.}
+\membrobanca{Maurício de Vasconcelos Barros}{Universidade Federal de Santa Catarina}
+\membrobanca{Brendon Vicente Rocha Silva}{Universidade Federal de Santa Catarina}
+
+% Dica: se feminino, \coordenadora
+\coordenador{Prof. Márcio Bastos Castro, Dr}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Principais elementos pré-textuais                            %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Inicia parte pré-textual do documento capa, folha de rosto, folha de
+% aprovação, aprovação, resumo, lista de tabelas, lista de figuras, etc.
+\pretextual%
+\imprimircapa%
+\imprimirfolhaderosto*
+\protect\incluirfichacatalografica{ficha.pdf}
+\imprimirfolhadecertificacao
+
+\begin{dedicatoria}
+À minha mãe e namorada.
+\end{dedicatoria}
+
+\begin{agradecimentos}
+  Concluir esta monografia não teria sido possível sem o apoio daqueles que estiveram ao meu lado ao longo de toda a jornada. Agradeço, primeiramente, aos amigos que tive a sorte de conhecer durante esse período – Cris, João, Léo, Luan, Dudu e Caz –, com quem compartilhei momentos de aprendizado, companheirismo e incentivo mútuo. Um agradecimento especial vai para Dani, que me apoiou em momentos difíceis e me ofereceu forças quando mais precisei. Aos amigos de longa data, Bia, Rondon, Barcelos e Henrique, agradeço pela confiança e pelo incentivo constante, por nunca terem desistido de mim e por me inspirarem a seguir em frente, independentemente dos desafios.
+
+  Também expresso minha profunda gratidão aos meus familiares – minha tia e meu irmão, que sempre foi um exemplo de dedicação e persistência. À minha namorada, Maria, que esteve ao meu lado de maneira incondicional, agradeço pelo amor, paciência e pelo encorajamento constantes, fundamentais para enfrentar todos os momentos difíceis. Por fim, agradeço especialmente à minha mãe, cujo esforço e comprometimento inabaláveis permitiram que seus filhos alcançassem o sonho da formação acadêmica.
+\end{agradecimentos}
+
+\begin{epigrafe}
+\textit{"Parabéns mamãe, seu projeto de homem feliz deu certo"} \\ Emicida
+\end{epigrafe}
+
+
+\begin{resumo}[Resumo]
+O modelo de Identidade Fiduciária representa uma abordagem inovadora para o desenvolvimento de sistemas de identificação, com foco em solucionar dois desafios centrais dos modelos convencionais: a usabilidade e a proteção da privacidade dos dados do usuário. A inclusão de um novo ator, responsável por atender a essas demandas, permite a definição de propriedades que facilitam o alcance dessas metas. No entanto, a definição dessas propriedades, por si só, é insuficiente. Para que sejam aplicadas de maneira eficaz, é imprescindível contar com protocolos de comunicação seguros entre as três entidades envolvidas no processo de autenticação do usuário: o Emissor, o Fiduciário e o Verificador. Além disso, é essencial que esses protocolos incluam propriedades de segurança específicas, capazes de validá-los em diferentes cenários de uso.
+Diante dessas considerações, este trabalho de conclusão de curso adapta e expande o protocolo OpendID para Apresentações Verficáveis (\acs{OIDC4VP}) para o contexto deste novo modelo de identidade, possibilitando a negociação de dados sensíveis no processo de autenticação e a manipulação desses dados em um ambiente de confiança para o usuário. Dessa forma, busca-se uma experiência mais fluida, em que o usuário não precise interagir constantemente com formulários de autorização, mas que ainda preserve as propriedades de segurança essenciais para o cenário proposto.
+
+  % Atenção! a BU exige separação através de ponto (.). Ela recomanda de 3 a 5 keywords
+  \vspace{\baselineskip} 
+  \textbf{Palavras-chave:} Identidade Eletrônica.  Identidade Digital. Gestão de Identidade. Identidade Autossoberana. Identidade Fiduciária.
+
+\end{resumo}
+
+
+    % \begin{resumo}[Resumo Estendido]
+    
+    %   \section*{Objetivos}
+    %     Desenvolver um protocolo de comunicação para um novo modelo de identidade eletrônica, descrevendo aspectos sintáticos e semânticos das mensagens trocadas entre a entidade fiduciária e o provedor de serviços, revisando as principais técnicas de Prova de Zero-Conhecimento para geração de Apresentações e selecionando as melhores alternativas para o protocolo a ser desenvolvido.
+        
+    %   \section*{Metodologia} 
+    %     O trabalho será executado de forma qualitativa, descritiva e explicativa, e será dividido em quatro etapas: revisão de técnicas para geração de Apresentações, adaptação da técnica escolhida para o protocolo, análise formal de segurança do que foi desenvolvido e aprimoramento do protocolo para torná-lo conciso e eficiente.
+        
+    %   \section*{Resultados e Discussão} 
+    %     O trabalho irá apresentar uma extensão para o OpenID Connect for Verifiable Credentials, adaptando-o ao Modelo Fiduciário. Essas modificações permitirão a negociação de atributos que o usuário deseja disponibilizar aos Provedores de Serviço, assim como irá elaborar uma proposta  de como estabelecer a negociação do ambiente de execução descrita pelo o Modelo Fiduciário.
+        
+    %   %\section*{Considerações Finais} 
+    %   %\lipsum[5]
+    
+    %   \vspace{\baselineskip}  % Atenção! manter igual ao resumo
+    %   \textbf{Palavras-chave:} Identidade Eletrônica.  Identidade Digital. Gestão de Identidade. Identidade Autossoberana. Identidade Fiduciária. 
+      
+    % \end{resumo}
+
+
+
+\begin{abstract}
+    The Fiduciary Identity model represents an innovative approach to developing identification systems, focusing on addressing two central challenges of conventional models: usability and the protection of user data privacy. The inclusion of a new actor, responsible for meeting these demands, enables the definition of properties that facilitate the achievement of these goals. However, defining these properties alone is not sufficient. To apply them effectively, it is essential to rely on secure communication protocols among the three entities involved in the user authentication process: the Issuer, the Fiduciary, and the Verifier. Additionally, it is crucial that these protocols incorporate specific security properties capable of validating them across different use scenarios.
+    In light of these considerations, this thesis adapts and expands the OpenID Connect for Verifiable Presentation (\acs{OIDC4VP}) protocol for the context of this new identity model, enabling the negotiation of sensitive data in the authentication process and the handling of such data within a trusted environment for the user. This approach seeks to provide a smoother experience, where the user does not need to constantly interact with authorization forms, while still preserving the essential security properties for the proposed scenario.
+
+  \vspace{\baselineskip} 
+  \textbf{Keywords:} Electronic Identity. Digital Identity. Identity Management. Self-Sovereign Identity. Fiduciary Identity.
+\end{abstract}
+
+\listoffigures*
+\listoftables*
+% \listofalgorithms*
+% \lstlistoflistings
+\imprimirlistadesiglas
+% \imprimirlistadesimbolos
+\imprimirglossario
+\tableofcontents*
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Corpo do texto                                               %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textual%
+\input{chapters/introduction}
+\input{chapters/theory}
+\input{chapters/related}
+\input{chapters/protocol}
+% \input{chapters/results}
+\input{chapters/conclusion}
+
+\postextual
+\bibliography{aftertex/referencia}
+
+\apendices
+\input{aftertex/formalanalysis/model}
+\input{aftertex/formalanalysis/properties}
+\input{aftertex/formalanalysis/proof}
+
+
+\end{document}

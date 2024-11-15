@@ -1,0 +1,65 @@
+\begin{figure}
+
+  \centering
+  \begin{sequencediagram}[scale=3]
+    \newthread{A}{Usuário}{}
+    \newinst{D}{IdP}{}
+    \newinst[5]{C}{Fiduciário}{}
+    \newinst[2.75]{B}{Provedor de Serviços}{}
+    
+    
+    \newcounter{contador}
+    \stepcounter{contador}
+    \begin{call}{A}{(\thecontador) Interação}{B}{Acesso}
+        \postlevel
+        \stepcounter{contador}
+        \begin{call}{B}{(\thecontador) Requisição de Autorização}{C}{\shortstack{(9) Resposta de Autorização \\ (id\_token e  vp\_token com VP)}}
+            \postlevel
+            \postlevel
+
+            \stepcounter{contador}
+            \begin{call}{C}{\shortstack{ (\thecontador) Requisição do \\ Objeto de Requisição \\ (contém o DA) }}{B}{\shortstack{(3.5) Resposta com \\ Objeto de Requisição (DA)}}
+            \postlevel
+            \end{call}
+
+            \stepcounter{contador}
+            \begin{call}{C}{ (\thecontador) Autenticação}{A}{Credenciais e \textbf{Reconhecimento}}    
+            \end{call}
+            \postlevel
+
+            \stepcounter{contador}
+            \begin{call}{C}{\shortstack{\color{red}(\thecontador)  Requisição de nova proposta \\\color{red} de Objeto de Requisição \\ \color{red} com novo DA}}{B}{\textbf{\color{red} Aceito}}    
+            \end{call}
+            \postlevel
+            
+
+            \stepcounter{contador}
+            \begin{call}{A}{\shortstack{(\thecontador) Usuário seleciona credencial}}{C}
+            \postlevel
+            \end{call}
+            \postlevel
+            
+            \stepcounter{contador}
+            \begin{call}{C}{\shortstack{ \shortstack{(\thecontador) Obtém metadados do \\ IdP}}}{D}
+            \postlevel
+            \end{call}
+            \postlevel
+
+            \stepcounter{contador}
+            \begin{call}{C}{\shortstack{(\thecontador) Requisição do Token de Acesso \\ (com prova de chave)}}{D}{Token de Acesso}
+            \end{call}
+            \postlevel
+            \postlevel
+            \postlevel
+
+            \stepcounter{contador}
+            \begin{call}{C}{\shortstack{(\thecontador) Requisição da emissão de \\ credencial \\ (com o Token de Acesso e a prova)}}{D}{Emissão de credencial}
+            \postlevel
+            \end{call}
+        \end{call}
+    \end{call}
+  \end{sequencediagram}
+  \caption{Diagrama de sequência para Negociação de DA}
+  \label{fig:negociacao-execucao}
+
+\end{figure}

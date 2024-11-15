@@ -1,0 +1,30 @@
+\begin{sequencediagram}[scale=0.1]
+    \newthread{A}{\ttfamily Usuário}{}
+    \newinst[4]{C}{\ttfamily Fiduciário}{}
+    \newinst[15]{B}{\ttfamily \acs{SP}}{}
+    
+    \begin{call}{A}{\ttfamily Interação}{B}
+        \postlevel
+        \postlevel
+        \postlevel
+            \begin{call}{B}{\shortstack{ \ttfamily (1) Requisição de Autorização \\ \ttfamily (client\_id, nonce, redirect\_uri, presentation\_definition, client\_metadata)}}{C}{\shortstack{\ttfamily (2) Resposta de Autorização \\ \ttfamily (vp\_token, presenation\_submission)}}
+            \postlevel
+
+            % Adicionando uma nota após o passo 1
+            \node at (1.5,-4) [text width=6cm, anchor=west] {\ttfamily \small Autenticação e Confirmação/Seleção da \acs{VC}};
+
+            \postlevel
+
+            \begin{call}{C}{\shortstack{ \ttfamily Requisição de Negociação\\ \ttfamily (type, computer\_site, compute\_site\_description)}}{B}{\shortstack{ \ttfamily Resposta de Negociação\\ \ttfamily(status)}}
+
+            \postlevel
+                
+            \end{call}
+
+            \postlevel
+            \postlevel
+            
+        \end{call}
+    \end{call}
+\end{sequencediagram}
+

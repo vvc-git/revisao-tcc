@@ -1,0 +1,52 @@
+\input{code/pseudo}
+
+%  call HTTPS_SIMPLE_SEND é do OAuth (Peguei do Algoritmo C.6)
+%  Reaproveito o nonce (session: m.none) da sessão que foi feito a Requisição de Autorização para amarrar na mesma sessão.
+
+% --- Tudo que precisa ser salvo para que seja feito a resposta de Autorização depois da Negociação.
+% 1. nonce da Requisição de Autorização
+% 2. aud (= AuthRespURI = URL para o redirecionamento após a solicitação)
+% 3. Gerar VP
+%     3.1 precisa da credenical
+%     3.2 do nonce em (1)
+%     3.3 do aud em (2)
+% 4. Colocar no vp\_token
+% 5. Salvar o host para comparar com o host da mensagem de aceitação
+% 6. Salvar o estado 
+% 7. Salvar = AuthRespURI
+\begin{lstlisting}[language=pseudo, caption={Modificação na relação de um Fiduciário $R^{fid}$: Processamento de Requisições HTTPS}, firstnumber=70, label={lst:fid-relation}]
+if $responseMode \equiv$ fragment then
+    let $authRespUri$ := $m$.body[redirect_uri]
+    let $previousPd$ := $m$.body[presentation_definition] 
+    let $clientMetadata$ := $m$.body[client_metadata]
+    let $negotiationEndpoint$ := $clientMetadata$[negotiation_endpoint]
+    if $negotiationEndpoint$ $\not\equiv \langle \rangle$ then
+        let $type$ := $\{attribute, env\}$
+        if $type \equiv attribute$ $\land$ followConstraints(constraints($f$), $previousPd$) $\equiv \bot $ then
+            //  Save information to respond to the Authorization request later.
+            let $nonceForVp$ := $m$.body[nonce]
+            let $nonceForHttpResp$ := $m$.nonce
+            let $aud$ := $authRespUri$.host
+            let $host$ := $m$.host
+            let $state$ := $m$.body[state]
+            let $authReqParameters$ := $\langle\langle$nonceForVp, $nonceForVp$$\rangle\rangle$
+            let $authReqParameters$ := $authReqParameters$ $+^{\langle\rangle}$ $\langle$nonceForHttpResp, $nonceForHttpResp$$\rangle$
+            let $authReqParameters$ := $authReqParameters$ $+^{\langle\rangle}$ $\langle$redirect_uri, $authRespUri$$\rangle$
+            let $authReqParameters$ := $authReqParameters$ $+^{\langle\rangle}$ $\langle$aud, $aud$$\rangle$
+            let $authReqParameters$ := $authReqParameters$ $+^{\langle\rangle}$ $\langle$host, $host$$\rangle$
+            let $authReqParameters$ := $authReqParameters$ $+^{\langle\rangle}$ $\langle$state, $state$$\rangle$
+            let $sessionID$ := $\nu_2$
+            let $s'$.sessions := $\langle\langle$$sessionID$, $authReqParameters$$\rangle\rangle$
+            // Create Negotiation Request
+            let $previousId$ := $previousPd$[$id$]
+            let $idFiduciaryPd$ := $\nu_1$
+            let $newPd$ := BUILD_PRESENTATION_DEFINITION($a$, constraints($f$), $idFiduciaryPd$) 
+            let $negotiationEndpoint$ := $client\_metadata$[$negotiation\_endpoint$]
+            let $parameters$ := $\langle$type, $attribute \rangle$
+            let $parameters$ := $parameters$ +$^{\langle \rangle}$ $\langle$previous_id, $previousId$$\rangle$
+            let $parameters$ := $parameters$ +$^{\langle \rangle}$ $\langle$presentation_definition, $newPd\rangle$
+            let $message$ := 
+            $\langle$HTTPReq, $\nu_3$, POST, $negotiationEndpoint$.host, $negotiationEndpoint.path$, $parameters$, $\langle\rangle$, $\langle\rangle$$\rangle$
+            call HTTPS_SIMPLE_SEND([responseTo:NEGOTIATE, session:$sessionID$], $message$, $s'$ )
+    else
+\end{lstlisting}

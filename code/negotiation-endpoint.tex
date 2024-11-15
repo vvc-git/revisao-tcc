@@ -1,0 +1,11 @@
+\input{code/json}
+
+
+% Exemplo baseado na Seção 5 (Authorization Request) do OIDC4VP
+\begin{lstlisting}[language=json,firstnumber=1]
+GET /authorize?
+  client_id=client.example.org
+  &client_metadata=%7B%22vp_formats%22%3A%7B%22jwt_vp_json%22%3A%7B%22alg%22%3A%5B%22EdDSA%22%2C%22ES256K%22%5D%7D%7D%2C%22negotiation_endpoint%22%3A%22https%3A%2F%2Fexample.com%22%7D
+  &request_uri=https%3A%2F%2Fclient.example.org%2Frequest%2Fvapof4ql2i7m41m68uep
+  &request_uri_method=post HTTP/1.1
+\end{lstlisting}

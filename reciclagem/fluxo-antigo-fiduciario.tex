@@ -1,0 +1,34 @@
+\subsubsection{FLUXO DE MENSAGENS}
+
+Abaixo está um diagrama de sequência mostrando as modificações que foram realizadas dentro do OIDC4VP para o Modelo Fiduciário [\ref{fig:OID4VCFiduciary}] . Nele, a Carteira Digital é substítuida pela entidade Fiduciário. 
+
+\input{diagrams/sequence-diagram/oidc4vc-fiduciary}
+
+\begin{enumerate}
+
+    \item Usuário acessa um serviço por meio do seu agente (geralmente, o \textit{browser}). \textcolor{red}{Essa interação se for feita com o usuário e o fiduciário no mesmo dispositivo DEVE utilizar algo similiar ao \cite{FedCM} e \cite{openYolo}, para que o usuário já encaminhe via Browser o Fiduciário que o Provedor de Serviços irá se comunicar.}   
+    \begin{comment}
+            \textbf{REVISAR A PARTE 7. WALLET INVOCATION PARA VER SE REALMENTE PRECISA UTILIZAR OUTROS PROTOCOLOS, PORQUE O QUE SE QUER AQUI É CRIAR UM MEIO PARA CHAMAR O FIDUCIÁRIO/CARTEIRA SEM UM REGISTRO PRÉVIO}.
+    \end{comment}
+    
+    \item O Fiduciário recebe uma Requisição de Autorização. Nela, contém uma URL (\textit{Request URL}) com os caminhos para pedir o Objeto de Requisição (\textit{Request Object}). 
+
+    \item o Fiduciário envia uma solicitação GET HTTPS para o URL de solicitação para recuperar o Objeto de Solicitação. A resposta do HTTPS GET retorna o Objeto de Requisição. Esse objeto contém uma Definição de Apresentação (DA), descrevendo os requisitos das Credenciais que o Provedor de Serviços está solicitando para serem apresentadas. 
+    
+    Tais requisitos podem incluir o tipo de Credencial, em quais formatos, quais Reivindicações individuais dentro dessas Credenciais (divulgação seletiva). o Fiduciário processa o Objeto de Requisição e determina quais Credenciais estão disponíveis correspondendo à solicitação do Verificador. 
+    
+    \item O Fiduciário autentica o usuário e obtém seu consentimento para apresentar as Credenciais solicitadas.
+    
+    \item O fluxo iniciado pelo Fiduciário começa quando o Usuário solicita uma Credencial via Fiduciário ao Provedor de Identidade. O usuário seleciona uma credencial de uma lista pré-configurada de Credenciais prontas para serem emitidas, ou alternativamente, o Fiduciário orienta o usuário a selecionar uma credencial de um Provedor de Identidade com base nas informações recebidas na solicitação de apresentação de um Provedor de Serviços.
+
+    \item o Fiduciário utiliza o URL do Provedor de Identidade para buscar os metadados do mesmo. Os metadados são necessários para aprender os tipos e formatos de Credenciais que o Provedor de Identidade suporta. Além disso, o Fiduciário também precisa determinar o \textit{endpoint} de Autorização (Servidor de Autorização OAuth 2.0) e o \textit{endpoint} de Credencial necessários para iniciar a solicitação. Observe que nesse exemplo o Provedor de Identidade emite credenciais e desempenha o papel de Servidor de Autorização OAuth 2.0, mas poderiam ser entidade diferentes.
+
+    \item o Fiduciário envia uma Solicitação de Token Acesso com uma \textcolor{blue}{prova de chave que comprove que o usuário autorizou o Fiduciário a receber uma credencial específica}. O Provedor de identidade retorna o token de Acesso após validar com sucesso essa \textcolor{blue}{prova de chave}. Esta etapa ocorre no \textit{Backend} \textcolor{blue}{e permite eliminar a Requisição de Token de Autorização}, uma vez que o usuário já está autenticado perante o Fiduciário e possui os mecanismos para provar que autorizou emissão de credencias para o seu correspondente. \textit{Endpoint} utilizado: token \textit{endpoint}
+
+    \item o Fiduciário envia uma Solicitação de emissão de credencial para o Provedor de Identidade com o Token de Acesso e (opcionalmente) a prova de posse da chave privada de um par de chaves ao qual o Provedor de Identidade deve vincular a Credencial emitida. Ao validar com sucesso o Token de Acesso e a prova, o Provedor de Identidade retorna uma credencial.
+    
+    \item o Fiduciário prepara as apresentações verificáveis à partir das credenciais verficicáveis aos quais o usuário consentiu. Em seguida, envia ao Provedor de Serviços uma Resposta de Autorização onde as apresentações verificáveis estão contidas no parâmetro vp\_token
+    
+    Observação: As etapas (7) e (8) ocorrem no \textit{frontend}, redirecionando o usuário por meio do Agente de Usuário.
+
+\end{enumerate}

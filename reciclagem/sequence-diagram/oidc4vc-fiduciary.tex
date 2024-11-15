@@ -1,0 +1,59 @@
+\begin{figure}
+
+  \centering
+  \begin{sequencediagram}[scale=0.1]
+    \newthread{A}{Usuário}{}
+    \newinst{D}{IdP}{}
+    \newinst[5]{C}{Fiduciário}{}
+    \newinst[2.75]{B}{Provedor de Serviços}{}
+    
+    
+    \newcounter{number}
+    \stepcounter{number}
+    \begin{call}{A}{(\thenumber) \color{red} Interação}{B}{Acesso}
+        \postlevel
+        \stepcounter{number}
+        \begin{call}{B}{(\thenumber) Requisição de Autorização}{C}{\shortstack{(9) Resposta de Autorização \\ (id\_token e  vp\_token com VP)}}
+            \postlevel
+            \postlevel
+
+            \stepcounter{number}
+            \begin{call}{C}{\shortstack{ (\thenumber) Requisição do \\ Objeto de Requisição \\ (contém o DA) }}{B}{\shortstack{(3.5) Resposta com \\ Objeto de Requisição (DA)}}
+            \postlevel
+            \end{call}
+
+            \stepcounter{number}
+            \begin{call}{C}{ (\thenumber) Autenticação e Autorização}{A}{Credenciais e Consentimento}    
+            \end{call}
+            \postlevel
+
+            \stepcounter{number}
+            \begin{call}{A}{\shortstack{(\thenumber) Usuário seleciona credencial}}{C}
+            \postlevel
+            \end{call}
+            \postlevel
+            
+            \stepcounter{number}
+            \begin{call}{C}{\shortstack{ \shortstack{(\thenumber) Obtém metadados do \\ IdP}}}{D}
+            \postlevel
+            \end{call}
+            \postlevel
+
+            \stepcounter{number}
+            \begin{call}{C}{\shortstack{(\thenumber) \color{blue} Requisição do Token de Acesso \\ \color{blue} (\textbf{com prova de chave})}}{D}{Token de Acesso}
+            \end{call}
+            \postlevel
+            \postlevel
+            \postlevel
+
+            \stepcounter{number}
+            \begin{call}{C}{\shortstack{(\thenumber) Requisição da emissão de \\ credencial \\ (com o Token de Acesso e a prova)}}{D}{Emissão de credencial}
+            \postlevel
+            \end{call}
+        \end{call}
+    \end{call}
+  \end{sequencediagram}
+  \caption{Diagrama de sequência para o protocolo OID4VC adaptado para o Modelo Fiduciário}
+  \label{fig:OID4VCFiduciary}
+
+\end{figure}

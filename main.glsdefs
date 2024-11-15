@@ -1,0 +1,924 @@
+\glsdefs@newdocentry{OPAL}%
+{%
+name={OPAL},%
+sort={OPAL},%
+type={acronym},%
+first={OPEN ALGORITHMS\glsspace (OPAL)},%
+firstplural={OPEN ALGORITHMS\acrpluralsuffix \glsspace (OPAL\acrpluralsuffix )},%
+text={OPAL},%
+plural={OPAL\acrpluralsuffix },%
+description={OPEN ALGORITHMS},%
+descriptionplural={OPEN ALGORITHMS\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={OPEN ALGORITHMS},%
+longplural={OPEN ALGORITHMSs},%
+short={OPAL},%
+shortplural={OPALs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{SP}%
+{%
+name={SP},%
+sort={SP},%
+type={acronym},%
+first={Service Provider\glsspace (SP)},%
+firstplural={Service Provider\acrpluralsuffix \glsspace (SP\acrpluralsuffix )},%
+text={SP},%
+plural={SP\acrpluralsuffix },%
+description={Service Provider},%
+descriptionplural={Service Provider\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Service Provider},%
+longplural={Service Providers},%
+short={SP},%
+shortplural={SPs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{IdP}%
+{%
+name={IdP},%
+sort={IdP},%
+type={acronym},%
+first={Identity Provider\glsspace (IdP)},%
+firstplural={Identity Provider\acrpluralsuffix \glsspace (IdP\acrpluralsuffix )},%
+text={IdP},%
+plural={IdP\acrpluralsuffix },%
+description={Identity Provider},%
+descriptionplural={Identity Provider\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Identity Provider},%
+longplural={Identity Providers},%
+short={IdP},%
+shortplural={IdPs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{SSI}%
+{%
+name={SSI},%
+sort={SSI},%
+type={acronym},%
+first={Self-Sovereign Identity\glsspace (SSI)},%
+firstplural={Self-Sovereign Identity\acrpluralsuffix \glsspace (SSI\acrpluralsuffix )},%
+text={SSI},%
+plural={SSI\acrpluralsuffix },%
+description={Self-Sovereign Identity},%
+descriptionplural={Self-Sovereign Identity\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Self-Sovereign Identity},%
+longplural={Self-Sovereign Identitys},%
+short={SSI},%
+shortplural={SSIs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{IAM}%
+{%
+name={IAM},%
+sort={IAM},%
+type={acronym},%
+first={Identity and Access Management\glsspace (IAM)},%
+firstplural={Identity and Access Management\acrpluralsuffix \glsspace (IAM\acrpluralsuffix )},%
+text={IAM},%
+plural={IAM\acrpluralsuffix },%
+description={Identity and Access Management},%
+descriptionplural={Identity and Access Management\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Identity and Access Management},%
+longplural={Identity and Access Managements},%
+short={IAM},%
+shortplural={IAMs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{ZKP}%
+{%
+name={ZKP},%
+sort={ZKP},%
+type={acronym},%
+first={Zero-Knowledge Proofs\glsspace (ZKP)},%
+firstplural={Zero-Knowledge Proofs\acrpluralsuffix \glsspace (ZKP\acrpluralsuffix )},%
+text={ZKP},%
+plural={ZKP\acrpluralsuffix },%
+description={Zero-Knowledge Proofs},%
+descriptionplural={Zero-Knowledge Proofs\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Zero-Knowledge Proofs},%
+longplural={Zero-Knowledge Proofss},%
+short={ZKP},%
+shortplural={ZKPs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{SSO}%
+{%
+name={SSO},%
+sort={SSO},%
+type={acronym},%
+first={Single Sign-On\glsspace (SSO)},%
+firstplural={Single Sign-On\acrpluralsuffix \glsspace (SSO\acrpluralsuffix )},%
+text={SSO},%
+plural={SSO\acrpluralsuffix },%
+description={Single Sign-On},%
+descriptionplural={Single Sign-On\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Single Sign-On},%
+longplural={Single Sign-Ons},%
+short={SSO},%
+shortplural={SSOs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{VC}%
+{%
+name={VC},%
+sort={VC},%
+type={acronym},%
+first={Verifiable Credentials\glsspace (VC)},%
+firstplural={Verifiable Credentials\acrpluralsuffix \glsspace (VC\acrpluralsuffix )},%
+text={VC},%
+plural={VC\acrpluralsuffix },%
+description={Verifiable Credentials},%
+descriptionplural={Verifiable Credentials\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Verifiable Credentials},%
+longplural={Verifiable Credentialss},%
+short={VC},%
+shortplural={VCs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{VP}%
+{%
+name={VP},%
+sort={VP},%
+type={acronym},%
+first={Verifiable Presentation\glsspace (VP)},%
+firstplural={Verifiable Presentation\acrpluralsuffix \glsspace (VP\acrpluralsuffix )},%
+text={VP},%
+plural={VP\acrpluralsuffix },%
+description={Verifiable Presentation},%
+descriptionplural={Verifiable Presentation\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Verifiable Presentation},%
+longplural={Verifiable Presentations},%
+short={VP},%
+shortplural={VPs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{DID}%
+{%
+name={DID},%
+sort={DID},%
+type={acronym},%
+first={Identificador Descentralizado\glsspace (DID)},%
+firstplural={Identificador Descentralizado\acrpluralsuffix \glsspace (DID\acrpluralsuffix )},%
+text={DID},%
+plural={DID\acrpluralsuffix },%
+description={Identificador Descentralizado},%
+descriptionplural={Identificador Descentralizado\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Identificador Descentralizado},%
+longplural={Identificador Descentralizados},%
+short={DID},%
+shortplural={DIDs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{PGP}%
+{%
+name={PGP},%
+sort={PGP},%
+type={acronym},%
+first={Pretty Good Privacy\glsspace (PGP)},%
+firstplural={Pretty Good Privacy\acrpluralsuffix \glsspace (PGP\acrpluralsuffix )},%
+text={PGP},%
+plural={PGP\acrpluralsuffix },%
+description={Pretty Good Privacy},%
+descriptionplural={Pretty Good Privacy\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Pretty Good Privacy},%
+longplural={Pretty Good Privacys},%
+short={PGP},%
+shortplural={PGPs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{ZK-SNARKs}%
+{%
+name={ZK-SNARKs},%
+sort={ZK-SNARKs},%
+type={acronym},%
+first={Zero-Knowledge Succinct Non-Interactive Arguments of Knowledge\glsspace (ZK-SNARKs)},%
+firstplural={Zero-Knowledge Succinct Non-Interactive Arguments of Knowledge\acrpluralsuffix \glsspace (ZK-SNARKs\acrpluralsuffix )},%
+text={ZK-SNARKs},%
+plural={ZK-SNARKs\acrpluralsuffix },%
+description={Zero-Knowledge Succinct Non-Interactive Arguments of Knowledge},%
+descriptionplural={Zero-Knowledge Succinct Non-Interactive Arguments of Knowledge\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Zero-Knowledge Succinct Non-Interactive Arguments of Knowledge},%
+longplural={Zero-Knowledge Succinct Non-Interactive Arguments of Knowledges},%
+short={ZK-SNARKs},%
+shortplural={ZK-SNARKss},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{DSL}%
+{%
+name={DSL},%
+sort={DSL},%
+type={acronym},%
+first={Domain Specific Language\glsspace (DSL)},%
+firstplural={Domain Specific Language\acrpluralsuffix \glsspace (DSL\acrpluralsuffix )},%
+text={DSL},%
+plural={DSL\acrpluralsuffix },%
+description={Domain Specific Language},%
+descriptionplural={Domain Specific Language\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Domain Specific Language},%
+longplural={Domain Specific Languages},%
+short={DSL},%
+shortplural={DSLs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{CRS}%
+{%
+name={CRS},%
+sort={CRS},%
+type={acronym},%
+first={Common Reference String\glsspace (CRS)},%
+firstplural={Common Reference String\acrpluralsuffix \glsspace (CRS\acrpluralsuffix )},%
+text={CRS},%
+plural={CRS\acrpluralsuffix },%
+description={Common Reference String},%
+descriptionplural={Common Reference String\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Common Reference String},%
+longplural={Common Reference Strings},%
+short={CRS},%
+shortplural={CRSs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{ZK-STARKs}%
+{%
+name={ZK-STARKs},%
+sort={ZK-STARKs},%
+type={acronym},%
+first={Zero-Knowledge Scalable Transparent ARguments of Knowledge\glsspace (ZK-STARKs)},%
+firstplural={Zero-Knowledge Scalable Transparent ARguments of Knowledge\acrpluralsuffix \glsspace (ZK-STARKs\acrpluralsuffix )},%
+text={ZK-STARKs},%
+plural={ZK-STARKs\acrpluralsuffix },%
+description={Zero-Knowledge Scalable Transparent ARguments of Knowledge},%
+descriptionplural={Zero-Knowledge Scalable Transparent ARguments of Knowledge\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Zero-Knowledge Scalable Transparent ARguments of Knowledge},%
+longplural={Zero-Knowledge Scalable Transparent ARguments of Knowledges},%
+short={ZK-STARKs},%
+shortplural={ZK-STARKss},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{MPC}%
+{%
+name={MPC},%
+sort={MPC},%
+type={acronym},%
+first={Multiparty Computation\glsspace (MPC)},%
+firstplural={Multiparty Computation\acrpluralsuffix \glsspace (MPC\acrpluralsuffix )},%
+text={MPC},%
+plural={MPC\acrpluralsuffix },%
+description={Multiparty Computation},%
+descriptionplural={Multiparty Computation\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Multiparty Computation},%
+longplural={Multiparty Computations},%
+short={MPC},%
+shortplural={MPCs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{HTTP}%
+{%
+name={HTTP},%
+sort={HTTP},%
+type={acronym},%
+first={HyperText Transfer Protocol\glsspace (HTTP)},%
+firstplural={HyperText Transfer Protocol\acrpluralsuffix \glsspace (HTTP\acrpluralsuffix )},%
+text={HTTP},%
+plural={HTTP\acrpluralsuffix },%
+description={HyperText Transfer Protocol},%
+descriptionplural={HyperText Transfer Protocol\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={HyperText Transfer Protocol},%
+longplural={HyperText Transfer Protocols},%
+short={HTTP},%
+shortplural={HTTPs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{OIDC}%
+{%
+name={OIDC},%
+sort={OIDC},%
+type={acronym},%
+first={OpenID Connect\glsspace (OIDC)},%
+firstplural={OpenID Connect\acrpluralsuffix \glsspace (OIDC\acrpluralsuffix )},%
+text={OIDC},%
+plural={OIDC\acrpluralsuffix },%
+description={OpenID Connect},%
+descriptionplural={OpenID Connect\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={OpenID Connect},%
+longplural={OpenID Connects},%
+short={OIDC},%
+shortplural={OIDCs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{JWT}%
+{%
+name={JWT},%
+sort={JWT},%
+type={acronym},%
+first={JSON Web Token\glsspace (JWT)},%
+firstplural={JSON Web Token\acrpluralsuffix \glsspace (JWT\acrpluralsuffix )},%
+text={JWT},%
+plural={JWT\acrpluralsuffix },%
+description={JSON Web Token},%
+descriptionplural={JSON Web Token\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={JSON Web Token},%
+longplural={JSON Web Tokens},%
+short={JWT},%
+shortplural={JWTs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{OIDC4VC}%
+{%
+name={OIDC4VC},%
+sort={OIDC4VC},%
+type={acronym},%
+first={OpenID Connect com Credenciais Verificáveis\glsspace (OIDC4VC)},%
+firstplural={OpenID Connect com Credenciais Verificáveis\acrpluralsuffix \glsspace (OIDC4VC\acrpluralsuffix )},%
+text={OIDC4VC},%
+plural={OIDC4VC\acrpluralsuffix },%
+description={OpenID Connect com Credenciais Verificáveis},%
+descriptionplural={OpenID Connect com Credenciais Verificáveis\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={OpenID Connect com Credenciais Verificáveis},%
+longplural={OpenID Connect com Credenciais Verificáveiss},%
+short={OIDC4VC},%
+shortplural={OIDC4VCs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{SIOPv2}%
+{%
+name={SIOPv2},%
+sort={SIOPv2},%
+type={acronym},%
+first={Self-Issued OpenID Provider v2\glsspace (SIOPv2)},%
+firstplural={Self-Issued OpenID Provider v2\acrpluralsuffix \glsspace (SIOPv2\acrpluralsuffix )},%
+text={SIOPv2},%
+plural={SIOPv2\acrpluralsuffix },%
+description={Self-Issued OpenID Provider v2},%
+descriptionplural={Self-Issued OpenID Provider v2\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Self-Issued OpenID Provider v2},%
+longplural={Self-Issued OpenID Provider v2s},%
+short={SIOPv2},%
+shortplural={SIOPv2s},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{OIDC4VP}%
+{%
+name={OIDC4VP},%
+sort={OIDC4VP},%
+type={acronym},%
+first={OpenID para Apresentações Verificáveis\glsspace (OIDC4VP)},%
+firstplural={OpenID para Apresentações Verificáveis\acrpluralsuffix \glsspace (OIDC4VP\acrpluralsuffix )},%
+text={OIDC4VP},%
+plural={OIDC4VP\acrpluralsuffix },%
+description={OpenID para Apresentações Verificáveis},%
+descriptionplural={OpenID para Apresentações Verificáveis\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={OpenID para Apresentações Verificáveis},%
+longplural={OpenID para Apresentações Verificáveiss},%
+short={OIDC4VP},%
+shortplural={OIDC4VPs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{OIDC4CI}%
+{%
+name={OIDC4CI},%
+sort={OIDC4CI},%
+type={acronym},%
+first={OpenID para Emissão de Credenciais Verificáveis\glsspace (OIDC4CI)},%
+firstplural={OpenID para Emissão de Credenciais Verificáveis\acrpluralsuffix \glsspace (OIDC4CI\acrpluralsuffix )},%
+text={OIDC4CI},%
+plural={OIDC4CI\acrpluralsuffix },%
+description={OpenID para Emissão de Credenciais Verificáveis},%
+descriptionplural={OpenID para Emissão de Credenciais Verificáveis\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={OpenID para Emissão de Credenciais Verificáveis},%
+longplural={OpenID para Emissão de Credenciais Verificáveiss},%
+short={OIDC4CI},%
+shortplural={OIDC4CIs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{JSON}%
+{%
+name={JSON},%
+sort={JSON},%
+type={acronym},%
+first={JavaScript Object Notation\glsspace (JSON)},%
+firstplural={JavaScript Object Notation\acrpluralsuffix \glsspace (JSON\acrpluralsuffix )},%
+text={JSON},%
+plural={JSON\acrpluralsuffix },%
+description={JavaScript Object Notation},%
+descriptionplural={JavaScript Object Notation\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={JavaScript Object Notation},%
+longplural={JavaScript Object Notations},%
+short={JSON},%
+shortplural={JSONs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{JSON-LD}%
+{%
+name={JSON-LD},%
+sort={JSON-LD},%
+type={acronym},%
+first={JSON for Linked Data\glsspace (JSON-LD)},%
+firstplural={JSON for Linked Data\acrpluralsuffix \glsspace (JSON-LD\acrpluralsuffix )},%
+text={JSON-LD},%
+plural={JSON-LD\acrpluralsuffix },%
+description={JSON for Linked Data},%
+descriptionplural={JSON for Linked Data\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={JSON for Linked Data},%
+longplural={JSON for Linked Datas},%
+short={JSON-LD},%
+shortplural={JSON-LDs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{JWS}%
+{%
+name={JWS},%
+sort={JWS},%
+type={acronym},%
+first={JSON Web Signature\glsspace (JWS)},%
+firstplural={JSON Web Signature\acrpluralsuffix \glsspace (JWS\acrpluralsuffix )},%
+text={JWS},%
+plural={JWS\acrpluralsuffix },%
+description={JSON Web Signature},%
+descriptionplural={JSON Web Signature\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={JSON Web Signature},%
+longplural={JSON Web Signatures},%
+short={JWS},%
+shortplural={JWSs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{DA}%
+{%
+name={DA},%
+sort={DA},%
+type={acronym},%
+first={Definição de Apresentação\glsspace (DA)},%
+firstplural={Definição de Apresentação\acrpluralsuffix \glsspace (DA\acrpluralsuffix )},%
+text={DA},%
+plural={DA\acrpluralsuffix },%
+description={Definição de Apresentação},%
+descriptionplural={Definição de Apresentação\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Definição de Apresentação},%
+longplural={Definição de Apresentaçãos},%
+short={DA},%
+shortplural={DAs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{OIDC Discovery}%
+{%
+name={OIDC Discovery},%
+sort={OIDC Discovery},%
+type={acronym},%
+first={OpenID Connect Discovery\glsspace (OIDC Discovery)},%
+firstplural={OpenID Connect Discovery\acrpluralsuffix \glsspace (OIDC Discovery\acrpluralsuffix )},%
+text={OIDC Discovery},%
+plural={OIDC Discovery\acrpluralsuffix },%
+description={OpenID Connect Discovery},%
+descriptionplural={OpenID Connect Discovery\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={OpenID Connect Discovery},%
+longplural={OpenID Connect Discoverys},%
+short={OIDC Discovery},%
+shortplural={OIDC Discoverys},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{OIDC Dynamic Client Registration}%
+{%
+name={OIDC Dynamic Client Registration},%
+sort={OIDC Dynamic Client Registration},%
+type={acronym},%
+first={OpenID Connect Dynamic Client Registration\glsspace (OIDC Dynamic Client Registration)},%
+firstplural={OpenID Connect Dynamic Client Registration\acrpluralsuffix \glsspace (OIDC Dynamic Client Registration\acrpluralsuffix )},%
+text={OIDC Dynamic Client Registration},%
+plural={OIDC Dynamic Client Registration\acrpluralsuffix },%
+description={OpenID Connect Dynamic Client Registration},%
+descriptionplural={OpenID Connect Dynamic Client Registration\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={OpenID Connect Dynamic Client Registration},%
+longplural={OpenID Connect Dynamic Client Registrations},%
+short={OIDC Dynamic Client Registration},%
+shortplural={OIDC Dynamic Client Registrations},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{WIM}%
+{%
+name={WIM},%
+sort={WIM},%
+type={acronym},%
+first={Web Infrastructure Model\glsspace (WIM)},%
+firstplural={Web Infrastructure Model\acrpluralsuffix \glsspace (WIM\acrpluralsuffix )},%
+text={WIM},%
+plural={WIM\acrpluralsuffix },%
+description={Web Infrastructure Model},%
+descriptionplural={Web Infrastructure Model\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Web Infrastructure Model},%
+longplural={Web Infrastructure Models},%
+short={WIM},%
+shortplural={WIMs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{DV}%
+{%
+name={DV},%
+sort={DV},%
+type={acronym},%
+first={Dolev-Yao\glsspace (DV)},%
+firstplural={Dolev-Yao\acrpluralsuffix \glsspace (DV\acrpluralsuffix )},%
+text={DV},%
+plural={DV\acrpluralsuffix },%
+description={Dolev-Yao},%
+descriptionplural={Dolev-Yao\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Dolev-Yao},%
+longplural={Dolev-Yaos},%
+short={DV},%
+shortplural={DVs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{MRPTWG}%
+{%
+name={MRPTWG},%
+sort={MRPTWG},%
+type={acronym},%
+first={Machine Readable Privacy Terms Working Group\glsspace (MRPTWG)},%
+firstplural={Machine Readable Privacy Terms Working Group\acrpluralsuffix \glsspace (MRPTWG\acrpluralsuffix )},%
+text={MRPTWG},%
+plural={MRPTWG\acrpluralsuffix },%
+description={Machine Readable Privacy Terms Working Group},%
+descriptionplural={Machine Readable Privacy Terms Working Group\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Machine Readable Privacy Terms Working Group},%
+longplural={Machine Readable Privacy Terms Working Groups},%
+short={MRPTWG},%
+shortplural={MRPTWGs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{LGPD}%
+{%
+name={LGPD},%
+sort={LGPD},%
+type={acronym},%
+first={Lei Geral de Proteção de Dados\glsspace (LGPD)},%
+firstplural={Lei Geral de Proteção de Dados\acrpluralsuffix \glsspace (LGPD\acrpluralsuffix )},%
+text={LGPD},%
+plural={LGPD\acrpluralsuffix },%
+description={Lei Geral de Proteção de Dados},%
+descriptionplural={Lei Geral de Proteção de Dados\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Lei Geral de Proteção de Dados},%
+longplural={Lei Geral de Proteção de Dadoss},%
+short={LGPD},%
+shortplural={LGPDs},%
+counter={page},%
+parent={},%
+%
+}%
+

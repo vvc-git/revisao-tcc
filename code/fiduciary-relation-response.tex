@@ -1,0 +1,45 @@
+\input{code/pseudo}
+
+\begin{lstlisting}[language=pseudo, caption={Modificação na relação de um Fiduciário $R^{fid}$: Processamento de Respostas HTTPS}, firstnumber=58, 
+else if $reference$[responseTo] $\equiv$ NEGOTIATE then
+    if $m$.body[status] $\equiv$ ACCEPTED then
+            \\ Retrieve information to respond to the Authorization request
+            let $sessionID$ := $reference$[session]
+            let $session$ := $s'$.session[$sessionID$]
+            let $nonceForVp$ := $session$[nonceForVp]
+            let $nonceForHttpResp$ := $session$[nonceForHttpResp]
+            let $aud$ := $session$[aud]
+            let $host$ := $session$[host]
+            let $state$ := $session$[state]
+            let $redirectUri$ := $session$[redirect_uri]
+            let $headers$ := $\langle\langle$Location, $redirectUri$$\rangle\rangle$
+            \\ Check if the one who accepted the request is the same as the one who forwarded the pd.
+            if $m$.host $\equiv$ $host$ then
+                let $credential$ $\leftarrow$ $s'$.credentials
+                let $username, iss, pubKey$ such that $\langle$username, iss, pubKey$\rangle$$\equiv$ extractmsg($credential$) if possible; 
+                otherwise stop
+                let $presentation$ := $\langle$$credential$, $nonceForVp$, $aud$$\rangle$
+                let $vpToken$ := sig($presentation$, $s'$.holderKey) 
+                let $parameters$ := $\langle\langle$ vp_token, vpToken $\rangle\rangle$
+                let $parameters$ :=$ parameters$ + $\langle$iss, $host$$\rangle$
+                let $parameters$ := $parameters$ + $\langle$state, $state$$\rangle$
+                let $redirectUri$.fragment := $redirectUri$.fragment $\cup$ $parameters$
+                let $m'$ := 
+                $enc_s$$\langle\langle$HTTPResp, $nonceForHttpResp$, 303, $\langle\langle$Location, authRespUri$\rangle\rangle$, $\langle\rangle$\rangle$, $k$$\rangle\rangle$
+                stop $\langle\langle$ $f$, $a$,$ m'$\rangle\rangle$, $s'$
+\end{lstlisting}
+
+
+% ----- Etapas para emissao do vp_token no responseMode = fragment 
+% 1. nonce da Requisição de Autorização (Usado para a VP) // Precisa salva o nonce da mensagem HTTPS.
+% 2. aud = AuthRespURI = URL para o redirecionamento após a solicitação
+% 3. Gerar VP
+%     3.1 precisa da credenical
+%     3.2 do nonce em (1)
+%     3.3 do aud em (2)
+% 4. Colocar no vp\_token
+% 5. Salvar o host para comparar com o host da mensagem de aceitação
+% 6. Salvar o estado 
+% 7. Salvar = AuthRespURI
+
+% redirectUri = authRespUri

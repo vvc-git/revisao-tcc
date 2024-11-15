@@ -1,0 +1,29 @@
+\section{Prova de Propriedades de Segurança}
+
+\subsection{Prova da Autenticação da Negociação}
+Esta seção apresenta a prova formal da propriedade de segurança de Autenticação da Negociação da Definição \ref{negotiation-auth-definition}. A propriedade é demonstrada diretamente, provando que ela se mantém em um sistema de credenciais verificáveis na web, $\mathcal{VCWS}^n$.
+
+\begin{lema}[Negociação da Autenticação é válida]
+Definção \ref{negotiation-auth-definition} é válida.
+\end{lema}
+
+\textbf{Prova} De acordo com a Definição \ref{negotiation-auth-definition}, existe uma definição de apresentação arbitrária $pd$ no formato $\langle id, input\_descriptor \rangle$. Para mostrar que $pd$ não é derivável pelo atacante ($pd \not \in d_{\emptyset}(S_j(atacante))$), rastreamos todas as maneiras pelas quais um agente malicioso poderia controlar a $pd$.
+
+  Este parágrafo demonstra que tanto o navegador quanto o verificador não vazam $pd$ em sua comunicação. O verificador honesto $v$ envia uma requisição HTTPS criptografada contendo
+  uma presentation\_definition no formato $ \langle id, input\_descriptor\rangle $ (Linha 25 do Algoritmo \ref{lst:verifier-relation}) para o Fiduciário honesto $fid$ através do navegador $b$. 
+  Esse mecanismo impede que o atacante derive o valor de $pd$, já que o algoritmo de criptografia não pode ser violado, as chaves de criptografia são mantidas em sigilo, e o mapeamento do domínio para a chave pública é devidamente configurado no estado inicial de cada processo. 
+  Uma prova mais aprofundada da segurança das mensagens HTTPS trocadas entre um navegador e um servidor HTTPS genérico, sem vazamento de informações, é apresentada no Lema 1 em \cite{fett2024wim}, assegurando que a resposta seja visível apenas para $v$ e $b$, sem exposição a outras partes.
+  Além disso, pela definição do navegador, podemos ver que apenas scripts carregados das origens $\langle d, \texttt{S} \rangle$ podem acessar $pd$. 
+  Portanto, temos que apenas os scripts script\_verifier\_get\_fragment e script client\_verifier\_index podem acessar $pd$ (se carregados de suas respectivas origens) e que o navegador não utiliza ou vaza $pd$ de nenhuma outra forma.
+  Nenhum desses scripts utiliza $pd$, então o navegador não vaza esta definição por eles.
+  
+  Este parágrafo demonstra que tanto o navegador quanto o fiduciário não vazam $pd$ em sua comunicação. 
+  Da mesma forma mostrada acima, ao estabelecer uma conexão HTTPS entre $b$ e $fid$, o mesmo lema 1 em \cite{fett2024wim} garante que a resposta permanece protegida contra vazamentos para qualquer outra parte.
+  O $fid$ realiza uma validação da definição com \texttt{followConstraints}( \texttt{constraints($fid$)}, $pd$) se $input\_descriptor$ de $pd$ está de acordo com \texttt{constraints($fid$)} (Linha 78 do Algoritmo \ref{lst:fid-relation}).
+  Caso a condição não seja satisfeita, o sistema descarta $pd$ procede construindo uma requisição com uma nova definição de apresentação pd' no mesmo formato $ \langle id', input\_descriptor'\rangle $ juntamente com $id$ de $pd$ (Linha 80 do Algoritmo \ref{lst:fid-relation}).
+  Como $id$ e $pd$ não vazam na etapa anterior, então somente $fid$ consegue sugerir uma nova definição por meio de uma requisição POST criptografada para o domínio que foi especificado em negotiationEndpoint (Linha 23  Algoritmo \ref{lst:verifier-relation}).
+  
+  Uma vez que essa requisição chega ao domínio de destino, a definição de apresentação é submetida a um processo de validação por $v$ com \texttt{followConstraints}( \texttt{constraints}($v$), $pd'$), garantindo que ela atende a todos os requisitos e critérios estabelecidos para ser considerada válida em \texttt{constraints($v$)}. 
+  Se a entidade verificadora $v$ estiver de acordo com os termos da definição de apresentação, ela então armazena essa definição em seu estado interno (Linha 106 do Algoritmo \ref{lst:verifier-relation-2}) para processamento da autenticidade do vp\_token no futuro.
+  Portanto, $pd$ não é exposto por $v$, $b$ ou $fid$ ao atacante ou a qualquer outra parte, garantindo a proteção das informações. Dessa forma, o lema está comprovado. \qed
+

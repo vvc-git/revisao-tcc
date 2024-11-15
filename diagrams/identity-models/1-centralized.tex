@@ -1,0 +1,13 @@
+% Modelo Centralizado
+\begin{minipage}[b]{0.4\linewidth}
+    \centering
+    \begin{tikzpicture}[roundnode/.style={circle, draw=black, very thick, minimum size=20mm, align=center},]
+        %Nodes
+        \node[roundnode]      (idp-sp)                            {IdP \\ SP};
+        \node[roundnode]      (usr)  [left=of idp-sp]  {usuário};
+        
+        %Lines
+        \draw[<->] (idp-sp) -- (usr);
+
+    \end{tikzpicture}
+\end{minipage}

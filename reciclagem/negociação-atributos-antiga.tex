@@ -1,0 +1,55 @@
+\subsubsection{NEGOCIAÇÃO}
+\input{diagrams/sequence-diagram/negociacao-execucao}
+
+Para que seja possível a negociação de DA, o Provedor de Serviços irá fornecer um novo \textit{endpoint} chamado \textit{/negotiate} que será disponibilizado pelo parâmetro \textit{negotiate\_uri}. Nele o Fiduciário irá realizar as solicitações HTTP POST com as sugestões de DA que estão em conformidade com as políticas do usuário. Um exemplo de mensagem com a modificação sugerida está sendo mostrado em [\ref{fig:auth-req-with-negotiate-oidc4vc}]. 
+
+\begin{figure}[h]
+
+    {\couriernew
+    POST /authorize? HTTP/1.1\\
+    Host: example.com \\
+    Content-Type: application/x-www-form-urlencoded\\\\
+    response\_type=vp\_token\\
+    \&client\_id=https\%3A\%2F\%2Fclient.example.org\%2Fcb \\
+    \&redirect\_uri=https\%3A\%2F\%2Fclient.example.org\%2Fcb \\
+    \textbf{\color{red}{\&negotiate\_uri=https\%3A\%2F\%2Fclient.example.org\%2Fcb}} \\
+    \&presentation\_definition=... \\
+    \&nonce=n-0S6\_WzA2Mj HTTP/1.1 \\
+    }
+    
+  \caption{Requisição de Autorização no OIDC4VC}
+  \label{fig:auth-req-with-negotiate-oidc4vc}
+\end{figure}
+
+Assim o protocolo define uma nova mensagem HTTP POST enviada pelo Fiduciário ao Provedor de Serviços sugerindo um novo DA. Esta mensagem contém o parâmetro \textit{presentation\_definition}, com a DA gerada pelo Fiduciário, além de um novo \textit{nonce} para evitar ataques de repetição. Um exemplo dessa mensagem é mostrado em [\ref{fig:negotiate-request}]. 
+
+
+\begin{figure}[h]    
+    {\couriernew
+    POST /negotiate? HTTP/1.1\\
+    Host: example.com \\
+    Content-Type: application/x-www-form-urlencoded\\\\
+    %response\_type=vp\_token\\
+    %\&client\_id=.. \\
+    %\&redirect\_uri=https\%3A\%2F\%2Fclient.example.org\%2Fcb \\
+    \&presentation\_definition=... \\
+    \&nonce=n-3z!K2hQ7iU HTTP/1.1\\
+    }
+  \caption{Requisição de Negociação}
+  \label{fig:negotiate-request}
+\end{figure}
+
+O PS pode então ou aceitar ou recusar DA sugerida pelo Fiduciário. Quando o PS aceita, a resposta do HTTP POST é 201, indicando que houve a aceitação da DA sugerida e o PS está pronto para receber uma Apresentação Verificável com os campos referentes a sugestão do Fiduciário e, consequentemente, diferentes da DA inicial. 
+
+Em seguida, o Fiduciário cria uma Resposta de Autorização, mostrado em [\ref{fig:authorization-response}], utilizando a DA que ele sugeriu. No entanto, quando o PS recusa a sugestão de DA, o \textit{status} é 403 indicando que o Fiduciário terá que propor novas DA(s). 
+
+\begin{figure}[h]    
+    {\couriernew
+    HTTP/1.1 302 Found \\
+    Location: https://client.example.org/cb\# \\
+    presentation\_submission=... \\
+    \&vp\_token=... \\
+    }
+  \caption{Resposta de Negociação}
+  \label{fig:authorization-response}
+\end{figure}

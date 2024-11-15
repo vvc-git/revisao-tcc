@@ -1,0 +1,12 @@
+\section{Propriedades Formais de Segurança}
+
+\subsection{Autenticação da Negociação}
+
+De forma informal, a propriedade de segurança de Autenticação da Negociação implica que um atacante não pode realizar negociações em nome de um fiduciário honesto em um verificador honesto, desde que determinadas partes envolvidas nos processos de autenticação permaneçam íntegras. A Definição \ref{negotiation-auth-definition} se aproxima da propriedade de autenticação apresentada em B.1.2 de \cite{hauck2023openid}, embora apresente algumas diferenças sutis, mas relevantes para esta análise.
+
+\begin{definicao}[O atacante não negocia Definições de Apresentações em nome de Fiduciário]\label{negotiation-auth-definition}
+Seja $\mathcal{VCWS}^n$ um sistema web de Credenciais Verificáveis com um atacante de rede. 
+O atacante não negocia Definições de Apresentações se, e somente se, para cada execução $\rho$ de $\mathcal{VCWS}^n$, cada configuração $(S_j, E_j, N_j)$ em $\rho$, 
+cada $u \in \text{ID}$ e o navegador $b$ que possui $u$ não esteja totalmente corrompido em $S_j$ (ou seja, o valor de \texttt{isCorrupted} não seja \texttt{FULLCORRUPT}), e $fid \in \text{Fiduciary}$ sendo um fiduciário honesto em $S_j$, 
+não existe \( l \leq j \), \( (S_l, E_l, N_l) \) sendo um estado em \( \rho \) tal que $pd \equiv \langle id, input\_descriptor \rangle$ e  \( pd \in d_\varnothing (S^l(attacker)) \)
+\end{definicao}
