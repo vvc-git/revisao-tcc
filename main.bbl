@@ -204,10 +204,15 @@ Dispon{\'\i}vel em:
   taxonomy.
 \textbf{Sensors 22(15)}, 2022.}
 
-\bibitem[Schardong 2024]{fiduciary}
-\abntrefinfo{Schardong}{SCHARDONG}{2024}
-{SCHARDONG, F. From self-sovereign identity to fiduciary identity: A journey
-  towards greater user privacy and usability. Não publicado. 2024.}
+\bibitem[Schardong e Custodio 2024]{fiduciary}
+\abntrefinfo{Schardong e Custodio}{SCHARDONG; CUSTODIO}{2024}
+{SCHARDONG, F.; CUSTODIO, R. From self-sovereign identity to fiduciary
+  identity: A journey towards greater user privacy and usability. In:
+  \textbf{Proceedings of the 39th ACM/SIGAPP Symposium on Applied Computing}.
+  New York, NY, USA: Association for Computing Machinery, 2024.  (SAC '24), p.
+  687–694.
+ISBN 9798400702433. Dispon{\'\i}vel em:
+  \url{https://doi.org/10.1145/3605098.3636061}.}
 
 \bibitem[Sidell 2020]{sidell2020google}
 \abntrefinfo{Sidell}{SIDELL}{2020}
