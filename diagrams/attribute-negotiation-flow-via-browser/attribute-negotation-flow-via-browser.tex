@@ -1,5 +1,5 @@
 \begin{sequencediagram}[scale=0.1]
-    \newthread{A}{\ttfamily Navegador}{}
+    \newthread{A}{\ttfamily Usuário}{}
     \newinst[6]{B}{\ttfamily Fiduciário}{}
     \newinst[15]{C}{\ttfamily \acs{SP}}{}
     
@@ -19,7 +19,7 @@
                 % \node at (1.5,-4) [text width=6cm, anchor=west] {\ttfamily \small Autenticação e Confirmação/Seleção da \acs{VC}};
     
                 \postlevel
-                \begin{call}{B}{\shortstack{ \ttfamily Requisição de Negociação\\ \ttfamily (type, definition\_id, presentation\_definition)}}{C}{\shortstack{ \ttfamily Resposta de Negociação\\ \ttfamily(status)}}
+                \begin{call}{B}{\shortstack{  \bfseries\ttfamily Requisição de Negociação \\ \bfseries\ttfamily (type, definition\_id, presentation\_definition)}}{C}{\shortstack{ \ttfamily \bfseries Resposta de Negociação\\ \bfseries\ttfamily(status)}}
                 \postlevel
                 \end{call}
 

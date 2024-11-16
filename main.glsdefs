@@ -894,31 +894,3 @@ parent={},%
 %
 }%
 
-\glsdefs@newdocentry{LGPD}%
-{%
-name={LGPD},%
-sort={LGPD},%
-type={acronym},%
-first={Lei Geral de Proteção de Dados\glsspace (LGPD)},%
-firstplural={Lei Geral de Proteção de Dados\acrpluralsuffix \glsspace (LGPD\acrpluralsuffix )},%
-text={LGPD},%
-plural={LGPD\acrpluralsuffix },%
-description={Lei Geral de Proteção de Dados},%
-descriptionplural={Lei Geral de Proteção de Dados\acrpluralsuffix },%
-symbol={\relax },%
-symbolplural={\relax },%
-user1={},%
-user2={},%
-user3={},%
-user4={},%
-user5={},%
-user6={},%
-long={Lei Geral de Proteção de Dados},%
-longplural={Lei Geral de Proteção de Dadoss},%
-short={LGPD},%
-shortplural={LGPDs},%
-counter={page},%
-parent={},%
-%
-}%
-

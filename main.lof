@@ -31,14 +31,14 @@
 \contentsline {figure}{\numberline {12}{\ignorespaces Ecossistema \acs {OPAL}.\relax }}{56}{figure.caption.28}%
 \contentsline {figure}{\numberline {13}{\ignorespaces Pilha: Modelo, protocolos, extensões.\relax }}{59}{figure.caption.30}%
 \contentsline {figure}{\numberline {14}{\ignorespaces Fluxo com Fiduciário no lugar da Carteira.\relax }}{60}{figure.caption.31}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Solicitação de Negociação.\relax }}{62}{figure.caption.32}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Resposta de Negociação com Sucesso.\relax }}{63}{figure.caption.33}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Resposta de Negociação com Recusa.\relax }}{64}{figure.caption.35}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Exemplo de parâmetro negotiation\_enpoint no client\_metadata (em UTF-8).\relax }}{65}{figure.caption.36}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Fluxo para Negociação de Atributos.\relax }}{66}{figure.caption.37}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Solicitação de Negociação com type=env.\relax }}{67}{figure.caption.38}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Resposta de Negociação com Sucesso.\relax }}{68}{figure.caption.39}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Resposta de Negociação com computer\_site\_description.\relax }}{68}{figure.caption.40}%
-\contentsline {figure}{\numberline {23}{\ignorespaces Resposta de Recusa para \autoref {fig:negotiation-request-env}.\relax }}{69}{figure.caption.41}%
-\contentsline {figure}{\numberline {24}{\ignorespaces Fluxo para Negociação de Ambiente de Execução.\relax }}{69}{figure.caption.42}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Fluxo para Negociação de Atributos.\relax }}{62}{figure.caption.32}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Exemplo de parâmetro negotiation\_enpoint no client\_metadata (em UTF-8).\relax }}{62}{figure.caption.33}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Solicitação de Negociação.\relax }}{63}{figure.caption.34}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Resposta de Negociação com Sucesso.\relax }}{64}{figure.caption.35}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Resposta de Negociação com Recusa.\relax }}{64}{figure.caption.37}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Fluxo para Negociação de Ambiente de Execução.\relax }}{66}{figure.caption.38}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Solicitação de Negociação com \texttt {type=env}.\relax }}{67}{figure.caption.39}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Resposta de Negociação com Sucesso.\relax }}{67}{figure.caption.40}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Resposta de Negociação com \texttt {compute\_site\_description}.\relax }}{68}{figure.caption.41}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Resposta de Recusa.\relax }}{69}{figure.caption.42}%
 \babel@toc {brazil}{}\relax 
