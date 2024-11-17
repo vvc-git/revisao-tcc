@@ -73,7 +73,7 @@ A Solicitação de Negociação constitui uma requisição HTTP POST enviada pel
 
 \subsection{Resposta de Negociação}
 
-O Provedor de Serviços possui a prerrogativa de aceitar ou recusar a proposta de alteração da Declaração de Requisitos. Em determinados casos, o Fiduciário aceita a proposta que contém a nova Declaração de Requisitos e responde com uma mensagem com tipo de mídia \texttt{application/json} contendo em seu corpo o \acs{JSON} com o parâmetro status indicando a aceitação da sugestão de declaração e o código de status HTTP 201 sinalizando a criação de um novo recurso para conseguir receber a nova declaração, que é diferente daquele que ele enviou. 
+O Provedor de Serviços possui a prerrogativa de aceitar ou recusar a proposta de alteração da Declaração de Requisitos. Em determinados casos, o Fiduciário aceita a proposta que contém a nova Declaração de Requisitos e responde com uma mensagem com tipo de mídia \texttt{application/json} contendo em seu corpo o \acs{JSON} com o parâmetro status indicando a aceitação da sugestão de declaração e o código de status HTTP 202 sinalizando está pronto para receber a nova declaração, que é diferente daquele que o \acs{SP} enviou em sua Requsição de Autorização. 
 
 % % Resposta de Negocição bem sucedida
 \input{images/tex/negotiation-response-success}
