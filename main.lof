@@ -21,8 +21,8 @@
 \contentsline {figure}{\numberline {2}{\ignorespaces Modelo de Credenciais Verificáveis W3C.\relax }}{32}{figure.caption.16}%
 \contentsline {figure}{\numberline {3}{\ignorespaces Pilares do Modelo Fiduciário.\relax }}{37}{figure.caption.19}%
 \contentsline {figure}{\numberline {4}{\ignorespaces Modelo Fiduciário.\relax }}{39}{figure.caption.20}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Fluxo de Código de Autorização no OAuth.\relax }}{42}{figure.caption.21}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Fluxo de Código de Autorização no OIDC.\relax }}{43}{figure.caption.22}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Fluxo de Código de Autorização no OAuth 2.0.\relax }}{42}{figure.caption.21}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Fluxo de Código de Autorização no OIDC.\relax }}{44}{figure.caption.22}%
 \contentsline {figure}{\numberline {7}{\ignorespaces Ecossistema do OIDC4VC.\relax }}{46}{figure.caption.23}%
 \contentsline {figure}{\numberline {8}{\ignorespaces Fluxo com Carteira e \acs {SP} no mesmo dispositivo.\relax }}{49}{figure.caption.24}%
 \contentsline {figure}{\numberline {9}{\ignorespaces Etapas da Análise Formal de Segurança.\relax }}{51}{figure.caption.25}%

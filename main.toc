@@ -46,7 +46,7 @@
 \contentsline {subsection}{\numberline {2.3.1}OAuth 2.0}{39}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}OpenID Connect}{42}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}OIDC4VC: O OpenID Connect no modelo SSI }{44}{subsection.2.3.3}%
-\contentsline {subsubsection}{\numberline {2.3.3.1}Ecossistema}{45}{subsubsection.2.3.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.3.1}Ecossistema}{46}{subsubsection.2.3.3.1}%
 \contentsline {subsubsection}{\numberline {2.3.3.2}OIDC4VP}{47}{subsubsection.2.3.3.2}%
 \contentsline {subsubsection}{\numberline {2.3.3.3}Funcionamento}{48}{subsubsection.2.3.3.3}%
 \contentsline {section}{\numberline {2.4}Análise formal de segurança}{51}{section.2.4}%

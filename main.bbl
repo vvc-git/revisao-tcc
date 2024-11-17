@@ -44,12 +44,6 @@ Acessado: 10 de julho de 2024.}
   8259.
 Dispon{\'\i}vel em: \url{https://www.rfc-editor.org/rfc/rfc8259.txt}.}
 
-\bibitem[Chinta 2024]{OAuthImage2024}
-\abntrefinfo{Chinta}{CHINTA}{2024}
-{CHINTA, M. \textbf{Understanding OAuth 2.0: Step-by-Step Gude}. 2024.
-Acessado em 06 de Abril, 2024.
-Dispon{\'\i}vel em: \url{https://medium.com/codenx/oauth-2-0-4cddd6c7471f}.}
-
 \bibitem[DIF 2024]{presentation-exchange}
 \abntrefinfo{DIF}{DIF}{2024}
 {DIF. \textbf{FPresentation Exchange 2.1.0}. [S.l.]: GitHub, 2024.
@@ -148,6 +142,13 @@ Dispon{\'\i}vel em:
   n.~2, p. 01--24, 2024.
 ISSN 1696-8352.}
 
+\bibitem[Kawasaki 2021]{darutk2021openidconnect}
+\abntrefinfo{Kawasaki}{KAWASAKI}{2021}
+{KAWASAKI, T. \textbf{Diagrams of All the OpenID Connect Flows}. 2021.
+Acessado: 15 de agosto de 2024.
+Dispon{\'\i}vel em:
+  \url{https://darutk.medium.com/diagrams-of-all-the-openid-connect-flows-6968e3990660}.}
+
 \bibitem[Kulik et al. 2020]{Kulik2020}
 \abntrefinfo{Kulik et al.}{KULIK et al.}{2020}
 {KULIK, T. et al. A survey of practical formal methods for security.
@@ -220,14 +221,6 @@ ISBN 9798400702433. Dispon{\'\i}vel em:
 Acessado: 18 de julho de 2024.
 Dispon{\'\i}vel em:
   \url{https://www.avast.com/pt-br/c-how-google-uses-your-data}.}
-
-\bibitem[Siriwardena 2020]{OpendIDImage2024}
-\abntrefinfo{Siriwardena}{SIRIWARDENA}{2020}
-{SIRIWARDENA, P. \textbf{OpenID Connect Authentication Flows}. 2020.
-Acessado em 11 de Abril, 2024.
-Dispon{\'\i}vel em:
-  \url{https://medium.facilelogin.com/openid-connect-authentication
-  flows-936f52380f38}.}
 
 \bibitem[Sporny et al. 2024]{data-model-w3c}
 \abntrefinfo{Sporny et al.}{SPORNY et al.}{2024}

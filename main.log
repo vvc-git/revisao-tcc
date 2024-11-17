@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.11.1)  16 NOV 2024 21:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.11.1)  17 NOV 2024 02:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1513,42 +1513,37 @@ Overfull \hbox (9.2908pt too wide) in paragraph at lines 153--154
  []
 
 [40] (./images/tex/oauth.tex
-<images/png/oauth.png, id=698, 599.23875pt x 430.60875pt>
+<images/png/oauth.png, id=700, 1084.05pt x 813.0375pt>
 File: images/png/oauth.png Graphic file (type png)
 <use images/png/oauth.png>
 Package pdftex.def Info: images/png/oauth.png  used on input line 5.
-(pdftex.def)             Requested size: 599.23729pt x 430.60768pt.
+(pdftex.def)             Requested size: 1084.04736pt x 813.03552pt.
 ) [41] [42 <./images/png/oauth.png>] (./images/tex/oidc.tex
-<images/png/openid.png, id=732, 1162.3425pt x 715.67375pt>
+<images/png/openid.png, id=734, 1084.05pt x 813.0375pt>
 File: images/png/openid.png Graphic file (type png)
 <use images/png/openid.png>
 Package pdftex.def Info: images/png/openid.png  used on input line 5.
-(pdftex.def)             Requested size: 1162.33968pt x 715.672pt.
-) [43 <./images/png/openid.png>]
-Overfull \hbox (20.34357pt too wide) in paragraph at lines 217--218
-\T1/phv/m/n/12 acordo, en-ca-mi-nha o to-ken de acesso, jun-ta-mente com \T1/pcr/m/n/12 id_token \T1/phv/m/n/12 e o re-fresh_token. 
- []
-
-[44] (./images/tex/protocol-of-oidc4vc.tex
-<images/png/protocol-of-OID4VC.png, id=777, 1495.5875pt x 515.9275pt>
+(pdftex.def)             Requested size: 1084.04736pt x 813.03552pt.
+) [43] [44 <./images/png/openid.png>] [45] (./images/tex/protocol-of-oidc4vc.tex
+<images/png/protocol-of-OID4VC.png, id=779, 1495.5875pt x 515.9275pt>
 File: images/png/protocol-of-OID4VC.png Graphic file (type png)
 <use images/png/protocol-of-OID4VC.png>
 Package pdftex.def Info: images/png/protocol-of-OID4VC.png  used on input line 5.
 (pdftex.def)             Requested size: 1495.58386pt x 515.92624pt.
-) [45] [46 <./images/png/protocol-of-OID4VC.png>] [47] [48] (./images/tex/same-device.tex
-<images/png/same-device.png, id=896, 955.57pt x 368.37625pt>
+) [46 <./images/png/protocol-of-OID4VC.png>] [47] [48] (./images/tex/same-device.tex
+<images/png/same-device.png, id=899, 955.57pt x 368.37625pt>
 File: images/png/same-device.png Graphic file (type png)
 <use images/png/same-device.png>
 Package pdftex.def Info: images/png/same-device.png  used on input line 5.
 (pdftex.def)             Requested size: 955.56767pt x 368.37534pt.
 ) [49 <./images/png/same-device.png>] [50] (./images/tex/formal-analysis-steps.tex
-<images/png/formal-analysis-steps.png, id=926, 1096.095pt x 454.69875pt>
+<images/png/formal-analysis-steps.png, id=929, 1096.095pt x 454.69875pt>
 File: images/png/formal-analysis-steps.png Graphic file (type png)
 <use images/png/formal-analysis-steps.png>
 Package pdftex.def Info: images/png/formal-analysis-steps.png  used on input line 5.
 (pdftex.def)             Requested size: 1096.09233pt x 454.69763pt.
 ) [51 <./images/png/formal-analysis-steps.png>] [52] (./images/tex/wim-model.tex
-<images/png/wim-model.png, id=979, 772.8875pt x 342.27875pt>
+<images/png/wim-model.png, id=982, 772.8875pt x 342.27875pt>
 File: images/png/wim-model.png Graphic file (type png)
 <use images/png/wim-model.png>
 Package pdftex.def Info: images/png/wim-model.png  used on input line 4.
@@ -1559,7 +1554,7 @@ Package pdftex.def Info: images/png/wim-model.png  used on input line 4.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [57] (./images/tex/opal-ecossytem.tex
-<images/png/OPAL-ecossytem.png, id=1016, 1008.76875pt x 440.64626pt>
+<images/png/OPAL-ecossytem.png, id=1019, 1008.76875pt x 440.64626pt>
 File: images/png/OPAL-ecossytem.png Graphic file (type png)
 <use images/png/OPAL-ecossytem.png>
 Package pdftex.def Info: images/png/OPAL-ecossytem.png  used on input line 4.
@@ -1704,18 +1699,18 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 47327 strings out of 480113
- 942268 string characters out of 5892773
- 1340536 words of memory out of 5000000
- 63894 multiletter control sequences out of 15000+600000
+ 47317 strings out of 480113
+ 942167 string characters out of 5892773
+ 1340451 words of memory out of 5000000
+ 63890 multiletter control sequences out of 15000+600000
  517421 words of font info for 93 fonts, out of 8000000 for 9000
  83 hyphenation exceptions out of 8191
  110i,17n,131p,1675b,2327s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (88 pages, 850056 bytes).
+Output written on main.pdf (88 pages, 1088247 bytes).
 PDF statistics:
- 1824 PDF objects out of 2073 (max. 8388607)
- 1623 compressed objects within 17 object streams
- 441 named destinations out of 1000 (max. 500000)
+ 1826 PDF objects out of 2073 (max. 8388607)
+ 1625 compressed objects within 17 object streams
+ 435 named destinations out of 1000 (max. 500000)
  721 words of extra memory for PDF output out of 10000 (max. 10000000)
 

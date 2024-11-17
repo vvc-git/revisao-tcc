@@ -65,9 +65,9 @@ A Solicitação de Negociação constitui uma requisição HTTP POST enviada pel
 
     \item \textbf{type}: OBRIGATÓRIO. Este parâmetro deve ser utilizado na Solicitação de Negociação para especificar o tipo de negociação que está sendo realizada. No contexto da \emph{Negociação de Atributos}, deve-se utilizar o valor \texttt{attribute}.
 
-    \item \textbf{definition\_id}: OPCIONAL. Trata-se de uma string que identifica uma Declaração de Requisitos previamente encaminhada ao Fiduciário. Após o acordo ser firmado entre o Fiduciário e o Provedor, o \acs{SP} deve invalidar o \texttt{definition\_id}. Este parâmetro se torna OBRIGATÓRIO quando o valor de type é \texttt{attribute}.
+    \item \textbf{definition\_id}: OPCIONAL. Trata-se de uma string que identifica uma Declaração de Requisitos previamente encaminhada ao Fiduciário. Após o acordo ser firmado entre o Fiduciário e o Provedor, o \acs{SP} deve invalidar o \texttt{definition\_id}. Este parâmetro se torna OBRIGATÓRIO quando o valor de \texttt{type} é \texttt{attribute}.
     
-    \item \textbf{presentation\_definition}: OPCIONAL. Este parâmetro contém um objeto JSON de Declaração de Requisitos, conforme a sintaxe estabelecida na \cite{presentation-exchange}. Este parâmetro se torna OBRIGATÓRIO quando o valor de type é \texttt{attribute}.
+    \item \textbf{presentation\_definition}: OPCIONAL. Este parâmetro contém um objeto JSON de Declaração de Requisitos, conforme a sintaxe estabelecida na \cite{presentation-exchange}. Este parâmetro se torna OBRIGATÓRIO quando o valor de \texttt{type} é \texttt{attribute}.
     
 \end{itemize}
 
@@ -85,7 +85,7 @@ O Provedor de Serviços possui a prerrogativa de aceitar ou recusar a proposta d
     \begin{itemize}
         \item \textbf{accepted}: Indica que a proposta para a nova Declaração de Requisitos foi aceita pelo \acs{SP}. Nesse caso, o processo de alteração da Declaração de Requisitos será iniciado, e o recurso associado pode ser atualizado ou criado conforme necessário.
         
-        \item \textbf{refused}: Indica que a proposta para a nova Declaração de Requisitos foi recusada pelo \acs{SP}. Nesse caso, nenhuma alteração será realizada, e a Declaração de Requisitos permanecerá como está. O motivo da recusa pode ser detalhado em um campo adicional de erro.
+        \item \textbf{refused}: Indica que a proposta para a nova Declaração de Requisitos foi recusada pelo \acs{SP}. Nesse caso, nenhuma alteração será realizada, e a Declaração de Requisitos permanecerá como está. O motivo da recusa pode ser detalhado em um campo adicional de erro chamado \texttt{error\_description}, descrito a seguir.
     \end{itemize}
 
 \end{itemize}
@@ -94,7 +94,7 @@ Em outros casos, o \acs{SP} pode rejeitar a proposta por não concordar com os n
 
 \subsubsection*{Resposta de Recusa de Negociação}\label{subsubsection:response-negotiation-error}
 
-Se a Solicitação de Negociação não for aceita ou for considerada inválida, o SP deverá definir o campo de status como \texttt{refused} e incluir os campos \texttt{error} e \texttt{interval}, conforme ilustrado abaixo.
+Se a Solicitação de Negociação não for aceita por não atender aos requisitos da aplicação, ou for considerada inválida devido à sintaxe incorreta da requisição, o SP deverá definir o campo de status como \texttt{refused} e incluir os campos \texttt{error} e \texttt{retry\_after}, conforme ilustrado abaixo.
 
 % % Resposta de Negocição com falha
 \input{images/tex/negotiation-response-refused}
@@ -117,7 +117,7 @@ Se a Solicitação de Negociação não for aceita ou for considerada inválida,
 
     \item \textbf{error\_description}: OPCIONAL. O parâmetro \texttt{error\_description} deve ser um texto ASCII, fornecendo informações adicionais para ajudar os implementadores do Fiduciário a entender o erro ocorrido. Ele pode incluir espaços, caracteres de pontuação e símbolos comuns, mas não pode incluir caracteres como o caractere aspas duplas ("), barra invertida (\textbackslash), ou qualquer caractere de controle esteja fora dos intervalos \texttt{\%x20-21 / \%x23-5B / \%x5D-7E}, onde o prefixo \texttt{\%} indica valores hexadecimais da tabela ASCII.
 
-    \item \textbf{interval}: OBRIGATÓRIO. A resposta de erro deve também conter o parâmetro \texttt{interval}, que determina o tempo mínimo em segundos que o Fiduciário deve aguardar antes de enviar uma nova solicitação ao Endpoint de Negociação.2
+    \item \textbf{retry\_after}: OBRIGATÓRIO. A resposta de erro deve também conter o parâmetro \texttt{retry\_after}, que determina o tempo mínimo em segundos que o Fiduciário deve aguardar antes de enviar uma nova solicitação ao Endpoint de Negociação.
     
 \end{itemize}
 
@@ -177,7 +177,7 @@ Se a Solicitação de Negociação com o parâmetro \texttt{compute\_site} defin
 
 \subsubsection{Resposta de Recusa para Execução em outros Ambientes}
 
-Se a Solicitação de Negociação não for aceita ou for considerada inválida, o \acs{SP} pode reutilizar alguns dos campos estabelecidos \autoref{subsubsection:response-negotiation-error}, além dos códigos de erro descritos a seguir. Abaixo está um exemplo de recusa.
+Se a Solicitação de Negociação não for aceita por não atender aos requisitos da aplicação, ou for considerada inválida devido à sintaxe incorreta da requisição, o \acs{SP} pode reutilizar alguns dos campos estabelecidos \autoref{subsubsection:response-negotiation-error}, além dos códigos de erro descritos a seguir. Abaixo está um exemplo de recusa.
 
 \begin{itemize}
     \item \textbf{negotiation\_request\_denied}:  A interpretação deste campo dependerá do tipo de negociação especificado em \texttt{type}. Neste contexto, ele indica que a Solicitação de Negociação referente ao novo local de execução não foi aceita pelo Provedor de Serviços.

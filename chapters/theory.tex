@@ -160,30 +160,25 @@ Há também a definição de vários endpoints usados ao longo do processo de au
 
 Esses papéis, artefatos, parâmetros e endpoints permitem construir uma implementação robusta do OAuth 2.0, assegurando acesso seguro e controlado a recursos, sem comprometer as credenciais dos usuários. O protocolo é flexível e adaptável, equilibrando segurança e usabilidade conforme as necessidades das aplicações.
 
-
-A \autoref{fig:oauth}, descrita a seguir, demonstra o funcionamento do Fluxo de Código de Autorização. Nesse fluxo, ocorre a obtenção de um Código de Autorização, que é subsequentemente trocado por um Token de Acesso.
-
+A \autoref{fig:oauth}, descrita a seguir, demonstra o funcionamento do \emph{Fluxo de Código de Autorização}. Nesse fluxo, ocorre a obtenção de um \emph{Código de Autorização}, que é subsequentemente trocado por um Token de Acesso. Na figura, observa-se que, após o usuário selecionar o \acs{IdP} de sua preferência, como o Facebook, ele é redirecionado pelo navegador por meio de uma requisição realizada pelo \acs{SP} (Cliente). A partir desse ponto, o fluxo descrito na imagem é iniciado.
 % Figura dos funcionamento do oauth
 \input{images/tex/oauth}
 
 \begin{enumerate}
-
-    \item O usuário acessa a aplicação e especifica seu provedor de identidade.
     
-    \item O frontend do aplicação redireciona o utilizador para o Servidor de Autorização, fornecendo seu identificador, \texttt{client\_id}.
+    \item O serviço Web (Cliente) redireciona o utilizador para a tela de login no Servidor de Autorização, fornecendo seu identificador, \texttt{client\_id}.
     
     \item O indivíduo autentica-se perante o Servidor de Autorização e concede acesso ao seu recurso para o aplicação.
     
-    \item O Servidor de Autorização fornece o token de autorização, que é então encaminhado para o backend da aplicação.
+    \item O Servidor de Autorização emite o Código de autorização, que é encaminhado ao cliente via redirecionamento no navegador do usuário.
     
-    \item O backend do aplicação solicita o token de acesso correspondente ao seu código de autorização para o Servidor de Autorização.
+    \item A aplicação solicita o token de acesso correspondente ao seu código de autorização para o Servidor de Autorização. 
     
-    \item O Servidor de Autorização encaminha o código de acesso.
-     
-    \item O aplicação solicita ao Proprietário do recursos o acesso aos dados utilizando seu código de acesso. Se bem-sucedido, o recurso é fornecido para o aplicação.
+    \item O Servidor de Autorização encaminha o código de acesso. Nesse ponto, a troca é feita diretamente entre o backend da aplicação e o Servidor de Autorização, sem passar pelo navegador do usuário.
 
-    
 \end{enumerate}
+
+Ao final do fluxo, a aplicação cliente utiliza o Token de Acesso para realizar requisições ao Servidor de Recursos, sendo autorizada a acessar apenas os recursos específicos concedidos pelo usuário. 
 
 \subsection{OpenID Connect}\label{subsec:OIDC}
 
@@ -195,30 +190,27 @@ Também é adicionado o valor \textbf{openid} para o parâmetro \texttt{scope}, 
 
 Ademais, também é exigido a obrigatoriedade do \texttt{redirect\_uri} como medida de segurança para garantir que as Respostas da Autorização sejam enviadas apenas para URLs previamente autorizados. Isso ajuda a prevenir ataques como a homem no meio (man-in-the-middle) e a ataque de redirecionamento, onde um atacante poderia tentar interceptar ou redirecionar as respostas de autorização para um local malicioso. 
 
-
 A \autoref{fig:openid}, descrita a seguir, demonstra o funcionamento do Fluxo de Código de Autorização no conxtexto do \acs{OIDC}. Nesse fluxo, ocorre a obtenção de um Código de Autorização, que é subsequentemente trocado por um \texttt{id\_token}.
+Semelhante ao OAuth 2.0, após o usuário selecionar o \acs{IdP} de sua preferência, como o Google, ele é redirecionado pelo navegador por meio de uma requisição realizada pelo \acs{SP} (Cliente). A partir desse ponto, o fluxo descrito na imagem se inicia.
 
 % Figura com o funcionamento do OIDC
 \input{images/tex/oidc}
 
 \begin{enumerate}
-    \item O titular acessa a aplicação, que realiza uma requisição de Código de Autorização, redirecionando-o para o endpoint /authorize do Servidor de Autorização.
     
-    \item O Servidor de Autorização abre o navegador para solicitar credenciais, geralmente um nome de usuário e uma senha.
+    \item O serviço Web (Cliente) redireciona o utilizador para a tela de login no Servidor de Autorização, fornecendo seu identificador, \texttt{client\_id}.
     
-    \item O indivíduo autentica-se perante o Servidor de Autorização.
+    \item O indivíduo autentica-se perante o Servidor de Autorização, fornecendo suas credenciais de acesso, como nome de usuário e senha.
     
-    \item A pessoa encaminha suas credenciais e concede acesso às informações pessoais para a aplicação.
+    \item O Servidor de Autorização emite o Código de autorização, que é encaminhado ao cliente via redirecionamento no navegador do usuário.
     
-    \item O Servidor de Autorização fornece o token de autorização. Essa mensagem é enviada pelo navegador e encaminha o token de autorização para o backend da aplicação.
+    \item A aplicação solicita o token de acesso correspondente ao seu código de autorização para o Servidor de Autorização. 
     
-    \item O backend da aplicação solicita o token de acesso correspondente ao seu código de autorização para o provedor de identidade no token endpoint.
-    
-    \item O Servidor de Autorização verifica o token de autorização e, caso esteja de acordo, encaminha o token de acesso, juntamente com \texttt{id\_token} e o refresh\_token.
-    
-    \item A aplicação solicita ao Servidor de Autorização acesso às informações adicionais sobre o usuário, utilizando seu \texttt{id\_token} no endpoint UserInfo.
+    \item O Servidor de Autorização encaminha o código de acesso e o \texttt{id\_token}. Nesse ponto, a troca é feita diretamente entre o backend da aplicação e o Servidor de Autorização, sem passar pelo navegador do usuário.
+
 \end{enumerate}
 
+Ao final do fluxo, a aplicação cliente pode utilizar o \emph{UserInfo Endpoint} para obter informações adicionais sobre o usuário, como nome, e-mail ou outros dados, utilizando o código de acesso recebido. Após essa etapa, o usuário é autenticado com sucesso e redirecionado para a página do serviço, onde tem acesso aos recursos autorizados de acordo com seu perfil.
 
 \subsection{OIDC4VC: O OpenID Connect no modelo SSI }\label{subsec:oidc4vc}
 

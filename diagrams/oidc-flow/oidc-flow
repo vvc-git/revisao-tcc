@@ -1,0 +1,56 @@
+
+% \begin{tikzpicture}
+
+%     % ----------------- No principal ---------------------------
+%     \tikzstyle{big} = [rectangle, rounded corners, draw=black, thick, minimum width=5cm, minimum height=15cm, align=center]
+%     % Nó principal
+%     \node[big, fill=yellow!10] (browser) at (0,0) {};
+%     % Texto separado posicionado com base no norte do nó "browser"
+%     \node[anchor=north, align=center] 
+%         (browser-text) at ([yshift=-0.25cm]browser.north) {Web Browser};
+    
+%     % Nó principal - Service
+%     \node[big, fill=green!10] (service) [right=1cm of browser] {};
+%     % Texto para o Service
+%     \node[anchor=north, align=center, inner xsep=2pt] (service-text) at ([yshift=-0.25cm]service.north) {Web Service};
+
+%     % Nó principal - IdP
+%     \node[big, fill=blue!10] (idp) [right=1cm of service] {};
+%     % Texto para o IdP
+%     \node[anchor=north, align=center] (idp-text) at ([yshift=-0.25cm]idp.north) {IdP};
+%     % ----------------- No principal ---------------------------
+    
+
+%     %  Tela de login do Serviço Web
+%     \tikzstyle{medium} = [rectangle, rounded corners, draw=black, thick, minimum width=4.5cm, minimum height=4.5cm, align=center]
+%     \tikzstyle{mini} = [rectangle, rounded corners, draw=black, thick, minimum width=4cm, minimum height=0.1cm, align=center, text=black!30, font=\tiny]
+%     \node[medium, fill=green!10, anchor=north]      (service-log)         at ([yshift=-1cm]browser-text.north)                {};
+%     \node[anchor=north, align=center, font=\scriptsize] (service-log-text) at ([yshift=-0.25cm]service-log.north) {Login with a user account};
+%     \node[mini, fill=white!10, anchor=north] (log-id) at ([yshift=-0.75cm]service-log-text.north) {Login ID};
+%     \node[mini, fill=white!10] (password) [below=0.1cm of log-id] {Password};
+%     \node[anchor=north, align=center, font=\scriptsize] (log-with-idp) at ([yshift=-0.75cm]password.north) {Login by an external IdP};
+%     \node[mini, fill=green!10, text=blue!90, draw=green!10, anchor=north east] (log-with-id-A) at (log-with-idp.south east) {- Login by IdP A};
+%     \node[mini, fill=green!10, text=blue!90, draw=green!10, anchor=north east] (log-with-id-B) at (log-with-id-A.south east) {- Login by IdP B};
+
+%     % \node[little, fill=green!10]       (logged)       [below=2cm of auth-page-idp]                          {\tiny{Top page (logged in)}};
+
+%     % Endpoints no Web Service
+%     \tikzstyle{little} = [rectangle, rounded corners, draw=black, thick, minimum width=4.75cm, minimum height=0.5cm, align=center, font=\tiny]
+%     \node[little, fill=white, anchor=north] (loggin-page)    at ([xshift=6cm]service-log-text.north) {Login Page};
+%     \node[little, fill=white, anchor=north] (id-federation)  at ([xshift=6.2cm]log-with-id-A.north) {ID federation};
+%     \node[little, fill=white] (id-federation-callback) [below=2.5cm of id-federation] {callback};
+%     \node[little, fill=white] (top-page) [below=0.75cm of id-federation-callback] {Top Page};
+
+
+%     % Endpoints no Idp
+%     \node[little, fill=white, anchor=north]       (auth-endpoint)       at ([xshift=12.5cm]log-with-id-A.north)                    {Authorization Endpoint};
+%     \node[little, fill=white]       (decision)            [below=0.25cm of auth-endpoint]                          {\tiny{authorization / decision}};
+%     \node[little, fill=white]       (token-endpoint)            [below=0.25cm of decision]                          {\tiny{Token Endpoint}};
+
+
+%     \draw[->] ([yshift=-0.2cm]service-log-text.north east) -- ([yshift=-0.2cm]loggin-page.north west);
+%     \draw[<-] ([yshift=0.2cm]service-log-text.south east) --  ([yshift=0.2cm]loggin-page.south west);
+
+%     \draw[->] ([yshift=-0.2cm]log-with-id-A.north east) --  ([yshift=-0.2cm]id-federation.north west);
+%     \draw[<-] ([yshift=0.22cm]log-with-id-A.south east) --  ([yshift=0.2cm]id-federation.south west);
+% \end{tikzpicture}
