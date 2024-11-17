@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.11.1)  16 NOV 2024 13:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.11.1)  16 NOV 2024 21:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1457,32 +1457,33 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
 ] [13] [14
 
 ] (./main.lof
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 40.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 35.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)) [15] [16
+)
+Overfull \hbox (25.05888pt too wide) in paragraph at lines 35--35
+ [][] [][][]\T1/phv/m/n/12 Exemplo de pa-râ-me-tro \T1/pcr/m/n/12 negotiation_enpoint \T1/phv/m/n/12 no \T1/pcr/m/n/12 client_metadata 
+ []
+
+) [15] [16
 
 ] (./main.lot) (./main.acr [17] [18
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 118--120
-[]|[]\T1/phv/m/n/12 ZK-
- []
-
-) [19
+]) [19
 
 ] [20
 
 ] (./main.gls) (./main.toc
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 42.
-\@gls@deffile=\write11
-\openout11 = `main.glsdefs'.
-
  [21
 
 
 ]) [22] (./chapters/introduction.tex
+\@gls@deffile=\write11
+\openout11 = `main.glsdefs'.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [23
@@ -1498,7 +1499,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [27
 
 ] (./images/tex/im-figure.tex (./diagrams/identity-models/1-centralized.tex) (./diagrams/identity-models/2-outsourced.tex) (./diagrams/identity-models/3-ssi.tex)) [28] [29] [30] [31] (./images/tex/vc-data-model-figure.tex (./diagrams/vc-data-model-w3c/vc-data-model.tex)) [32] [33] [34] [35] (./images/tex/principles.tex
-<images/png/pilares-do-FIM.png, id=646, 1445.4pt x 813.0375pt>
+<images/png/pilares-do-FIM.png, id=644, 1445.4pt x 813.0375pt>
 File: images/png/pilares-do-FIM.png Graphic file (type png)
 <use images/png/pilares-do-FIM.png>
 Package pdftex.def Info: images/png/pilares-do-FIM.png  used on input line 4.
@@ -1512,13 +1513,13 @@ Overfull \hbox (9.2908pt too wide) in paragraph at lines 153--154
  []
 
 [40] (./images/tex/oauth.tex
-<images/png/oauth.png, id=699, 599.23875pt x 430.60875pt>
+<images/png/oauth.png, id=698, 599.23875pt x 430.60875pt>
 File: images/png/oauth.png Graphic file (type png)
 <use images/png/oauth.png>
 Package pdftex.def Info: images/png/oauth.png  used on input line 5.
 (pdftex.def)             Requested size: 599.23729pt x 430.60768pt.
 ) [41] [42 <./images/png/oauth.png>] (./images/tex/oidc.tex
-<images/png/openid.png, id=733, 1162.3425pt x 715.67375pt>
+<images/png/openid.png, id=732, 1162.3425pt x 715.67375pt>
 File: images/png/openid.png Graphic file (type png)
 <use images/png/openid.png>
 Package pdftex.def Info: images/png/openid.png  used on input line 5.
@@ -1529,68 +1530,36 @@ Overfull \hbox (20.34357pt too wide) in paragraph at lines 217--218
  []
 
 [44] (./images/tex/protocol-of-oidc4vc.tex
-<images/png/protocol-of-OID4VC.png, id=778, 1495.5875pt x 515.9275pt>
+<images/png/protocol-of-OID4VC.png, id=777, 1495.5875pt x 515.9275pt>
 File: images/png/protocol-of-OID4VC.png Graphic file (type png)
 <use images/png/protocol-of-OID4VC.png>
 Package pdftex.def Info: images/png/protocol-of-OID4VC.png  used on input line 5.
 (pdftex.def)             Requested size: 1495.58386pt x 515.92624pt.
-) [45] [46 <./images/png/protocol-of-OID4VC.png>] [47]
-Overfull \hbox (6.13461pt too wide) in paragraph at lines 276--277
-\T1/phv/m/n/12 no ([][]YA-SUDA; JO-NES; LOD-DERS-TEDT[][], [][]2023[][]). Além disso, quando o \T1/pcr/m/n/12 response_type
- []
-
-[48] (./images/tex/same-device.tex
+) [45] [46 <./images/png/protocol-of-OID4VC.png>] [47] [48] (./images/tex/same-device.tex
 <images/png/same-device.png, id=896, 955.57pt x 368.37625pt>
 File: images/png/same-device.png Graphic file (type png)
 <use images/png/same-device.png>
 Package pdftex.def Info: images/png/same-device.png  used on input line 5.
 (pdftex.def)             Requested size: 955.56767pt x 368.37534pt.
-)
-Overfull \hbox (7.97043pt too wide) in paragraph at lines 282--283
-\T1/phv/m/n/12 Nesse caso, \T1/pcr/m/n/12 response_type \T1/phv/m/n/12 con-tém \T1/pcr/b/n/12 redirect_uri \T1/phv/m/n/12 e o pre-sen-ta-tion_definition
- []
-
-
-Overfull \hbox (21.55765pt too wide) in paragraph at lines 284--285
-\T1/phv/m/n/12 ponse). Nesse caso, como \T1/pcr/m/n/12 response_type \T1/phv/m/n/12 era \T1/pcr/b/n/12 redirect_uri\T1/phv/m/n/12 , o \T1/pcr/m/n/12 redirect_uri
- []
-
-[49 <./images/png/same-device.png>] [50] (./images/tex/formal-analysis-steps.tex
-<images/png/formal-analysis-steps.png, id=925, 1096.095pt x 454.69875pt>
+) [49 <./images/png/same-device.png>] [50] (./images/tex/formal-analysis-steps.tex
+<images/png/formal-analysis-steps.png, id=926, 1096.095pt x 454.69875pt>
 File: images/png/formal-analysis-steps.png Graphic file (type png)
 <use images/png/formal-analysis-steps.png>
 Package pdftex.def Info: images/png/formal-analysis-steps.png  used on input line 5.
 (pdftex.def)             Requested size: 1096.09233pt x 454.69763pt.
-) [51 <./images/png/formal-analysis-steps.png>] (./images/tex/wim-model.tex
-<images/png/wim-model.png, id=955, 772.8875pt x 342.27875pt>
+) [51 <./images/png/formal-analysis-steps.png>] [52] (./images/tex/wim-model.tex
+<images/png/wim-model.png, id=979, 772.8875pt x 342.27875pt>
 File: images/png/wim-model.png Graphic file (type png)
 <use images/png/wim-model.png>
 Package pdftex.def Info: images/png/wim-model.png  used on input line 4.
 (pdftex.def)             Requested size: 772.8856pt x 342.2779pt.
-) [52 <./images/png/wim-model.png>]
+) [53 <./images/png/wim-model.png>] (./images/tex/proof-of-presentation-authentication-figure.tex (./diagrams/proof-of-presentation-authentication/proof-of-presentation-authentication.tex))) (./chapters/related.tex [54] [55] [56
 
-Package hyperref Warning: No autoref name for `premise' on input line 321.
-
-\c@premise=\count465
-[53] (./images/tex/proof-of-presentation-authentication-figure.tex (./diagrams/proof-of-presentation-authentication/proof-of-presentation-authentication.tex))) (./chapters/related.tex [54]
-
-Package glossaries Warning: Entry `OPAL' has already been defined in the document environment (ignoring new definition) on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\newacronym' on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\acrfull' on input line 3.
-
-
+]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [55
-
-] (./images/tex/opal-ecossytem.tex
-<images/png/OPAL-ecossytem.png, id=995, 1008.76875pt x 440.64626pt>
+ [57] (./images/tex/opal-ecossytem.tex
+<images/png/OPAL-ecossytem.png, id=1016, 1008.76875pt x 440.64626pt>
 File: images/png/OPAL-ecossytem.png Graphic file (type png)
 <use images/png/OPAL-ecossytem.png>
 Package pdftex.def Info: images/png/OPAL-ecossytem.png  used on input line 4.
@@ -1599,12 +1568,12 @@ Package pdftex.def Info: images/png/OPAL-ecossytem.png  used on input line 4.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [56 <./images/png/OPAL-ecossytem.png>]) (./chapters/protocol.tex [57] [58
+) [58 <./images/png/OPAL-ecossytem.png>]) (./chapters/protocol.tex [59] [60
 
 ] (./images/tex/stack-model-protocol.tex (./diagrams/strack-model-protocol/stack-model-protocol.tex))
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [59] (./images/tex/oidc4vp-in-fid.tex (./diagrams/oidc4vp-in-fid/oidc4vp-in-fid-sequence.tex
+ [61] (./images/tex/oidc4vp-in-fid.tex (./diagrams/oidc4vp-in-fid/oidc4vp-in-fid-sequence.tex
 \pgf@layerbox@umlsd@background=\box93
 \pgf@layerboxsaved@umlsd@background=\box94
 \pgf@layerbox@umlsd@threadlayer=\box95
@@ -1621,16 +1590,13 @@ Missing character: There is no 0 in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no ] in font nullfont!
-\c@number=\count466
+\c@number=\count465
 
 Underfull \hbox (badness 3884) in paragraph at lines 18--18
 [][]\T1/pcr/m/n/10.95 Autenticação e 
  []
 
-))
-Underfull \vbox (badness 4096) has occurred while \output is active []
-
- [60] (./images/tex/attribute-negotiation-flow-via-browser.tex (./diagrams/attribute-negotiation-flow-via-browser/attribute-negotation-flow-via-browser.tex
+)) [62] (./images/tex/attribute-negotiation-flow-via-browser.tex (./diagrams/attribute-negotiation-flow-via-browser/attribute-negotation-flow-via-browser.tex
 Missing character: There is no [ in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no c in font nullfont!
@@ -1642,12 +1608,7 @@ Missing character: There is no 0 in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no ] in font nullfont!
-)) [61] (./images/tex/negotiation-endpoint.tex (./code/negotiation-endpoint.tex (./code/json.tex))) [62] (./images/tex/negotiaton-request.tex (./code/negotiation-request.tex (./code/json.tex)))
-Overfull \hbox (11.40085pt too wide) in paragraph at lines 68--69
-\T1/phv/m/n/12 zada. No con-texto da \T1/phv/m/sl/12 Ne-go-ci-a-ção de Atri-bu-tos\T1/phv/m/n/12 , deve-se uti-li-zar o va-lor \T1/pcr/m/n/12 attribute\T1/phv/m/n/12 . 
- []
-
-(./images/tex/negotiation-response-success.tex (./code/negotiation-response-success.tex (./code/json.tex))) [63] (./images/tex/negotiation-response-refused.tex (./code/negotiation-response-refused.tex (./code/json.tex))) [64] [65] (./images/tex/env-negotiation-flow.tex (./diagrams/env-negotiation-flow/env-negotiation-flow.tex
+)) [63] (./images/tex/negotiation-endpoint.tex (./code/negotiation-endpoint.tex (./code/json.tex))) (./images/tex/negotiaton-request.tex (./code/negotiation-request.tex (./code/json.tex))) [64] (./images/tex/negotiation-response-success.tex (./code/negotiation-response-success.tex (./code/json.tex))) [65] (./images/tex/negotiation-response-refused.tex (./code/negotiation-response-refused.tex (./code/json.tex))) [66] [67] (./images/tex/env-negotiation-flow.tex (./diagrams/env-negotiation-flow/env-negotiation-flow.tex
 Missing character: There is no [ in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no c in font nullfont!
@@ -1664,20 +1625,20 @@ Underfull \hbox (badness 3884) in paragraph at lines 14--14
 [][]\T1/pcr/m/n/10.95 Autenticação e 
  []
 
-)) (./images/tex/negotiation-request-env.tex (./code/negotiation-request-env.tex (./code/json.tex))) [66
+)) (./images/tex/negotiation-request-env.tex (./code/negotiation-request-env.tex (./code/json.tex))) [68
 
-] (./images/tex/negotiation-response-success.tex (./code/negotiation-response-success.tex (./code/json.tex))) [67] (./images/tex/negotiation-response-env-with-description.tex (./code/negotiation-response-env-with-description.tex (./code/json.tex))) (./images/tex/negotiation-response-env-refused.tex (./code/negotiation-response-env-refused.tex (./code/json.tex))) [68]
-Overfull \hbox (6.44287pt too wide) in paragraph at lines 199--200
+] (./images/tex/negotiation-response-success.tex (./code/negotiation-response-success.tex (./code/json.tex))) [69] (./images/tex/negotiation-response-env-with-description.tex (./code/negotiation-response-env-with-description.tex (./code/json.tex))) (./images/tex/negotiation-response-env-refused.tex (./code/negotiation-response-env-refused.tex (./code/json.tex))) [70]
+Overfull \hbox (6.44287pt too wide) in paragraph at lines 197--198
 \T1/phv/m/n/12 timo. O ata-cante que-bra essa pro-pri-e-dade quando con-se-gue uti-li-zar o \T1/pcr/m/n/12 definition_id
  []
 
-[69]) (./chapters/conclusion.tex [70
+[71]) (./chapters/conclusion.tex [72
 
 ]
 
 Package glossaries Warning: Entry `ZKP' has already been defined in the document environment (ignoring new definition) on input line 4.
 
-) (./main.bbl [71] [72
+) (./main.bbl [73] [74
 
 ]
 bibitemlist
@@ -1686,11 +1647,11 @@ Underfull \hbox (badness 1158) in paragraph at lines 10--13
 []\T1/phv/m/n/12 ALLEN, C. \T1/phv/b/n/12 The Path to Self-Sovereign Iden-tity\T1/phv/m/n/12 . 2016. 
  []
 
-[73] [74]) (./aftertex/formalanalysis/model.tex [75] [76
+[75] [76]) (./aftertex/formalanalysis/model.tex [77] [78
 
-] [77] [78] (./code/build-presentation-definition.tex (./code/pseudo.tex)
+] [79] [80] (./code/build-presentation-definition.tex (./code/pseudo.tex)
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 3.
-) [79]
+) [81]
 Overfull \hbox (13.34647pt too wide) in paragraph at lines 102--104
 []\T1/phv/m/n/12 com $\OML/cmm/m/it/12 pendingDNS$\T1/phv/m/n/12 , $\OML/cmm/m/it/12 pendingRequests$\T1/phv/m/n/12 , $\OML/cmm/m/it/12 DNSaddress$\T1/phv/m/n/12 , $\OML/cmm/m/it/12 keyMapping$\T1/phv/m/n/12 , $\OML/cmm/m/it/12 tlskeys$\T1/phv/m/n/12 , $\OML/cmm/m/it/12 corrupt$
  []
@@ -1705,12 +1666,12 @@ Overfull \hbox (37.53142pt too wide) in paragraph at lines 107--112
 \OML/cmm/m/it/12 s[]:[][]b \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 browserOfFiduciary\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 fid\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 gi$\T1/phv/m/n/12 , $\OML/cmm/m/it/12 s[]:[] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 hi$\T1/phv/m/n/12 , e $\OML/cmm/m/it/12 s[]:[] \OT1/cmr/m/n/12 =
  []
 
-(./code/fiduciary-relation-request.tex (./code/pseudo.tex) [80])
+(./code/fiduciary-relation-request.tex (./code/pseudo.tex) [82])
 Overfull \hbox (1.3907pt too wide) in paragraph at lines 120--121
 \T1/phv/m/n/12 fe-rido ser-vi-dor HTTPS com su-porte para cre-den-ci-ais ve-ri-fi-cá-veis pro-posto em ([][]HAUCK[][],
  []
 
-(./code/verifier-relation.tex (./code/pseudo.tex) [81])) (./aftertex/formalanalysis/properties.tex) (./aftertex/formalanalysis/proof.tex [82]
+(./code/verifier-relation.tex (./code/pseudo.tex) [83])) (./aftertex/formalanalysis/properties.tex) (./aftertex/formalanalysis/proof.tex [84]
 Overfull \hbox (32.60442pt too wide) in paragraph at lines 20--25
 \T1/pcr/m/n/12 constraints($\OML/cmm/m/it/12 fid$\T1/pcr/m/n/12 )\T1/phv/m/n/12 , $\OML/cmm/m/it/12 pd$\T1/phv/m/n/12 ) se $\OML/cmm/m/it/12 input[]descriptor$ \T1/phv/m/n/12 de $\OML/cmm/m/it/12 pd$ \T1/phv/m/n/12 está de acordo com \T1/pcr/m/n/12 constraints($\OML/cmm/m/it/12 fid$\T1/pcr/m/n/12 )
  []
@@ -1720,7 +1681,7 @@ Overfull \hbox (15.98782pt too wide) in paragraph at lines 26--29
 \T1/phv/m/n/12 apre-sen-ta-ção é sub-me-tida a um pro-cesso de va-li-da-ção por $\OML/cmm/m/it/12 v$ \T1/phv/m/n/12 com \T1/pcr/m/n/12 followConstraints\T1/phv/m/n/12 (
  []
 
-[83]) [84
+[85]) [86
 runsystem(makeindex -s main.ist -t main.glg -o main.gls main.glo)...executed safely (allowed).
 
 runsystem(makeindex -s main.ist -t main.alg -o main.acr main.acn)...executed safely (allowed).
@@ -1743,18 +1704,18 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 47332 strings out of 480113
- 942393 string characters out of 5892773
- 1323348 words of memory out of 5000000
- 63901 multiletter control sequences out of 15000+600000
- 511801 words of font info for 89 fonts, out of 8000000 for 9000
+ 47327 strings out of 480113
+ 942268 string characters out of 5892773
+ 1340536 words of memory out of 5000000
+ 63894 multiletter control sequences out of 15000+600000
+ 517421 words of font info for 93 fonts, out of 8000000 for 9000
  83 hyphenation exceptions out of 8191
  110i,17n,131p,1675b,2327s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (86 pages, 847272 bytes).
+Output written on main.pdf (88 pages, 850056 bytes).
 PDF statistics:
- 1811 PDF objects out of 2073 (max. 8388607)
- 1612 compressed objects within 17 object streams
+ 1824 PDF objects out of 2073 (max. 8388607)
+ 1623 compressed objects within 17 object streams
  441 named destinations out of 1000 (max. 500000)
  721 words of extra memory for PDF output out of 10000 (max. 10000000)
 

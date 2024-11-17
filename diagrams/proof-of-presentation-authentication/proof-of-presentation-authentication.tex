@@ -1,6 +1,13 @@
 \begin{tikzpicture}[
     node distance=2cm and 3cm,
-    every node/.style={draw, rectangle, align=center, text width=5cm, minimum height=2cm},
+    every node/.style={
+        draw, 
+        rectangle, 
+        align=center, 
+        text width=5cm, 
+        minimum height=2cm, 
+        font=\Large % Aumenta a fonte para todos os nós
+    },
     arrow/.style={draw, -{Latex[width=2mm]}, thick}
     ]
     
@@ -11,62 +18,29 @@
     \node (l2-2) [below right=of l1] {Token de serviço é divulgado por meio de uma entidade honesta};
     
     \node (l3-1) [below left=of l2-1] {Atacante obtém um vp\_token válido};
-    % \node (l3-2) [below right=of l2-1] {Atacante conhece um ID de sessão autorizada};
     \node (l3-3) [below=of l2-2, fill=gray!20] {\textbf{Falso}\\em virtude da Premissa 1};
     
     \node (l4-1) [below left=of l3-1] {O vp\_token é divulgado para o atacante};
     \node (l4-2) [below=of l3-1] {O atacante induz uma carteira legítima a gerar um vp\_token em seu nome, permitindo que ele o envie para um verificador.};
     \node (l4-3) [below right=of l3-1] {Atacante sabe a chave privada da credencial do usuário legítimo};
-    % \node (l4-4) [below=of l3-2] {O atacante cria seu próprio ID de sessão com o verificador};
-    % \node (l4-5) [below right=of l3-2] {ID de Sessão é divulgado};
     
     \node (l5-1) [below=of l4-1, fill=gray!20] {\textbf{Falso}\\em virtude da Premissa 1};
-    % ---------------------- EXPLICAÇÃO ----------------------------------%
-    % -- Existe a possibilidade de não alterar o redirect\_uri. Porém o atacante teria que:
-    % -- 1. Fazer um script para iniciar a sessão com um verificador (Ter um ID de Sessão para o usuário mas que o atacante tenha acesso?)
-    % -- 2.1 Atacante pode interceptar a resposta, mas está criptografada.
-    % -- 2.2 A resposta chega e redireciona o usuário para o redirec_uri definido previamente (fluxo normal seguro)
-    % -- OU
-    % -- 1. O Atacante inicia uma sessão com um verificador fora do browser do usuário
-    % -- 2. Engana o usuário (com um script no browser dele) para enviar o vp_token para o verificador que o atacante tem um ID de Sessão.
-    % -- 3. Verificador recebe o vp_token, mas dá erro porque vem com a origem do usuário a qual não têm sessão com ele.
-    % ---------------------- EXPLICAÇÃO ----------------------------------%
     \node (l5-2) [below=of l4-2] {O atacante tenta modificar a Requisição de Autorização enviada à carteira, alterando o \textbf{redirect\_uri} para um domínio sob seu controle, com o objetivo de redirecionar a resposta para um verificador legítimo e se passar pelo usuário que solicitou a apresentação.};
     \node (l5-3) [below=of l4-3, fill=gray!50] {\textbf{Falso}\\Quebra a Propriedade de segurança da autenticação de emissão};
-    % \node (l5-4) [below=of l4-4] {A requisição de autorização é enviada ao usuário através de phishing};
-    % \node (l5-5) [below=of l4-5, fill=gray!20] {\textbf{Falso}\\em virtude da Premissa 1};
     
-
-    % ---------------------- EXPLICAÇÃO ----------------------------------%
-    % - O nodo abaixo pode parecer incompleto, ou mal explicado, mas a jutificativa está diretamente relacionada com a proposta de algoritmo que está descrita no texto.
-
-
-  
-    % ----------------------  EXPLICAÇÃO ----------------------------------%
     \node (l6-1) [below=of l5-2, fill=gray!20]  {\textbf{Falso}\\O atacante não consegue gerar um vp\_token válido, pois o campo \textbf{aud} utiliza o domínio do \textbf{redirect\_uri} como valor, tornando-o inválido e inutilizável.};
 
-    % \node (l6-2) [below=of l5-4, fill=gray!20] {\textbf{Falso}\\em virtude da Premissa 2};
-    
     % Connections
     \draw[arrow] (l1) -- (l2-1);
     \draw[arrow] (l1) -- (l2-2);
     \draw[arrow] (l2-1) -- (l3-1);
-    % \draw[arrow] (l2-1) -- (l3-2);
     \draw[arrow] (l2-2) -- (l3-3);
     \draw[arrow] (l3-1) -- (l4-1);
     \draw[arrow] (l3-1) -- (l4-2);
     \draw[arrow] (l3-1) -- (l4-3);
-    % \draw[arrow] (l3-2) -- (l4-4);
-    % \draw[arrow] (l3-2) -- (l4-5);
     \draw[arrow] (l4-1) -- (l5-1);
     \draw[arrow] (l4-2) -- (l5-2);
     \draw[arrow] (l4-3) -- (l5-3);
-    % \draw[arrow] (l4-4) -- (l5-4);
-    % \draw[arrow] (l4-5) -- (l5-5);
-    % \draw[arrow] (l5-4) -- (l6-2);
-    
-
     \draw[arrow] (l5-2) -- (l6-1);
-   
     
 \end{tikzpicture}

@@ -1,31 +1,3 @@
-\glsdefs@newdocentry{OPAL}%
-{%
-name={OPAL},%
-sort={OPAL},%
-type={acronym},%
-first={OPEN ALGORITHMS\glsspace (OPAL)},%
-firstplural={OPEN ALGORITHMS\acrpluralsuffix \glsspace (OPAL\acrpluralsuffix )},%
-text={OPAL},%
-plural={OPAL\acrpluralsuffix },%
-description={OPEN ALGORITHMS},%
-descriptionplural={OPEN ALGORITHMS\acrpluralsuffix },%
-symbol={\relax },%
-symbolplural={\relax },%
-user1={},%
-user2={},%
-user3={},%
-user4={},%
-user5={},%
-user6={},%
-long={OPEN ALGORITHMS},%
-longplural={OPEN ALGORITHMSs},%
-short={OPAL},%
-shortplural={OPALs},%
-counter={page},%
-parent={},%
-%
-}%
-
 \glsdefs@newdocentry{SP}%
 {%
 name={SP},%
@@ -306,15 +278,15 @@ parent={},%
 %
 }%
 
-\glsdefs@newdocentry{ZK-SNARKs}%
+\glsdefs@newdocentry{ZK-SNARK}%
 {%
-name={ZK-SNARKs},%
-sort={ZK-SNARKs},%
+name={ZK-SNARK},%
+sort={ZK-SNARK},%
 type={acronym},%
-first={Zero-Knowledge Succinct Non-Interactive Arguments of Knowledge\glsspace (ZK-SNARKs)},%
-firstplural={Zero-Knowledge Succinct Non-Interactive Arguments of Knowledge\acrpluralsuffix \glsspace (ZK-SNARKs\acrpluralsuffix )},%
-text={ZK-SNARKs},%
-plural={ZK-SNARKs\acrpluralsuffix },%
+first={Zero-Knowledge Succinct Non-Interactive Arguments of Knowledge\glsspace (ZK-SNARK)},%
+firstplural={Zero-Knowledge Succinct Non-Interactive Arguments of Knowledge\acrpluralsuffix \glsspace (ZK-SNARK\acrpluralsuffix )},%
+text={ZK-SNARK},%
+plural={ZK-SNARK\acrpluralsuffix },%
 description={Zero-Knowledge Succinct Non-Interactive Arguments of Knowledge},%
 descriptionplural={Zero-Knowledge Succinct Non-Interactive Arguments of Knowledge\acrpluralsuffix },%
 symbol={\relax },%
@@ -327,8 +299,8 @@ user5={},%
 user6={},%
 long={Zero-Knowledge Succinct Non-Interactive Arguments of Knowledge},%
 longplural={Zero-Knowledge Succinct Non-Interactive Arguments of Knowledges},%
-short={ZK-SNARKs},%
-shortplural={ZK-SNARKss},%
+short={ZK-SNARK},%
+shortplural={ZK-SNARKs},%
 counter={page},%
 parent={},%
 %
@@ -390,15 +362,15 @@ parent={},%
 %
 }%
 
-\glsdefs@newdocentry{ZK-STARKs}%
+\glsdefs@newdocentry{ZK-STARK}%
 {%
-name={ZK-STARKs},%
-sort={ZK-STARKs},%
+name={ZK-STARK},%
+sort={ZK-STARK},%
 type={acronym},%
-first={Zero-Knowledge Scalable Transparent ARguments of Knowledge\glsspace (ZK-STARKs)},%
-firstplural={Zero-Knowledge Scalable Transparent ARguments of Knowledge\acrpluralsuffix \glsspace (ZK-STARKs\acrpluralsuffix )},%
-text={ZK-STARKs},%
-plural={ZK-STARKs\acrpluralsuffix },%
+first={Zero-Knowledge Scalable Transparent ARguments of Knowledge\glsspace (ZK-STARK)},%
+firstplural={Zero-Knowledge Scalable Transparent ARguments of Knowledge\acrpluralsuffix \glsspace (ZK-STARK\acrpluralsuffix )},%
+text={ZK-STARK},%
+plural={ZK-STARK\acrpluralsuffix },%
 description={Zero-Knowledge Scalable Transparent ARguments of Knowledge},%
 descriptionplural={Zero-Knowledge Scalable Transparent ARguments of Knowledge\acrpluralsuffix },%
 symbol={\relax },%
@@ -411,8 +383,8 @@ user5={},%
 user6={},%
 long={Zero-Knowledge Scalable Transparent ARguments of Knowledge},%
 longplural={Zero-Knowledge Scalable Transparent ARguments of Knowledges},%
-short={ZK-STARKs},%
-shortplural={ZK-STARKss},%
+short={ZK-STARK},%
+shortplural={ZK-STARKs},%
 counter={page},%
 parent={},%
 %
@@ -861,6 +833,34 @@ long={Dolev-Yao},%
 longplural={Dolev-Yaos},%
 short={DV},%
 shortplural={DVs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{OPAL}%
+{%
+name={OPAL},%
+sort={OPAL},%
+type={acronym},%
+first={Open Algorithms\glsspace (OPAL)},%
+firstplural={Open Algorithms\acrpluralsuffix \glsspace (OPAL\acrpluralsuffix )},%
+text={OPAL},%
+plural={OPAL\acrpluralsuffix },%
+description={Open Algorithms},%
+descriptionplural={Open Algorithms\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Open Algorithms},%
+longplural={Open Algorithmss},%
+short={OPAL},%
+shortplural={OPALs},%
 counter={page},%
 parent={},%
 %

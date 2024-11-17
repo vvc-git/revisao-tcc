@@ -13,20 +13,18 @@ Através dessa adaptação facilitará a construção de uma camada de apresenta
 
 A nova especificação introduz duas extensões alinhadas às estratégias da \autoref{subsection:fiduciário} para a preservação da privacidade dos usuários: a \emph{Negociação de Atributos} e a \emph{Negociação do Ambiente de Execução}. A primeira utiliza a estrutura de \acs{DA}s em conjunto com a definição de novas mensagens e endpoints, visando à redução do risco de uso indevido de dados, garantindo que somente as informações estritamente necessárias sejam compartilhadas. Já a segunda extensão, também baseada em endpoints e mensagens, permite que dados sensíveis sejam preferencialmente processados em ambientes confiáveis ao usuário.
 
-Essas adaptações são representadas na \autoref{fig:stack-model-protocol-extension}, que adota uma abordagem modular como solução para atingir as propriedades e comportamentos definidos pelo modelo. Embora o foco esteja no \acs{OIDC4VP}, destacado em tons de cinza, deixa em aberto a viabilidade de explorar as demais soluções mencionadas em \autoref{subsection:fiduciário}, representadas em branco, para atender aos demais princípios do modelo.
-Essas mudanças visam não apenas cumprir os requisitos de segurança, mas também aprimorar a confiança do usuário no sistema, ao assegurar que sua privacidade seja rigorosamente protegida em todas as etapas do processo.
+Essas adaptações são representadas na \autoref{fig:stack-model-protocol-extension}, que adota uma abordagem modular como solução para atingir as propriedades e comportamentos definidos pelo modelo. Embora o foco esteja no \acs{OIDC4VP}, destacado em tons de cinza, deixa-se em aberto a viabilidade de explorar as demais soluções mencionadas em \autoref{subsection:fiduciário}, representadas em branco, para atender aos demais princípios do modelo.
+Essa solução visa não apenas cumprir os requisitos de segurança, mas também aprimorar a confiança do usuário no sistema, ao assegurar que sua privacidade seja rigorosamente protegida em todas as etapas do processo.
 
 \input{images/tex/stack-model-protocol}
 
-\section{Transição: de Carteiras para Fiduciários}
+\section{Integração do OIDC4VP com o Modelo Fiduciário}
 
-A transição do modelo original de \acs{SSI}, no qual o ecossistema \acs{OIDC4VP} foi originalmente proposto, para o Modelo Fiduciário, é um processo bastante natural como mostrado na \autoref{fig:oidc4vp-in-fid}. 
-Isso ocorre porque esta adaptação foca exclusivamente na redução da divulgação de dados, sem exigir, por exemplo, modificações nas mensagens trocadas pelo Fiduciário como solução para garantir maior controle sobre as ações realizadas com os dados do usuário, conforme previsto no princípio de \emph{Transparency for Accountability}.
-Dessa forma, sem a necessidade de alterações significativas, o \acs{SP} mantém seu papel como a entidade responsável por solicitar, receber e validar as \acs{VP}s, desempenhando, no contexto do protocolo \acs{OIDC4VP}, a função de Cliente OAuth.
+A transição do modelo original de \acs{SSI}, no qual o \acs{OIDC4VP} foi originalmente proposto, para o Modelo Fiduciário, é um processo bastante natural como mostrado na \autoref{fig:oidc4vp-in-fid}. 
+Isso ocorre porque esta adaptação foca exclusivamente na redução da divulgação de dados proposto por \emph{Non-Disclousure as Goal}, sem exigir, por exemplo, modificações nas mensagens trocadas pelo Fiduciário como solução para garantir maior controle sobre as ações realizadas com os dados do usuário, conforme previsto no princípio de \emph{Transparency for Accountability}.
+Dessa forma, não foram necessárias alterações significativas, permitindo que a \acs{SP} continue desempenhando seu papel como a entidade responsável por solicitar, receber e validar as \acs{VP}s. No contexto do \acs{OIDC4VP}, essa função é exercida por meio do papel de Cliente OAuth.
 
-Conforme discutido anteriormente na \autoref{subsection:fiduciário}, o Fiduciário, é capaz de exercer as mesmas funções e capacidades que a Carteira. Dessa forma, é responsabilidade do Fiduciário receber, armazenar, apresentar e gerenciar as \acs{VC}s e as chaves criptográficas associadas. Ademais, assim como não existe um único modelo de implementação para Carteiras, também não há uma única abordagem para a configuração de entidades Fiduciárias. Em outras palavras, as \acs{VC}s e as chaves podem ser armazenadas e gerenciadas localmente, por meio de um serviço remoto, auto-hospedado — gerido e mantido pelo próprio usuário — ou ainda por meio de um serviço remoto operado por terceiros. 
-Em última análise, o Fiduciário assume o mesmo papel que a Carteira desempenha dentro do contexto \acs{OIDC4VP}, o de Servidor de Autorização, porém com a prioridade de, além de possuir um mecanismo para requisitar e entregar VPs, integrar as extensões de \emph{Negociação de Atributos} e \emph{Negociação do Ambiente de Execução} nos fluxos existentes, visando atender o pilar \emph{Non-Disclousure as Goal}.
-
+O Fiduciário, por sua vez, possui as mesmas funções e capacidades que a Carteira, conforme discutido anteriormente na \autoref{subsection:fiduciário}, incluindo receber, armazenar, apresentar e gerenciar as \acs{VC}s, bem como as chaves criptográficas associadas. Portanto, no contexto do \acs{OIDC4VP}, deve assumir o papel Servidor de Autorização que é realizado pela Carteira dentro desse contexto. No entanto, com a prioridade de, além de adquirir um mecanismo para entregar \acs{VP}s, integrar as extensões de \emph{Negociação de Atributos} e \emph{Negociação do Ambiente de Execução} nos fluxos existentes, visando atender o pilar \emph{Non-Disclosure as Goal}.
 % Mudanças em oidc4vp
 \input{images/tex/oidc4vp-in-fid}
 
@@ -65,7 +63,7 @@ A Solicitação de Negociação constitui uma requisição HTTP POST enviada pel
 
 \begin{itemize}
 
-    \item \textbf{type}: OBRIGATÓRIO. Este parâmetro deve ser utilizado na Solicitação de Negociação para especificar claramente o tipo de negociação que está sendo realizada. No contexto da \emph{Negociação de Atributos}, deve-se utilizar o valor \texttt{attribute}.
+    \item \textbf{type}: OBRIGATÓRIO. Este parâmetro deve ser utilizado na Solicitação de Negociação para especificar o tipo de negociação que está sendo realizada. No contexto da \emph{Negociação de Atributos}, deve-se utilizar o valor \texttt{attribute}.
 
     \item \textbf{definition\_id}: OPCIONAL. Trata-se de uma string que identifica uma Declaração de Requisitos previamente encaminhada ao Fiduciário. Após o acordo ser firmado entre o Fiduciário e o Provedor, o \acs{SP} deve invalidar o \texttt{definition\_id}. Este parâmetro se torna OBRIGATÓRIO quando o valor de type é \texttt{attribute}.
     

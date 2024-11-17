@@ -54,48 +54,48 @@
 \contentsline {subsection}{\numberline {2.4.2}Propriedades de segurança}{53}{subsection.2.4.2}%
 \contentsline {subsection}{\numberline {2.4.3}Prova de segurança}{53}{subsection.2.4.3}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Trabalhos relacionados}}{55}{chapter.3}%
-\contentsline {section}{\numberline {3.1}\newacronym {OPAL}{OPAL}{Open Algorithms}\acrfull {OPAL}}{55}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Machine Readable Personal Privacy Terms}{56}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Comparação entre propostas}{56}{section.3.3}%
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Trabalhos relacionados}}{57}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Open Algorithms}{57}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Machine Readable Personal Privacy Terms}{58}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Comparação entre propostas}{58}{section.3.3}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Um Novo Protocolo Para Identidade Fiduciária}}{59}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Transição: de Carteiras para Fiduciários}{60}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Uso de Provas de Conhecimento Zero}{61}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Negociação de Atributos}{61}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Endpoint de Negociação}{61}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Solicitação de Negociação}{63}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Resposta de Negociação}{63}{subsection.4.3.3}%
-\contentsline {section}{\numberline {4.4}Negociação do Ambiente de Execução}{66}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Solicitação de Negociação}{66}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Resposta de Negociação}{67}{subsection.4.4.2}%
-\contentsline {subsubsection}{\numberline {4.4.2.1}Resposta de Sucesso para Computação Multipartidária}{68}{subsubsection.4.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.4.2.2}Resposta de Recusa para Execução em outros Ambientes}{68}{subsubsection.4.4.2.2}%
-\contentsline {section}{\numberline {4.5}Análise Formal de Segurança}{68}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Propriedade de Segurança: Autenticação da Negociação}{69}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Prova da Autenticação da Negociação}{69}{subsection.4.5.2}%
-\contentsline {section}{\numberline {4.6}Limitações e esforço para mudança}{70}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Conclusões}{71}{section.4.7}%
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Um Novo Protocolo Para Identidade Fiduciária}}{61}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Integração do OIDC4VP com o Modelo Fiduciário}{62}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Uso de Provas de Conhecimento Zero}{62}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Negociação de Atributos}{63}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Endpoint de Negociação}{63}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Solicitação de Negociação}{64}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Resposta de Negociação}{65}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}Negociação do Ambiente de Execução}{68}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Solicitação de Negociação}{68}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Resposta de Negociação}{69}{subsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.1}Resposta de Sucesso para Computação Multipartidária}{70}{subsubsection.4.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.4.2.2}Resposta de Recusa para Execução em outros Ambientes}{70}{subsubsection.4.4.2.2}%
+\contentsline {section}{\numberline {4.5}Análise Formal de Segurança}{70}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Propriedade de Segurança: Autenticação da Negociação}{71}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Prova da Autenticação da Negociação}{71}{subsection.4.5.2}%
+\contentsline {section}{\numberline {4.6}Limitações e esforço para mudança}{72}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Conclusões}{73}{section.4.7}%
 \vspace {\cftbeforechapterskip }
 \babel@toc {brazil}{}\relax 
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{73}{section*.46}%
+\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{75}{section*.46}%
 \renewcommand *{\cftappendixname }{AP\^ENDICE \space }
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Análise Formal de Segurança}}{77}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Sistema de Credenciais Verificáveis na Web}{77}{section.A.1}%
-\contentsline {subsection}{\numberline {A.1.1}Visão Geral}{77}{subsection.A.1.1}%
-\contentsline {subsection}{\numberline {A.1.2}Identidades e Segredos}{78}{subsection.A.1.2}%
-\contentsline {subsubsection}{\numberline {A.1.2.1}Identidades}{78}{subsubsection.A.1.2.1}%
-\contentsline {subsubsection}{\numberline {A.1.2.2}Chaves e Segredos}{79}{subsubsection.A.1.2.2}%
-\contentsline {subsubsection}{\numberline {A.1.2.3}Senhas}{79}{subsubsection.A.1.2.3}%
-\contentsline {subsubsection}{\numberline {A.1.2.4}Navegadores (Web Browsers)}{79}{subsubsection.A.1.2.4}%
-\contentsline {subsubsection}{\numberline {A.1.2.5}Função auxiliar}{79}{subsubsection.A.1.2.5}%
-\contentsline {subsection}{\numberline {A.1.3}Emissores}{79}{subsection.A.1.3}%
-\contentsline {subsection}{\numberline {A.1.4}Fiduciário}{80}{subsection.A.1.4}%
-\contentsline {subsection}{\numberline {A.1.5}Verificador}{81}{subsection.A.1.5}%
-\contentsline {section}{\numberline {A.2}Propriedades Formais de Segurança}{82}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Prova de Propriedades de Segurança}{82}{section.A.3}%
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Análise Formal de Segurança}}{79}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Sistema de Credenciais Verificáveis na Web}{79}{section.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}Visão Geral}{79}{subsection.A.1.1}%
+\contentsline {subsection}{\numberline {A.1.2}Identidades e Segredos}{80}{subsection.A.1.2}%
+\contentsline {subsubsection}{\numberline {A.1.2.1}Identidades}{80}{subsubsection.A.1.2.1}%
+\contentsline {subsubsection}{\numberline {A.1.2.2}Chaves e Segredos}{81}{subsubsection.A.1.2.2}%
+\contentsline {subsubsection}{\numberline {A.1.2.3}Senhas}{81}{subsubsection.A.1.2.3}%
+\contentsline {subsubsection}{\numberline {A.1.2.4}Navegadores (Web Browsers)}{81}{subsubsection.A.1.2.4}%
+\contentsline {subsubsection}{\numberline {A.1.2.5}Função auxiliar}{81}{subsubsection.A.1.2.5}%
+\contentsline {subsection}{\numberline {A.1.3}Emissores}{81}{subsection.A.1.3}%
+\contentsline {subsection}{\numberline {A.1.4}Fiduciário}{82}{subsection.A.1.4}%
+\contentsline {subsection}{\numberline {A.1.5}Verificador}{83}{subsection.A.1.5}%
+\contentsline {section}{\numberline {A.2}Propriedades Formais de Segurança}{84}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Prova de Propriedades de Segurança}{84}{section.A.3}%
 \thispagestyle {empty}
