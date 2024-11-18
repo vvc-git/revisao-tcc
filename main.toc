@@ -59,17 +59,17 @@
 \contentsline {section}{\numberline {3.2}Machine Readable Personal Privacy Terms}{58}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Comparação entre propostas}{58}{section.3.3}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Um Novo Protocolo Para Identidade Fiduciária}}{61}{chapter.4}%
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Um Protocolo Para Identidade Fiduciária}}{61}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Integração do OIDC4VP com o Modelo Fiduciário}{62}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Uso de Provas de Conhecimento Zero}{62}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Uso de Provas de Conhecimento Zero}{63}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Negociação de Atributos}{63}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Endpoint de Negociação}{63}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.1}Endpoint de Negociação}{64}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Solicitação de Negociação}{64}{subsection.4.3.2}%
 \contentsline {subsection}{\numberline {4.3.3}Resposta de Negociação}{65}{subsection.4.3.3}%
 \contentsline {section}{\numberline {4.4}Negociação do Ambiente de Execução}{68}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Solicitação de Negociação}{68}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Resposta de Negociação}{69}{subsection.4.4.2}%
-\contentsline {subsubsection}{\numberline {4.4.2.1}Resposta de Sucesso para Computação Multipartidária}{70}{subsubsection.4.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.4.2.1}Resposta de Sucesso para Computação Multipartidária}{69}{subsubsection.4.4.2.1}%
 \contentsline {subsubsection}{\numberline {4.4.2.2}Resposta de Recusa para Execução em outros Ambientes}{70}{subsubsection.4.4.2.2}%
 \contentsline {section}{\numberline {4.5}Análise Formal de Segurança}{70}{section.4.5}%
 \contentsline {subsection}{\numberline {4.5.1}Propriedade de Segurança: Autenticação da Negociação}{71}{subsection.4.5.1}%

@@ -32,9 +32,9 @@
 \contentsline {figure}{\numberline {13}{\ignorespaces Pilha: Modelo, protocolos, extensões.\relax }}{61}{figure.caption.30}%
 \contentsline {figure}{\numberline {14}{\ignorespaces Fluxo com Fiduciário no lugar da Carteira.\relax }}{62}{figure.caption.31}%
 \contentsline {figure}{\numberline {15}{\ignorespaces Fluxo para Negociação de Atributos.\relax }}{64}{figure.caption.32}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Exemplo de parâmetro \texttt {negotiation\_enpoint} no \texttt {client\_metadata} (em UTF-8).\relax }}{64}{figure.caption.33}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Exemplo de parâmetro \texttt {negotiation\_enpoint} no \texttt {client\_metadata} (em UTF-8).\relax }}{65}{figure.caption.33}%
 \contentsline {figure}{\numberline {17}{\ignorespaces Solicitação de Negociação.\relax }}{65}{figure.caption.34}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Resposta de Negociação com Sucesso.\relax }}{65}{figure.caption.35}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Resposta de Negociação com Sucesso.\relax }}{66}{figure.caption.35}%
 \contentsline {figure}{\numberline {19}{\ignorespaces Resposta de Negociação com Recusa.\relax }}{66}{figure.caption.37}%
 \contentsline {figure}{\numberline {20}{\ignorespaces Fluxo para Negociação de Ambiente de Execução.\relax }}{68}{figure.caption.38}%
 \contentsline {figure}{\numberline {21}{\ignorespaces Solicitação de Negociação com \texttt {type=env}.\relax }}{69}{figure.caption.39}%

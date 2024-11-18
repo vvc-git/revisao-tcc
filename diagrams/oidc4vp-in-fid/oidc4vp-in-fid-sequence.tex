@@ -1,11 +1,18 @@
 \begin{sequencediagram}
+    \Large
     \newthread{A}{\ttfamily Usuário}{}
-    \newinst[4]{C}{\ttfamily \bfseries Fiduciário}{}
-    \newinst[15]{B}{\ttfamily \acs{SP}}{}
+    \newinst[8]{C}{\ttfamily \bfseries Fiduciário}{}
+    \newinst[20]{B}{\ttfamily \acs{SP}}{}
     
+    \postlevel    
+    \postlevel
+    \postlevel
+    \postlevel
     \newcounter{number}
     \stepcounter{number}
     \begin{call}{A}{\ttfamily Interação}{B}
+        \postlevel
+        \postlevel
         \postlevel
         \postlevel
         \postlevel
@@ -13,12 +20,23 @@
             \begin{call}{B}{\shortstack{ \ttfamily (1) Requisição de Autorização \\ \ttfamily (client\_id, nonce, redirect\_uri, presentation\_definition)}}{C}{\shortstack{\ttfamily (2) Resposta de Autorização \\ \ttfamily (vp\_token, presenation\_submission)}}
             \postlevel
             \postlevel
+            \postlevel
+            \postlevel
 
             % Adicionando uma nota após o passo 1
-            \node at (1.5,-4) [text width=6cm, anchor=west] {\ttfamily \small Autenticação e Confirmação/Seleção da \acs{VC}};
+            \node at (5,-10) [text width=6cm, anchor=west] {\ttfamily Autenticação e Confirmação/Seleção da \acs{VC}};
 
             \postlevel
-            
+            \postlevel
+            \postlevel
+            \postlevel
+            \postlevel
         \end{call}
     \end{call}
+    \postlevel    
+    \postlevel
+    \postlevel
+    \postlevel
+    \postlevel    
+    \postlevel
 \end{sequencediagram}

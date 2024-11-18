@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.11.1)  17 NOV 2024 17:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.11.1)  17 NOV 2024 21:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1565,21 +1565,21 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) [58 <./images/png/OPAL-ecossytem.png>]) (./chapters/protocol.tex [59] [60
 
-] (./images/tex/stack-model-protocol.tex (./diagrams/strack-model-protocol/stack-model-protocol.tex))
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [61] (./images/tex/oidc4vp-in-fid.tex (./diagrams/oidc4vp-in-fid/oidc4vp-in-fid-sequence.tex
+] (./images/tex/stack-model-protocol.tex (./diagrams/strack-model-protocol/stack-model-protocol.tex)) [61] (./images/tex/oidc4vp-in-fid.tex (./diagrams/oidc4vp-in-fid/oidc4vp-in-fid-sequence.tex
 \pgf@layerbox@umlsd@background=\box93
 \pgf@layerboxsaved@umlsd@background=\box94
 \pgf@layerbox@umlsd@threadlayer=\box95
 \pgf@layerboxsaved@umlsd@threadlayer=\box96
 \c@number=\count465
 
-Underfull \hbox (badness 3884) in paragraph at lines 18--18
-[][]\T1/pcr/m/n/10.95 Autenticação e 
+Overfull \hbox (26.2754pt too wide) in paragraph at lines 27--27
+\T1/pcr/m/n/17.28 Confirmação/Seleção 
  []
 
-)) [62] (./images/tex/attribute-negotiation-flow-via-browser.tex (./diagrams/attribute-negotiation-flow-via-browser/attribute-negotation-flow-via-browser.tex
+))
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [62] (./images/tex/attribute-negotiation-flow-via-browser.tex (./diagrams/attribute-negotiation-flow-via-browser/attribute-negotation-flow-via-browser.tex
 Missing character: There is no [ in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no c in font nullfont!
@@ -1591,7 +1591,10 @@ Missing character: There is no 0 in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no ] in font nullfont!
-)) [63] (./images/tex/negotiation-endpoint.tex (./code/negotiation-endpoint.tex (./code/json.tex))) (./images/tex/negotiaton-request.tex (./code/negotiation-request.tex (./code/json.tex))) [64] (./images/tex/negotiation-response-success.tex (./code/negotiation-response-success.tex (./code/json.tex))) [65] (./images/tex/negotiation-response-refused.tex (./code/negotiation-response-refused.tex (./code/json.tex))) [66] [67] (./images/tex/env-negotiation-flow.tex (./diagrams/env-negotiation-flow/env-negotiation-flow.tex
+))
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [63] (./images/tex/negotiation-endpoint.tex (./code/negotiation-endpoint.tex (./code/json.tex))) (./images/tex/negotiaton-request.tex (./code/negotiation-request.tex (./code/json.tex)) [64]) (./images/tex/negotiation-response-success.tex (./code/negotiation-response-success.tex (./code/json.tex))) [65] (./images/tex/negotiation-response-refused.tex (./code/negotiation-response-refused.tex (./code/json.tex))) [66] [67] (./images/tex/env-negotiation-flow.tex (./diagrams/env-negotiation-flow/env-negotiation-flow.tex
 Missing character: There is no [ in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no c in font nullfont!
@@ -1608,16 +1611,10 @@ Underfull \hbox (badness 3884) in paragraph at lines 14--14
 [][]\T1/pcr/m/n/10.95 Autenticação e 
  []
 
-)) (./images/tex/negotiation-request-env.tex (./code/negotiation-request-env.tex (./code/json.tex))) [68
+)) (./images/tex/negotiation-request-env.tex (./code/negotiation-request-env.tex (./code/json.tex))) [68] (./images/tex/negotiation-response-success.tex (./code/negotiation-response-success.tex (./code/json.tex))) [69] (./images/tex/negotiation-response-env-with-description.tex (./code/negotiation-response-env-with-description.tex (./code/json.tex))) (./images/tex/negotiation-response-env-refused.tex (./code/negotiation-response-env-refused.tex (./code/json.tex))) [70]
+Underfull \vbox (badness 2221) has occurred while \output is active []
 
-] (./images/tex/negotiation-response-success.tex (./code/negotiation-response-success.tex (./code/json.tex))) [69] (./images/tex/negotiation-response-env-with-description.tex (./code/negotiation-response-env-with-description.tex (./code/json.tex))) (./images/tex/negotiation-response-env-refused.tex (./code/negotiation-response-env-refused.tex (./code/json.tex))) [70]
-Overfull \hbox (6.44287pt too wide) in paragraph at lines 197--198
-\T1/phv/m/n/12 timo. O ata-cante que-bra essa pro-pri-e-dade quando con-se-gue uti-li-zar o \T1/pcr/m/n/12 definition_id
- []
-
-[71]) (./chapters/conclusion.tex [72
-
-]
+ [71]) (./chapters/conclusion.tex [72]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [73]) (./main.bbl [74]
@@ -1676,18 +1673,18 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 47317 strings out of 480113
- 942167 string characters out of 5892773
- 1340452 words of memory out of 5000000
- 63890 multiletter control sequences out of 15000+600000
- 517421 words of font info for 93 fonts, out of 8000000 for 9000
+ 47330 strings out of 480113
+ 942349 string characters out of 5892773
+ 1354652 words of memory out of 5000000
+ 63900 multiletter control sequences out of 15000+600000
+ 520209 words of font info for 103 fonts, out of 8000000 for 9000
  83 hyphenation exceptions out of 8191
  110i,17n,131p,1675b,2327s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (88 pages, 1090288 bytes).
+Output written on main.pdf (88 pages, 1090987 bytes).
 PDF statistics:
- 1825 PDF objects out of 2073 (max. 8388607)
- 1624 compressed objects within 17 object streams
+ 1833 PDF objects out of 2073 (max. 8388607)
+ 1632 compressed objects within 17 object streams
  435 named destinations out of 1000 (max. 500000)
  721 words of extra memory for PDF output out of 10000 (max. 10000000)
 
