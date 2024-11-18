@@ -17,28 +17,28 @@
 \babel@toc {english}{}\relax 
 \babel@toc {brazil}{}\relax 
 \babel@toc {brazil}{}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Modelos de identidade.\relax }}{28}{figure.caption.15}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Modelo de Credenciais Verificáveis W3C.\relax }}{32}{figure.caption.16}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Pilares do Modelo Fiduciário.\relax }}{37}{figure.caption.19}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Modelo Fiduciário.\relax }}{39}{figure.caption.20}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Fluxo de Código de Autorização no OAuth 2.0.\relax }}{42}{figure.caption.21}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Fluxo de Código de Autorização no OIDC.\relax }}{44}{figure.caption.22}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Ecossistema do OIDC4VC.\relax }}{46}{figure.caption.23}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Fluxo com Carteira e \acs {SP} no mesmo dispositivo.\relax }}{49}{figure.caption.24}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Etapas da Análise Formal de Segurança.\relax }}{51}{figure.caption.25}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Modelo WIM.\relax }}{53}{figure.caption.26}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Prova de Autenticação da Apresentação.\relax }}{55}{figure.caption.27}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Ecossistema \acs {OPAL}.\relax }}{58}{figure.caption.28}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Pilha: Modelo, protocolos, extensões.\relax }}{61}{figure.caption.30}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Fluxo com Fiduciário no lugar da Carteira.\relax }}{62}{figure.caption.31}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Fluxo para Negociação de Atributos.\relax }}{64}{figure.caption.32}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Exemplo de parâmetro \texttt {negotiation\_enpoint} no \texttt {client\_metadata} (em UTF-8).\relax }}{65}{figure.caption.33}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Solicitação de Negociação.\relax }}{65}{figure.caption.34}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Resposta de Negociação com Sucesso.\relax }}{66}{figure.caption.35}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Resposta de Negociação com Recusa.\relax }}{66}{figure.caption.37}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Fluxo para Negociação de Ambiente de Execução.\relax }}{68}{figure.caption.38}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Solicitação de Negociação com \texttt {type=env}.\relax }}{69}{figure.caption.39}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Resposta de Negociação com Sucesso.\relax }}{69}{figure.caption.40}%
-\contentsline {figure}{\numberline {23}{\ignorespaces Resposta de Negociação com \texttt {compute\_site\_description}.\relax }}{70}{figure.caption.41}%
-\contentsline {figure}{\numberline {24}{\ignorespaces Resposta de Recusa.\relax }}{71}{figure.caption.42}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Modelos de identidade.\relax }}{28}{figure.caption.13}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Modelo de Credenciais Verificáveis W3C.\relax }}{32}{figure.caption.14}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Pilares do Modelo Fiduciário.\relax }}{37}{figure.caption.17}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Modelo Fiduciário.\relax }}{39}{figure.caption.18}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Fluxo de Código de Autorização no OAuth 2.0.\relax }}{42}{figure.caption.19}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Fluxo de Código de Autorização no OIDC.\relax }}{44}{figure.caption.20}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Ecossistema do OIDC4VC.\relax }}{46}{figure.caption.21}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Fluxo com Carteira e \acs {SP} no mesmo dispositivo.\relax }}{49}{figure.caption.22}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Etapas da Análise Formal de Segurança.\relax }}{51}{figure.caption.23}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Modelo WIM.\relax }}{53}{figure.caption.24}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Prova de Autenticação da Apresentação.\relax }}{55}{figure.caption.25}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Ecossistema \acs {OPAL}.\relax }}{58}{figure.caption.26}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Pilha: Modelo, protocolos, extensões.\relax }}{61}{figure.caption.28}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Fluxo com Fiduciário no lugar da Carteira.\relax }}{62}{figure.caption.29}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Fluxo para Negociação de Atributos.\relax }}{64}{figure.caption.30}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Exemplo de parâmetro \texttt {negotiation\_enpoint} no \texttt {client\_metadata} (em UTF-8).\relax }}{65}{figure.caption.31}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Solicitação de Negociação.\relax }}{65}{figure.caption.32}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Resposta de Negociação com Sucesso.\relax }}{66}{figure.caption.33}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Resposta de Negociação com Recusa.\relax }}{66}{figure.caption.35}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Fluxo para Negociação de Ambiente de Execução.\relax }}{68}{figure.caption.36}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Solicitação de Negociação com \texttt {type=env}.\relax }}{69}{figure.caption.37}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Resposta de Negociação com Sucesso.\relax }}{69}{figure.caption.38}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Resposta de Negociação com \texttt {compute\_site\_description}.\relax }}{70}{figure.caption.39}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Resposta de Recusa.\relax }}{71}{figure.caption.40}%
 \babel@toc {brazil}{}\relax 

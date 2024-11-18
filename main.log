@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.11.1)  17 NOV 2024 21:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.11.1)  18 NOV 2024 01:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1120,7 +1120,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 \c@postulado=\count418
 \c@teorema=\count419
 \c@conjectura=\count420
-Package hyperref Info: Option `colorlinks' set `true' on input line 74.
+Package hyperref Info: Option `colorlinks' set `true' on input line 72.
  (./glossario.tex (/usr/share/texlive/texmf-dist/tex/latex/glossaries/base/glossaries.sty
 Package: glossaries 2021/11/01 v4.49 (NLCT)
  (/usr/share/texlive/texmf-dist/tex/latex/mfirstuc/mfirstuc.sty
@@ -1293,11 +1293,11 @@ ufsc-thesis-rn46-2019: Will DeclareFloatingEnvironment{algorithm} with listofalg
 (/usr/share/texlive/texmf-dist/tex/latex/newfloat/newfloat.sty
 Package: newfloat 2019/09/02 v1.1l Defining new floating environments (AR)
 )
-Package newfloat Info: New float `algorithm' with options `within=none,listname=Lista de Algoritmos,name=Algoritmo' on input line 123.
+Package newfloat Info: New float `algorithm' with options `within=none,listname=Lista de Algoritmos,name=Algoritmo' on input line 121.
 \c@algorithm=\count454
-Package newfloat Info: float type `algorithm'=4 on input line 123.
+Package newfloat Info: float type `algorithm'=4 on input line 121.
 \c@loalgorithmdepth=\count455
-Package tocbasic Info: setting babel extension for `loalgorithm' on input line 123.
+Package tocbasic Info: setting babel extension for `loalgorithm' on input line 121.
 \c@subalgorithm=\count456
 \tikzscale@accuracy=\skip282
  (./main.aux
@@ -1307,25 +1307,25 @@ LaTeX Warning: Label `fig:negotiation-response-success' multiply defined.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-Package hyperref Info: Link coloring ON on input line 123.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+Package hyperref Info: Link coloring ON on input line 121.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1337,10 +1337,10 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 123.
-LaTeX Info: Redefining \ref on input line 123.
-LaTeX Info: Redefining \pageref on input line 123.
-LaTeX Info: Redefining \nameref on input line 123.
+LaTeX Info: Redefining \nameref on input line 121.
+LaTeX Info: Redefining \ref on input line 121.
+LaTeX Info: Redefining \pageref on input line 121.
+LaTeX Info: Redefining \nameref on input line 121.
 \myptabbox=\box91
 \myptabboxwidth=\skip283
 runsystem(base64 --decode main.64> main-logo.pdf)...disabled (restricted).
@@ -1372,17 +1372,17 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ) (/usr/share/texlive/texmf-dist/tex/latex/translations/translations-basic-dictionary-brazil.trsl
 File: translations-basic-dictionary-brazil.trsl (brazil translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `brazil'. on input line 123.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `brazil'. on input line 121.
  (/usr/share/texlive/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 123.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 121.
 \c@lstlisting=\count464
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
  (./main.glsdefs)
-Package hyperref Info: Option `pageanchor' set `false' on input line 132.
+Package hyperref Info: Option `pageanchor' set `false' on input line 130.
  [1
 
 \openout7 = `main.ist'.
@@ -1390,12 +1390,12 @@ Package hyperref Info: Option `pageanchor' set `false' on input line 132.
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 ]
-Package hyperref Info: Option `pageanchor' set `true' on input line 132.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 134.
+Package hyperref Info: Option `pageanchor' set `true' on input line 130.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 132.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 134.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 132.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -1405,32 +1405,32 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <ficha.pdf, id=46, 597.51233pt x 845.0471pt>
 File: ficha.pdf Graphic file (type pdf)
 <use ficha.pdf>
-Package pdftex.def Info: ficha.pdf  used on input line 134.
+Package pdftex.def Info: ficha.pdf  used on input line 132.
 (pdftex.def)             Requested size: 597.51086pt x 845.04504pt.
 File: ficha.pdf Graphic file (type pdf)
 <use ficha.pdf>
-Package pdftex.def Info: ficha.pdf  used on input line 134.
+Package pdftex.def Info: ficha.pdf  used on input line 132.
 (pdftex.def)             Requested size: 597.51086pt x 845.04504pt.
 <ficha.pdf, id=49, page=1, 597.51233pt x 845.0471pt>
 File: ficha.pdf Graphic file (type pdf)
 <use ficha.pdf, page 1>
-Package pdftex.def Info: ficha.pdf , page1 used on input line 134.
+Package pdftex.def Info: ficha.pdf , page1 used on input line 132.
 (pdftex.def)             Requested size: 597.51086pt x 845.04504pt.
 File: ficha.pdf Graphic file (type pdf)
 <use ficha.pdf, page 1>
-Package pdftex.def Info: ficha.pdf , page1 used on input line 134.
+Package pdftex.def Info: ficha.pdf , page1 used on input line 132.
 (pdftex.def)             Requested size: 597.53821pt x 845.08372pt.
 File: ficha.pdf Graphic file (type pdf)
 <use ficha.pdf, page 1>
-Package pdftex.def Info: ficha.pdf , page1 used on input line 134.
+Package pdftex.def Info: ficha.pdf , page1 used on input line 132.
 (pdftex.def)             Requested size: 597.53821pt x 845.08372pt.
 File: ficha.pdf Graphic file (type pdf)
 <use ficha.pdf, page 1>
-Package pdftex.def Info: ficha.pdf , page1 used on input line 134.
+Package pdftex.def Info: ficha.pdf , page1 used on input line 132.
 (pdftex.def)             Requested size: 597.53821pt x 845.08372pt.
 File: ficha.pdf Graphic file (type pdf)
 <use ficha.pdf, page 1>
-Package pdftex.def Info: ficha.pdf , page1 used on input line 134.
+Package pdftex.def Info: ficha.pdf , page1 used on input line 132.
 (pdftex.def)             Requested size: 597.53821pt x 845.08372pt.
  [2
 
@@ -1447,7 +1447,7 @@ Package pdftex.def Info: ficha.pdf , page1 used on input line 134.
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 148.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 146.
  [9] [10
 
 ] [11
@@ -1467,19 +1467,20 @@ Overfull \hbox (25.05888pt too wide) in paragraph at lines 35--35
 
 ) [15] [16
 
-] (./main.lot) (./main.acr [17] [18
+] (./main.lot)
+No file main.acr.
+[17] [18
 
-]) [19
+]
+No file main.gls.
+[19
 
 ] [20
 
-] (./main.gls) (./main.toc
+] (./main.toc
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 42.
- [21
-
-
-]) [22] (./chapters/introduction.tex
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 41.
+ [21]) [22] (./chapters/introduction.tex
 \@gls@deffile=\write11
 \openout11 = `main.glsdefs'.
 
@@ -1499,7 +1500,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [27
 
 ] (./images/tex/im-figure.tex (./diagrams/identity-models/1-centralized.tex) (./diagrams/identity-models/2-outsourced.tex) (./diagrams/identity-models/3-ssi.tex)) [28] [29] [30] [31] (./images/tex/vc-data-model-figure.tex (./diagrams/vc-data-model-w3c/vc-data-model.tex)) [32] [33] [34] [35] (./images/tex/principles.tex
-<images/png/pilares-do-FIM.png, id=644, 1445.4pt x 813.0375pt>
+<images/png/pilares-do-FIM.png, id=627, 1445.4pt x 813.0375pt>
 File: images/png/pilares-do-FIM.png Graphic file (type png)
 <use images/png/pilares-do-FIM.png>
 Package pdftex.def Info: images/png/pilares-do-FIM.png  used on input line 4.
@@ -1513,37 +1514,37 @@ Overfull \hbox (9.2908pt too wide) in paragraph at lines 153--154
  []
 
 [40] (./images/tex/oauth.tex
-<images/png/oauth.png, id=700, 1084.05pt x 813.0375pt>
+<images/png/oauth.png, id=684, 1084.05pt x 813.0375pt>
 File: images/png/oauth.png Graphic file (type png)
 <use images/png/oauth.png>
 Package pdftex.def Info: images/png/oauth.png  used on input line 5.
 (pdftex.def)             Requested size: 1084.04736pt x 813.03552pt.
 ) [41] [42 <./images/png/oauth.png>] (./images/tex/oidc.tex
-<images/png/openid.png, id=734, 1084.05pt x 813.0375pt>
+<images/png/openid.png, id=721, 1084.05pt x 813.0375pt>
 File: images/png/openid.png Graphic file (type png)
 <use images/png/openid.png>
 Package pdftex.def Info: images/png/openid.png  used on input line 5.
 (pdftex.def)             Requested size: 1084.04736pt x 813.03552pt.
 ) [43] [44 <./images/png/openid.png>] [45] (./images/tex/protocol-of-oidc4vc.tex
-<images/png/protocol-of-OID4VC.png, id=779, 1495.5875pt x 515.9275pt>
+<images/png/protocol-of-OID4VC.png, id=767, 1495.5875pt x 515.9275pt>
 File: images/png/protocol-of-OID4VC.png Graphic file (type png)
 <use images/png/protocol-of-OID4VC.png>
 Package pdftex.def Info: images/png/protocol-of-OID4VC.png  used on input line 5.
 (pdftex.def)             Requested size: 1495.58386pt x 515.92624pt.
 ) [46 <./images/png/protocol-of-OID4VC.png>] [47] [48] (./images/tex/same-device.tex
-<images/png/same-device.png, id=899, 955.57pt x 368.37625pt>
+<images/png/same-device.png, id=895, 955.57pt x 368.37625pt>
 File: images/png/same-device.png Graphic file (type png)
 <use images/png/same-device.png>
 Package pdftex.def Info: images/png/same-device.png  used on input line 5.
 (pdftex.def)             Requested size: 955.56767pt x 368.37534pt.
 ) [49 <./images/png/same-device.png>] [50] (./images/tex/formal-analysis-steps.tex
-<images/png/formal-analysis-steps.png, id=929, 1096.095pt x 454.69875pt>
+<images/png/formal-analysis-steps.png, id=924, 1096.095pt x 454.69875pt>
 File: images/png/formal-analysis-steps.png Graphic file (type png)
 <use images/png/formal-analysis-steps.png>
 Package pdftex.def Info: images/png/formal-analysis-steps.png  used on input line 5.
 (pdftex.def)             Requested size: 1096.09233pt x 454.69763pt.
 ) [51 <./images/png/formal-analysis-steps.png>] [52] (./images/tex/wim-model.tex
-<images/png/wim-model.png, id=982, 772.8875pt x 342.27875pt>
+<images/png/wim-model.png, id=980, 772.8875pt x 342.27875pt>
 File: images/png/wim-model.png Graphic file (type png)
 <use images/png/wim-model.png>
 Package pdftex.def Info: images/png/wim-model.png  used on input line 4.
@@ -1554,7 +1555,7 @@ Package pdftex.def Info: images/png/wim-model.png  used on input line 4.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [57] (./images/tex/opal-ecossytem.tex
-<images/png/OPAL-ecossytem.png, id=1019, 1008.76875pt x 440.64626pt>
+<images/png/OPAL-ecossytem.png, id=1017, 1008.76875pt x 440.64626pt>
 File: images/png/OPAL-ecossytem.png Graphic file (type png)
 <use images/png/OPAL-ecossytem.png>
 Package pdftex.def Info: images/png/OPAL-ecossytem.png  used on input line 4.
@@ -1650,41 +1651,963 @@ Overfull \hbox (1.3907pt too wide) in paragraph at lines 120--121
 \T1/phv/m/n/12 fe-rido ser-vi-dor HTTPS com su-porte para cre-den-ci-ais ve-ri-fi-cá-veis pro-posto em ([][]HAUCK[][],
  []
 
-(./code/verifier-relation.tex (./code/pseudo.tex) [83])) (./aftertex/formalanalysis/properties.tex) (./aftertex/formalanalysis/proof.tex [84] [85]) [86
-runsystem(makeindex -s main.ist -t main.glg -o main.gls main.glo)...executed safely (allowed).
+(./code/verifier-relation.tex (./code/pseudo.tex) [83])) (./aftertex/formalanalysis/properties.tex) (./aftertex/formalanalysis/proof.tex [84] [85]) (./aftertex/sbc/sbc.tex [86]
 
-runsystem(makeindex -s main.ist -t main.alg -o main.acr main.acn)...executed safely (allowed).
+./aftertex/sbc/sbc.tex:2: Package pdfpages Error: Cannot find file `sbc-template.pdf'.
 
-runsystem(makeindex -s main.ist -t main.glg -o main.simbolos main.sbl)...executed safely (allowed).
+See the pdfpages package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+This error message was generated by an \errmessage
+command, so I can't give any explicit help.
+Pretend that you're Hercule Poirot: Examine all clues,
+and deduce the truth by order and method.
+
+
+./aftertex/sbc/sbc.tex:2: Package pdfpages Error: Cannot find file `-'.
+
+See the pdfpages package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+(That was another \errmessage.)
+
+./aftertex/sbc/sbc.tex:2: Undefined control sequence.
+\AM@expand@range ...M@i \relax \@tempcntb =\AM@ii 
+                                                  \relax \ifnum \@tempcnta <...
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./aftertex/sbc/sbc.tex:2: Missing number, treated as zero.
+<to be read again> 
+                   \relax 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./aftertex/sbc/sbc.tex:2: Undefined control sequence.
+\AM@checkpagenumber #1->\ifnum #1>\AM@pagecount 
+                                                \relax \ifthenelse {\boolean...
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./aftertex/sbc/sbc.tex:2: Missing number, treated as zero.
+<to be read again> 
+                   \relax 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+./aftertex/sbc/sbc.tex:2: Package pdfpages Error: Page 1 of `\AM@currentdocname ' does not exist.
+
+See the pdfpages package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+You have set a wrong page number in the `pages' option. Document 
+`\AM@currentdocname ' does not have 1 pages.
+
+./aftertex/sbc/sbc.tex:2: Undefined control sequence.
+\AM@checkpagenumber #1->\ifnum #1>\AM@pagecount 
+                                                \relax \ifthenelse {\boolean...
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./aftertex/sbc/sbc.tex:2: Missing number, treated as zero.
+<to be read again> 
+                   \relax 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+
+./aftertex/sbc/sbc.tex:2: LaTeX Error: File `\AM@currentdocname ' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+I could not locate the file with any of these extensions:
+.tikz,.TIKZ,.TikZ,.pgf,.PGF,.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./aftertex/sbc/sbc.tex:2: Arithmetic overflow.
+<recently read> \calc@Acount 
+                             
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+I can't carry out that multiplication or division,
+since the result is out of range.
+
+./aftertex/sbc/sbc.tex:2: Arithmetic overflow.
+<recently read> \calc@Acount 
+                             
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+I can't carry out that multiplication or division,
+since the result is out of range.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+
+./aftertex/sbc/sbc.tex:2: LaTeX Error: File `\AM@currentdocname ' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+I could not locate the file with any of these extensions:
+.tikz,.TIKZ,.TikZ,.pgf,.PGF,.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[87
 
 ]
-\tf@lof=\write12
-\openout12 = `main.lof'.
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
 
-\tf@lot=\write13
-\openout13 = `main.lot'.
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
 
-\tf@toc=\write14
-\openout14 = `main.toc'.
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
 
- (./main.aux)
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
 
-LaTeX Warning: There were multiply-defined labels.
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
 
- ) 
-Here is how much of TeX's memory you used:
- 47330 strings out of 480113
- 942349 string characters out of 5892773
- 1354652 words of memory out of 5000000
- 63900 multiletter control sequences out of 15000+600000
- 520209 words of font info for 103 fonts, out of 8000000 for 9000
- 83 hyphenation exceptions out of 8191
- 110i,17n,131p,1675b,2327s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (88 pages, 1090987 bytes).
-PDF statistics:
- 1833 PDF objects out of 2073 (max. 8388607)
- 1632 compressed objects within 17 object streams
- 435 named destinations out of 1000 (max. 500000)
- 721 words of extra memory for PDF output out of 10000 (max. 10000000)
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
 
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+
+./aftertex/sbc/sbc.tex:2: LaTeX Error: File `\AM@currentdocname ' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+I could not locate the file with any of these extensions:
+.tikz,.TIKZ,.TikZ,.pgf,.PGF,.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+
+./aftertex/sbc/sbc.tex:2: LaTeX Error: File `\AM@currentdocname ' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+I could not locate the file with any of these extensions:
+.tikz,.TIKZ,.TikZ,.pgf,.PGF,.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+
+./aftertex/sbc/sbc.tex:2: LaTeX Error: File `\AM@currentdocname ' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+I could not locate the file with any of these extensions:
+.tikz,.TIKZ,.TikZ,.pgf,.PGF,.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[88]
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+
+./aftertex/sbc/sbc.tex:2: LaTeX Error: File `\AM@currentdocname ' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+I could not locate the file with any of these extensions:
+.tikz,.TIKZ,.TikZ,.pgf,.PGF,.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          ^^M
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+./aftertex/sbc/sbc.tex:2: Missing endcsname inserted.
+<to be read again> 
+                   AM@currentdocname 
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./aftertex/sbc/sbc.tex:2: Use of ??? doesn't match its definition.
+<argument> ???  
+                ! LaTeX3 Error: AM@currentdocname invalid in file name. Lost: .
+l.2 \includepdf[pages=-]{sbc-template.pdf}
+                                          
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+
+./aftertex/sbc/sbc.tex:2: LaTeX Error: File `\AM@currentdocn

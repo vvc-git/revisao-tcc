@@ -24,7 +24,6 @@
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \babel@toc {brazil}{}\relax 
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdução}}{23}{chapter.1}%
@@ -79,7 +78,7 @@
 \vspace {\cftbeforechapterskip }
 \babel@toc {brazil}{}\relax 
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{75}{section*.46}%
+\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{75}{section*.44}%
 \renewcommand *{\cftappendixname }{AP\^ENDICE \space }
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
@@ -98,4 +97,7 @@
 \contentsline {subsection}{\numberline {A.1.5}Verificador}{83}{subsection.A.1.5}%
 \contentsline {section}{\numberline {A.2}Propriedades Formais de Segurança}{84}{section.A.2}%
 \contentsline {section}{\numberline {A.3}Prova de Propriedades de Segurança}{84}{section.A.3}%
-\thispagestyle {empty}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\cftinsert {A}
+\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase {SBC}}{87}{appendix.B}%
