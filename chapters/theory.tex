@@ -305,7 +305,7 @@ Dessa forma, um processo atacante é capaz de realizar todos os ataques que qual
 Nesta análise, utiliza-se o modelo de atacante de rede, que tem acesso a todos os endereços IP, permitindo-lhe interceptar mensagens destinadas a outras partes e falsificar os endereços dos remetentes. Em redes reais, esses ataques podem incluir ARP-spoofing, onde o atacante redireciona tráfego em redes locais ao falsificar a correspondência entre endereços IP e endereços MAC, e ações de adversários patrocinados por estados-nação, que exploram infraestrutura de telecomunicação para interceptar e manipular dados em larga escala.
 
 O atacante pode, ainda, corromper qualquer processo legítimo, ganhando acesso completo ao estado da entidade comprometida.
-Isso é representado pelo envio de uma mensagem especial, $m = \text{CORRUPT}$, ao processo correspondente \cite[Seção 2.5]{FettKS14}.. Após receber essa mensagem, o processo começa a atuar como um processo atacante, utilizando o último estado disponível. Os detalhes sobre como ocorre a corrupção variam de acordo com o modelo específico do processo.
+Isso é representado pelo envio de uma mensagem especial, $m = \text{CORRUPT}$, ao processo correspondente \cite[Seção 2.5]{FettKS14}. Após receber essa mensagem, o processo começa a atuar como um processo atacante, utilizando o último estado disponível. Os detalhes sobre como ocorre a corrupção variam de acordo com o modelo específico do processo.
 
 
 O navegador web faz parte de um sistema que formaliza a infraestrutura da web e suas aplicações associadas. Para simplificar o modelo, o \acs{WIM} inclui um servidor HTTPS genérico, responsável, entre outras funções, por receber e enviar requisições HTTPS.

@@ -1,24 +1,59 @@
+% \begin{sequencediagram}[scale=0.1]
+%     \newthread{A}{\ttfamily Usuário}{}
+%     \newinst[4]{C}{\ttfamily Fiduciário}{}
+%     \newinst[18]{B}{\ttfamily \acs{SP}}{}
+    
+%     \begin{call}{A}{\ttfamily Interação}{B}
+%         \postlevel
+%         \postlevel
+%         \postlevel
+%             \begin{call}{B}{\shortstack{ \ttfamily (1) Requisição de Autorização \\ \ttfamily (client\_id, nonce, redirect\_uri, presentation\_definition, client\_metadata)}}{C}{\shortstack{\ttfamily (2) Resposta de Autorização \\ \ttfamily (vp\_token, presenation\_submission)}}
+%             \postlevel
+
+%             % Adicionando uma nota após o passo 1
+%             \node at (1.5,-4) [text width=6cm, anchor=west] {\ttfamily \small Autenticação e Confirmação/Seleção da \acs{VC}};
+
+%             \postlevel
+
+%             \begin{call}{C}{\shortstack{ \ttfamily \bfseries Requisição de Negociação\\ \ttfamily \bfseries (type, compute\_site, compute\_site\_description)}}{B}{\shortstack{ \ttfamily \bfseries Resposta de Negociação\\ \bfseries \ttfamily(status)}}
+
+%             \postlevel
+                
+%             \end{call}
+
+%             \postlevel
+%             \postlevel
+            
+%         \end{call}
+%     \end{call}
+% \end{sequencediagram}
+
 \begin{sequencediagram}[scale=0.1]
     \newthread{A}{\ttfamily Usuário}{}
-    \newinst[4]{C}{\ttfamily Fiduciário}{}
-    \newinst[18]{B}{\ttfamily \acs{SP}}{}
+    \newinst[6]{B}{\ttfamily Fiduciário}{}
+    \newinst[15]{C}{\ttfamily \acs{SP}}{}
     
-    \begin{call}{A}{\ttfamily Interação}{B}
+    \begin{call}{A}{\ttfamily Interação}{C}
         \postlevel
         \postlevel
         \postlevel
-            \begin{call}{B}{\shortstack{ \ttfamily (1) Requisição de Autorização \\ \ttfamily (client\_id, nonce, redirect\_uri, presentation\_definition, client\_metadata)}}{C}{\shortstack{\ttfamily (2) Resposta de Autorização \\ \ttfamily (vp\_token, presenation\_submission)}}
+            \begin{call}{C}{\shortstack{ \ttfamily (1) Requisição de Autorização \\ \ttfamily (client\_id, nonce, redirect\_uri, presentation\_definition, client\_metadata)}}{A}{\shortstack{\ttfamily (2) Resposta de Autorização \\ \ttfamily (vp\_token, presenation\_submission)}}
+            \postlevel
             \postlevel
 
-            % Adicionando uma nota após o passo 1
-            \node at (1.5,-4) [text width=6cm, anchor=west] {\ttfamily \small Autenticação e Confirmação/Seleção da \acs{VC}};
+            \begin{call}{A}{\shortstack{ \ttfamily (1) Requisição de Autorização}}{B}{\shortstack{\ttfamily (2) Resposta de Autorização}}
 
-            \postlevel
+                \postlevel
+                \postlevel
+                % Adicionando uma nota após o passo 1
+                % \node at (1.5,-4) [text width=6cm, anchor=west] {\ttfamily \small Autenticação e Confirmação/Seleção da \acs{VC}};
+    
+                \postlevel
+                \begin{call}{B}{\shortstack{  \bfseries\ttfamily Requisição de Negociação \\ \bfseries\ttfamily (type, compute\_site)}}{C}{\shortstack{ \ttfamily \bfseries Resposta de Negociação\\ \bfseries\ttfamily(status, compute\_site\_description)}}
+                \postlevel
+                \end{call}
 
-            \begin{call}{C}{\shortstack{ \ttfamily \bfseries Requisição de Negociação\\ \ttfamily \bfseries (type, compute\_site, compute\_site\_description)}}{B}{\shortstack{ \ttfamily \bfseries Resposta de Negociação\\ \bfseries \ttfamily(status)}}
-
-            \postlevel
-                
+            \postlevel  
             \end{call}
 
             \postlevel
@@ -27,4 +62,4 @@
         \end{call}
     \end{call}
 \end{sequencediagram}
-
+\textbf{}\textbf{}

@@ -878,4 +878,19 @@ plural={MRPTWG\acrpluralsuffix },%
 description={Machine Readable Privacy Terms Working Group},%
 descriptionplural={Machine Readable Privacy Terms Working Group\acrpluralsuffix },%
 symbol={\relax },%
-symbo
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Machine Readable Privacy Terms Working Group},%
+longplural={Machine Readable Privacy Terms Working Groups},%
+short={MRPTWG},%
+shortplural={MRPTWGs},%
+counter={page},%
+parent={},%
+%
+}%
+

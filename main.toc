@@ -66,11 +66,11 @@
 \contentsline {subsection}{\numberline {4.3.2}Solicitação de Negociação}{64}{subsection.4.3.2}%
 \contentsline {subsection}{\numberline {4.3.3}Resposta de Negociação}{65}{subsection.4.3.3}%
 \contentsline {section}{\numberline {4.4}Negociação do Ambiente de Execução}{68}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Solicitação de Negociação}{68}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.1}Solicitação de Negociação}{69}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Resposta de Negociação}{69}{subsection.4.4.2}%
 \contentsline {subsubsection}{\numberline {4.4.2.1}Resposta de Sucesso para Computação Multipartidária}{69}{subsubsection.4.4.2.1}%
 \contentsline {subsubsection}{\numberline {4.4.2.2}Resposta de Recusa para Execução em outros Ambientes}{70}{subsubsection.4.4.2.2}%
-\contentsline {section}{\numberline {4.5}Análise Formal de Segurança}{70}{section.4.5}%
+\contentsline {section}{\numberline {4.5}Análise Formal de Segurança}{71}{section.4.5}%
 \contentsline {subsection}{\numberline {4.5.1}Propriedade de Segurança: Autenticação da Negociação}{71}{subsection.4.5.1}%
 \contentsline {subsection}{\numberline {4.5.2}Prova da Autenticação da Negociação}{71}{subsection.4.5.2}%
 \contentsline {section}{\numberline {4.6}Limitações e esforço para mudança}{72}{section.4.6}%
@@ -100,4 +100,4 @@
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase {SBC}}{87}{appendix.B}%
+\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase {Artigo SBC}}{87}{appendix.B}%
